@@ -16,3 +16,4 @@
 | 2026-05-24 | Разработана структура агентского договора для защиты интересов руководителя филиала. | Gemini | [results/legal/agency_agreement_draft.md](../results/legal/agency_agreement_draft.md) |
 | 2026-05-24 | Принято решение: стартовать со склада в Горячем Ключе, расширение в КРД — по результатам спроса B2B. | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
 | 2026-05-24 | Сформирован запрос в ГО на уточнение ТТХ. Проект переведен в режим ожидания данных. | Руководитель | [results/operations/request_to_hq.md](../operations/request_to_hq.md) |
+| 2026-05-24 | Окончательно выбрана Агентская модель для периода пилота (90 дней). | Руководитель | [EXECUTIVE_SUMMARY.md](../strategy/EXECUTIVE_SUMMARY.md) |

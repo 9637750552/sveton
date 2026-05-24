@@ -1,7 +1,7 @@
 .vscode/
 .DS_Store
 *.Identifier
-input/assets/images/bulk/
+input/audio/
 *.wav
 *.m4a
 *.mp3

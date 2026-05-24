@@ -1,0 +1,7 @@
+.vscode/
+.DS_Store
+*.Identifier
+input/assets/images/bulk/
+*.wav
+*.m4a
+*.mp3

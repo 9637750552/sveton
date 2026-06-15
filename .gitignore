@@ -3,8 +3,8 @@
 *.Identifier
 *:Zone.Identifier
 ~$*
-tmp/
-input/audio/
+99_tmp/
+00_input/audio/
 *.wav
 *.m4a
 *.mp3

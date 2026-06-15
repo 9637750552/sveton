@@ -5,15 +5,15 @@
 | 2026-05-24 | Инициация проекта Sveton-South. | Руководитель | [EXECUTIVE_SUMMARY.md](../strategy/EXECUTIVE_SUMMARY.md) |
 | 2026-05-24 | Утвержден гипер-детальный план (Ревизия "Максимум"). | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
 | 2026-05-24 | Переход на мессенджер MAX (Макс) как основной канал. | Руководитель | [GEMINI.md](../../GEMINI.md) |
-| 2026-05-24 | Сформирована база знаний на основе парсинга сайта. | Gemini | [input/](../../input/README.md) |
+| 2026-05-24 | Сформирована база знаний на основе парсинга сайта. | Gemini | [00_input/](../../00_input/) |
 
 | 2026-05-24 | Утверждена гибридная юр. схема: крупные сделки через ГО, мелкие через ИП. | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
 | 2026-05-24 | Подтверждено наличие руководителя в действующих B2B договорах ГО. | Руководитель | [EXECUTIVE_SUMMARY.md](../strategy/EXECUTIVE_SUMMARY.md) |
-| 2026-05-24 | Подано заявление в ФНС на добавление ОКВЭД (электромонтаж и торговля). | Руководитель | [results/economics/okved_required.md](../results/economics/okved_required.md) |
+| 2026-05-24 | Подано заявление в ФНС на добавление ОКВЭД (электромонтаж и торговля). | Руководитель | [02_output/economics/okved_required.md](../../02_output/economics/okved_required.md) |
 | 2026-05-24 | Утверждено использование существующих счетов в Т-Банке и Альфа-Банке. | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
 | 2026-05-24 | Выбрана стратегия использования банковской бухгалтерии для снижения OPEX. | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
-| 2026-05-24 | Сформирована полная техническая спецификация систем (3-60 кВт) для логистики. | Gemini | [results/economics/system_specs.md](../results/economics/system_specs.md) |
-| 2026-05-24 | Разработана структура агентского договора для защиты интересов руководителя филиала. | Gemini | [results/legal/agency_agreement_draft.md](../results/legal/agency_agreement_draft.md) |
+| 2026-05-24 | Сформирована полная техническая спецификация систем (3-60 кВт) для логистики. | Gemini | [02_output/economics/system_specs.md](../../02_output/economics/system_specs.md) |
+| 2026-05-24 | Разработана структура агентского договора для защиты интересов руководителя филиала. | Gemini | [02_output/legal/agency_agreement_draft.md](../../02_output/legal/agency_agreement_draft.md) |
 | 2026-05-24 | Принято решение: стартовать со склада в Горячем Ключе, расширение в КРД — по результатам спроса B2B. | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
-| 2026-05-24 | Сформирован запрос в ГО на уточнение ТТХ. Проект переведен в режим ожидания данных. | Руководитель | [results/operations/request_to_hq.md](../operations/request_to_hq.md) |
+| 2026-05-24 | Сформирован запрос в ГО на уточнение ТТХ. Проект переведен в режим ожидания данных. | Руководитель | [02_output/operations/request_to_hq.md](../../02_output/operations/request_to_hq.md) |
 | 2026-05-24 | Окончательно выбрана Агентская модель для периода пилота (90 дней). | Руководитель | [EXECUTIVE_SUMMARY.md](../strategy/EXECUTIVE_SUMMARY.md) |

@@ -1,6 +1,9 @@
 .vscode/
 .DS_Store
 *.Identifier
+*:Zone.Identifier
+~$*
+tmp/
 input/audio/
 *.wav
 *.m4a

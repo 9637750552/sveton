@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+  <defs>
+    <style>
+      .grey-fill{fill:gray;}
+      .yellow-fill{fill:#f5d946;}
+    </style>
+    <linearGradient id="grey-gradient" x1="63.38" y1="77.71" x2="37.25" y2="46.57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="gray"/>
+      <stop offset="0.17" stop-color="#7c7c7c"/>
+      <stop offset="0.35" stop-color="#6f6f6f"/>
+      <stop offset="0.53" stop-color="#5b5b5b"/>
+      <stop offset="0.71" stop-color="#3e3e3e"/>
+      <stop offset="0.9" stop-color="#191919"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="yellow-gradient" x1="67.04" y1="47.11" x2="47.92" y2="24.32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7ed4e"/>
+      <stop offset="0.18" stop-color="#f6e94e"/>
+      <stop offset="0.36" stop-color="#f2dc4d"/>
+      <stop offset="0.55" stop-color="#edc84b"/>
+      <stop offset="0.74" stop-color="#e5ab48"/>
+      <stop offset="0.93" stop-color="#db8645"/>
+      <stop offset="1" stop-color="#d77744"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(5 0)">
+    <path fill="url(#grey-gradient)" d="M65.31,44.15V39.62h-9.9v4.52H34.84v-2a67.66,67.66,0,0,0-3.3,7.41v1.26h3.29v3.3H31.54v3.3H29.12a68.55,68.55,0,0,0-1.94,16.07c0,1.72.09,3.43.22,5.12H71.92V44.15Zm0,9.94h-9.9v-3.3h9.9Z"/>
+    <path class="grey-fill" d="M24.94,39.87v4.28H18.33V78.58h9.08c-.13-1.69-.22-3.4-.22-5.12a67,67,0,0,1,1.95-16.07h-.89v-3.3h-3.3v-3.3h3.3V47.5h3.3V49.6a73.06,73.06,0,0,1,3.3-7.48V39.87Z"/>
+    <path fill="url(#yellow-gradient)" d="M55.77,18c-1.45,1-2.83,2.15-4.19,3.29v3.46H47.75q-1.9,1.85-3.64,3.85V35.3H39.58v-1C38.3,36.18,37.08,38.07,36,40v3h18.3V38.49H66.44V43h5.49V28.37l6.66,2.91V27.93ZM51.58,35.3H47V27.35h4.61Z"/>
+    <path class="yellow-fill" d="M55.77,18,45.12,13.32l-11.43,5v-5H23.79v9.33L11.67,27.93v3.35l6.65-2.91V43h5.48V38.74H36V40c1.1-1.94,2.32-3.82,3.61-5.66V20.75h4.53v7.87q1.77-2,3.68-3.9H47v-4h4.61v.52C52.94,20.12,54.33,19,55.77,18Z"/>
+  </g>
+</svg>

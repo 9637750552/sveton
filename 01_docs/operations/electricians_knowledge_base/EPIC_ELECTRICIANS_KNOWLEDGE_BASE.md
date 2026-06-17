@@ -19,7 +19,7 @@ Canonical-набор утверждений создан и расширен bat
 - очередь safety-review: `safety_review_queue.md`.
 - детальный safety-review пакет для `C009`: `safety_review_c009_installation_process.md`.
 - связи утверждений с изображениями: `statement_images.jsonl`.
-- source coverage gate: `06_scripts/check_source_coverage.py`, отчеты `source_coverage_report.md`, `source_coverage_doc007.md` и `source_coverage_doc015.md`.
+- source coverage gate: `07_scripts/check_source_coverage.py`, отчеты `source_coverage_report.md`, `source_coverage_doc007.md` и `source_coverage_doc015.md`.
 - карта покрытия canonical -> editorial sections: `README.md`.
 
 Точные связи `statement_id -> cluster_id` добавлены для всех `387` canonical-утверждений. Новые `101` утверждение batch 006 по `doc_015 / installation_process` сгруппированы в `C009 / installation_process`.

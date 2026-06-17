@@ -55,7 +55,7 @@ Run-папки:
 
 ## Методологическое изменение
 
-Перед promotion добавлен paragraph coverage gate в `06_scripts/run_atomic_extraction.py`.
+Перед promotion добавлен paragraph coverage gate в `07_scripts/run_atomic_extraction.py`.
 
 Причина: документ `doc_015` показал, что содержательные утверждения в обычных абзацах могут не ловиться старым bullet/checklist gate. Новый gate проверяет покрытие конкретных candidate source items через `source_quote` или `skipped_source_items`.
 

@@ -110,7 +110,7 @@ Key directories:
 
 - `00_input/`: raw and extracted inputs;
 - `01_docs/`: governed project documents and editorial knowledge-base outputs;
-- `06_scripts/`: extraction and validation scripts.
+- `07_scripts/`: extraction and validation scripts.
 
 Do not overwrite or delete user-authored materials unless explicitly asked.
 Prefer additive updates with clear traceability.

@@ -18,7 +18,7 @@ Runner готовит и собирает массовый прогон извл
 - создает warnings по вероятно неполному покрытию bullet/checklist-пунктов;
 - сохраняет валидные утверждения и ошибки отдельно.
 
-Скрипт: `06_scripts/run_atomic_extraction.py`.
+Скрипт: `07_scripts/run_atomic_extraction.py`.
 
 ## Подготовленный run
 
@@ -65,19 +65,19 @@ run_.../
 Подготовить очередь без review-чанков:
 
 ```bash
-python3 06_scripts/run_atomic_extraction.py prepare /home/sergey/Sveton --run-id run_20260616_non_review_v1
+python3 07_scripts/run_atomic_extraction.py prepare /home/sergey/Sveton --run-id run_20260616_non_review_v1
 ```
 
 Собрать raw-ответы после модели:
 
 ```bash
-python3 06_scripts/run_atomic_extraction.py collect /home/sergey/Sveton 00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_non_review_v1 --fail-on-errors --fail-on-warnings
+python3 07_scripts/run_atomic_extraction.py collect /home/sergey/Sveton 00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_non_review_v1 --fail-on-errors --fail-on-warnings
 ```
 
 Собрать и продвинуть результат в canonical files:
 
 ```bash
-python3 06_scripts/run_atomic_extraction.py collect /home/sergey/Sveton 00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_non_review_v1 --promote --fail-on-errors --fail-on-warnings
+python3 07_scripts/run_atomic_extraction.py collect /home/sergey/Sveton 00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_non_review_v1 --promote --fail-on-errors --fail-on-warnings
 ```
 
 ## Smoke-test
@@ -186,7 +186,7 @@ python3 06_scripts/run_atomic_extraction.py collect /home/sergey/Sveton 00_input
 - но содержательные предложения в обычных абзацах могли не попасть в extraction, если модель формально указала достаточный `source_items_detected`;
 - это критично для будущего эпика по интервью с руководством, где основная структура источника будет состоять из абзацев, а не bullets.
 
-Что изменено в `06_scripts/run_atomic_extraction.py`:
+Что изменено в `07_scripts/run_atomic_extraction.py`:
 
 - runner теперь строит candidate source items не только из bullets, но и из содержательных предложений обычного текста;
 - candidate-предложения выбираются кодом по признакам: технические термины, действия, условия, числовые значения, параметры, примеры;
@@ -243,7 +243,7 @@ Batch 002 v3 прошел Codex-ревью и был продвинут в canon
 После выявленного недопокрытия документа проверки заявки добавлен отдельный gate прямого покрытия исходника:
 
 ```bash
-python3 06_scripts/check_source_coverage.py /home/sergey/Sveton \
+python3 07_scripts/check_source_coverage.py /home/sergey/Sveton \
   --source-file 'Проверка_соответвие_описания_менеджера_правилам_заявки_на_монтаж.docx' \
   --fail-on-uncovered
 ```

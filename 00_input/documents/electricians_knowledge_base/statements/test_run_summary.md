@@ -14,7 +14,7 @@
 - JSON Schema одного утверждения: `atomic_statement.schema.json`
 - JSON Schema результата по чанку: `chunk_extraction_result.schema.json`
 - Тестовый JSONL: `test_atomic_statements.jsonl`
-- Валидатор: `06_scripts/validate_atomic_statements.py`
+- Валидатор: `07_scripts/validate_atomic_statements.py`
 - Runner массового прогона: `mass_extraction_runner.md`
 
 ## Выборка чанков

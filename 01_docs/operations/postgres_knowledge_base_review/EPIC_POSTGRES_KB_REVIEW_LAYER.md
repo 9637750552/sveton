@@ -175,6 +175,14 @@ Concrete order inside `Sv-a3d`:
 
 After this, `Sv-yzh` maps artifacts to the created schema, and `Sv-7sd` imports the current `387` statements.
 
+Applied status on 2026-06-17:
+
+- dev database `sveton_kb_dev` created;
+- schema `kb` created;
+- migration `001_create_kb_review_schema` applied;
+- `16` tables are visible;
+- no extraction data has been imported yet.
+
 ## 8. Read Models / API Contract
 
 Minimum UI views:

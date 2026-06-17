@@ -7,6 +7,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import semantic_project_config as project_config
+
 
 FILE_DIM_RE = re.compile(r"(?P<width>\d+)\s*x\s*(?P<height>\d+)")
 
@@ -132,16 +134,13 @@ def classify_entry(source_key: str, suffix_key: str, width: int, height: int) ->
 
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
-        print("Usage: build_image_inventory.py <project_root> [images_raw_dir] [inventory_csv]", file=sys.stderr)
+        print("Usage: build_image_inventory.py <project_root> [images_raw_dir] [inventory_csv] [config_path]", file=sys.stderr)
         return 1
 
     project_root = Path(argv[1]).resolve()
-    images_raw_dir = project_root / (
-        argv[2] if len(argv) > 2 else "00_input/documents/electricians_knowledge_base/images/raw"
-    )
-    inventory_csv = project_root / (
-        argv[3] if len(argv) > 3 else "00_input/documents/electricians_knowledge_base/images/inventory.csv"
-    )
+    config = project_config.load_project_config(project_root, argv[4] if len(argv) > 4 else None)
+    images_raw_dir = project_root / (argv[2] if len(argv) > 2 else config["images_raw"])
+    inventory_csv = project_root / (argv[3] if len(argv) > 3 else config["images_inventory"])
 
     if not images_raw_dir.is_dir():
         print(f"Images directory not found: {images_raw_dir}", file=sys.stderr)

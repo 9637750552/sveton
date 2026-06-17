@@ -8,6 +8,8 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+import semantic_project_config as project_config
+
 
 IMG_RE = re.compile(r"<img\b[^>]*\bsrc=\"(?P<src>media/image(?P<num>\d+)\.(?P<ext>[^\"]+))\"[^>]*>", re.IGNORECASE)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
@@ -40,9 +42,9 @@ def split_markdown_table_row(line: str) -> list[str]:
     return parts
 
 
-def load_documents(project_root: Path) -> list[SourceDocument]:
-    inventory_path = project_root / "00_input/documents/electricians_knowledge_base/inventory.md"
-    extracted_dir = project_root / "00_input/documents/electricians_knowledge_base/extracted"
+def load_documents(project_root: Path, config: dict[str, str]) -> list[SourceDocument]:
+    inventory_path = project_config.config_path(project_root, config, "source_inventory")
+    extracted_dir = project_config.config_path(project_root, config, "extracted_texts")
 
     docs: list[SourceDocument] = []
     for line in inventory_path.read_text(encoding="utf-8").splitlines():
@@ -74,8 +76,8 @@ def load_documents(project_root: Path) -> list[SourceDocument]:
     return docs
 
 
-def load_image_index(project_root: Path) -> dict[tuple[str, str], dict[str, str]]:
-    inventory_csv = project_root / "00_input/documents/electricians_knowledge_base/images/inventory.csv"
+def load_image_index(project_root: Path, config: dict[str, str]) -> dict[tuple[str, str], dict[str, str]]:
+    inventory_csv = project_config.config_path(project_root, config, "images_inventory")
     index: dict[tuple[str, str], dict[str, str]] = {}
     with inventory_csv.open(encoding="utf-8", newline="") as handle:
         for row in csv.DictReader(handle):
@@ -339,11 +341,11 @@ def make_chunks_for_document(
     return chunks
 
 
-def write_outputs(project_root: Path, chunks: list[dict[str, object]]) -> None:
-    chunks_dir = project_root / "00_input/documents/electricians_knowledge_base/chunks"
-    chunks_dir.mkdir(parents=True, exist_ok=True)
-    jsonl_path = chunks_dir / "source_chunks.jsonl"
-    summary_path = chunks_dir / "summary.md"
+def write_outputs(project_root: Path, config: dict[str, str], chunks: list[dict[str, object]]) -> None:
+    jsonl_path = project_config.config_path(project_root, config, "chunks")
+    summary_path = project_config.config_path(project_root, config, "chunks_summary")
+    jsonl_path.parent.mkdir(parents=True, exist_ok=True)
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
 
     with jsonl_path.open("w", encoding="utf-8") as handle:
         for chunk in chunks:
@@ -422,15 +424,16 @@ def write_outputs(project_root: Path, chunks: list[dict[str, object]]) -> None:
 
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
-        print("Usage: build_source_chunks.py <project_root>", file=sys.stderr)
+        print("Usage: build_source_chunks.py <project_root> [config_path]", file=sys.stderr)
         return 1
     project_root = Path(argv[1]).resolve()
-    image_index = load_image_index(project_root)
-    docs = load_documents(project_root)
+    config = project_config.load_project_config(project_root, argv[2] if len(argv) > 2 else None)
+    image_index = load_image_index(project_root, config)
+    docs = load_documents(project_root, config)
     chunks: list[dict[str, object]] = []
     for doc in docs:
         chunks.extend(make_chunks_for_document(doc, image_index))
-    write_outputs(project_root, chunks)
+    write_outputs(project_root, config, chunks)
     print(f"Wrote {len(chunks)} chunks for {len(docs)} documents")
     return 0
 

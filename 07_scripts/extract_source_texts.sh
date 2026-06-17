@@ -2,8 +2,9 @@
 set -euo pipefail
 
 project_root="${1:-}"
-raw_dir="${2:-00_input/documents/electricians_knowledge_base/raw}"
-output_dir="${3:-00_input/documents/electricians_knowledge_base/extracted}"
+raw_dir="${2:-}"
+output_dir="${3:-}"
+config_file="${4:-semantic_project.yml}"
 pandoc="/mnt/c/Program Files/Pandoc/pandoc.exe"
 
 if [[ -z "$project_root" ]]; then
@@ -12,6 +13,22 @@ if [[ -z "$project_root" ]]; then
 fi
 
 cd "$project_root"
+
+config_value() {
+  local key="$1"
+  if [[ ! -f "$config_file" ]]; then
+    return 1
+  fi
+  awk -F ':' -v key="$key" '$1 == key { sub(/^[[:space:]]+/, "", $2); sub(/[[:space:]]+$/, "", $2); gsub(/^["'\'']|["'\'']$/, "", $2); print $2; exit }' "$config_file"
+}
+
+raw_dir="${raw_dir:-$(config_value raw_sources || true)}"
+output_dir="${output_dir:-$(config_value extracted_texts || true)}"
+
+if [[ -z "$raw_dir" || -z "$output_dir" ]]; then
+  echo "Raw/output directories were not provided and config values are missing in: $config_file" >&2
+  exit 1
+fi
 
 if [[ ! -d "$raw_dir" ]]; then
   echo "Raw directory not found: $raw_dir" >&2

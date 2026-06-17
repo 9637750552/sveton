@@ -9,11 +9,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+import semantic_project_config as project_config
 
-DEFAULT_CHUNKS_PATH = Path("00_input/documents/electricians_knowledge_base/chunks/source_chunks.jsonl")
-DEFAULT_STATEMENTS_PATH = Path("00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl")
-DEFAULT_REPORT_PATH = Path("00_input/documents/electricians_knowledge_base/statements/source_coverage_report.md")
-DEFAULT_OVERRIDES_PATH = Path("00_input/documents/electricians_knowledge_base/statements/source_coverage_overrides.jsonl")
 
 MARKDOWN_RE = re.compile(r"[*_`>#\\\[\](){}]")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
@@ -201,21 +198,26 @@ def render_markdown(rows: list[dict[str, Any]], summary: dict[str, Any]) -> str:
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description="Check source chunk coverage by canonical atomic statements.")
     parser.add_argument("project_root")
+    parser.add_argument("--config", help="Project config path relative to project root.")
     parser.add_argument("--source-file", action="append", help="Limit check to a source file. Can be repeated.")
     parser.add_argument("--source-document-id", action="append", help="Limit check to a source document id. Can be repeated.")
     parser.add_argument("--topic", action="append", help="Limit check to a chunk topic. Can be repeated.")
-    parser.add_argument("--statements", default=str(DEFAULT_STATEMENTS_PATH), help="Statements JSONL path relative to project root.")
-    parser.add_argument("--chunks", default=str(DEFAULT_CHUNKS_PATH), help="Chunks JSONL path relative to project root.")
-    parser.add_argument("--output-md", default=str(DEFAULT_REPORT_PATH), help="Markdown report path relative to project root.")
+    parser.add_argument("--statements", help="Statements JSONL path relative to project root.")
+    parser.add_argument("--chunks", help="Chunks JSONL path relative to project root.")
+    parser.add_argument("--output-md", help="Markdown report path relative to project root.")
     parser.add_argument("--output-jsonl", help="Optional JSONL detail report path relative to project root.")
-    parser.add_argument("--overrides", default=str(DEFAULT_OVERRIDES_PATH), help="Coverage overrides JSONL path relative to project root.")
+    parser.add_argument("--overrides", help="Coverage overrides JSONL path relative to project root.")
     parser.add_argument("--fail-on-uncovered", action="store_true", help="Exit non-zero when content chunks lack statements.")
     args = parser.parse_args(argv[1:])
 
     project_root = Path(args.project_root).resolve()
-    chunks = load_jsonl(project_root / args.chunks)
-    statements = load_jsonl(project_root / args.statements)
-    overrides_path = project_root / args.overrides
+    config = project_config.load_project_config(project_root, args.config)
+    chunks_path = project_root / (args.chunks or config["chunks"])
+    statements_path = project_root / (args.statements or config["statements"])
+    output_md_path = project_root / (args.output_md or config["coverage_report"])
+    overrides_path = project_root / (args.overrides or config["coverage_overrides"])
+    chunks = load_jsonl(chunks_path)
+    statements = load_jsonl(statements_path)
     overrides = {
         row["chunk_id"]: row
         for row in load_jsonl(overrides_path)
@@ -223,7 +225,7 @@ def main(argv: list[str]) -> int:
     source_files = source_files_from_args(chunks, args)
     rows, summary = build_report(chunks, statements, source_files, overrides)
 
-    output_md = project_root / args.output_md
+    output_md = output_md_path
     output_md.parent.mkdir(parents=True, exist_ok=True)
     output_md.write_text(render_markdown(rows, summary), encoding="utf-8")
 

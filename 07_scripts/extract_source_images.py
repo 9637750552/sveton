@@ -8,6 +8,8 @@ from zipfile import ZipFile
 import subprocess
 import re
 
+import semantic_project_config as project_config
+
 
 DOCX_MEDIA_PREFIX = "word/media/"
 MEDIA_IMAGE_RE = re.compile(r"image(?P<num>\d+)$", re.IGNORECASE)
@@ -65,15 +67,14 @@ def render_pdf_pages(input_file: Path, raw_dir: Path) -> int:
 
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
-        print("Usage: extract_source_images.py <project_root> [raw_dir] [normalized_dir]", file=sys.stderr)
+        print("Usage: extract_source_images.py <project_root> [raw_dir] [image_raw_dir] [normalized_dir] [config_path]", file=sys.stderr)
         return 1
 
     project_root = Path(argv[1]).resolve()
-    raw_input_dir = project_root / (argv[2] if len(argv) > 2 else "00_input/documents/electricians_knowledge_base/raw")
-    image_raw_dir = project_root / (argv[3] if len(argv) > 3 else "00_input/documents/electricians_knowledge_base/images/raw")
-    image_normalized_dir = project_root / (
-        argv[4] if len(argv) > 4 else "00_input/documents/electricians_knowledge_base/images/normalized"
-    )
+    config = project_config.load_project_config(project_root, argv[5] if len(argv) > 5 else None)
+    raw_input_dir = project_root / (argv[2] if len(argv) > 2 else config["raw_sources"])
+    image_raw_dir = project_root / (argv[3] if len(argv) > 3 else config["images_raw"])
+    image_normalized_dir = project_root / (argv[4] if len(argv) > 4 else config["images_normalized"])
 
     if not raw_input_dir.is_dir():
         print(f"Raw directory not found: {raw_input_dir}", file=sys.stderr)

@@ -1,0 +1,17 @@
+project_id: sveton
+corpus_id: electricians_knowledge_base
+source_inventory: 00_input/documents/electricians_knowledge_base/inventory.md
+raw_sources: 00_input/documents/electricians_knowledge_base/raw
+extracted_texts: 00_input/documents/electricians_knowledge_base/extracted
+chunks: 00_input/documents/electricians_knowledge_base/chunks/source_chunks.jsonl
+chunks_summary: 00_input/documents/electricians_knowledge_base/chunks/summary.md
+statements_dir: 00_input/documents/electricians_knowledge_base/statements
+statements: 00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl
+prompt: 00_input/documents/electricians_knowledge_base/statements/atomic_extraction_prompt.md
+extraction_errors: 00_input/documents/electricians_knowledge_base/statements/extraction_errors.jsonl
+coverage_warnings: 00_input/documents/electricians_knowledge_base/statements/coverage_warnings.jsonl
+coverage_report: 00_input/documents/electricians_knowledge_base/statements/source_coverage_report.md
+coverage_overrides: 00_input/documents/electricians_knowledge_base/statements/source_coverage_overrides.jsonl
+images_raw: 00_input/documents/electricians_knowledge_base/images/raw
+images_normalized: 00_input/documents/electricians_knowledge_base/images/normalized
+images_inventory: 00_input/documents/electricians_knowledge_base/images/inventory.csv

@@ -7,6 +7,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import semantic_project_config as project_config
+
 
 STATEMENT_ID_RE = re.compile(r"^(doc_[0-9]{3}_chunk_[0-9]{4}_stmt_[0-9]{3}|stmt_[0-9]{6})$")
 DOCUMENT_ID_RE = re.compile(r"^doc_[0-9]{3}$")
@@ -107,8 +109,9 @@ SKIP_REASONS = {
 }
 
 
-def load_chunks(project_root: Path) -> dict[str, dict[str, Any]]:
-    chunks_path = project_root / "00_input/documents/electricians_knowledge_base/chunks/source_chunks.jsonl"
+def load_chunks(project_root: Path, config: dict[str, str] | None = None) -> dict[str, dict[str, Any]]:
+    active_config = config or project_config.load_project_config(project_root)
+    chunks_path = project_config.config_path(project_root, active_config, "chunks")
     chunks: dict[str, dict[str, Any]] = {}
     with chunks_path.open(encoding="utf-8") as handle:
         for line in handle:
@@ -298,12 +301,13 @@ def validate_chunk_result(result: dict[str, Any], chunks: dict[str, dict[str, An
 
 def main(argv: list[str]) -> int:
     if len(argv) < 3:
-        print("Usage: validate_atomic_statements.py <project_root> <statements_jsonl>", file=sys.stderr)
+        print("Usage: validate_atomic_statements.py <project_root> <statements_jsonl> [config_path]", file=sys.stderr)
         return 1
 
     project_root = Path(argv[1]).resolve()
     statements_path = (project_root / argv[2]).resolve()
-    chunks = load_chunks(project_root)
+    config = project_config.load_project_config(project_root, argv[3] if len(argv) > 3 else None)
+    chunks = load_chunks(project_root, config)
 
     total = 0
     errors: list[str] = []

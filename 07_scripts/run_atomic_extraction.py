@@ -11,15 +11,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+import semantic_project_config as project_config
 import validate_atomic_statements as statement_validator
 
-
-DEFAULT_STATEMENTS_DIR = Path("00_input/documents/electricians_knowledge_base/statements")
-DEFAULT_CHUNKS_PATH = Path("00_input/documents/electricians_knowledge_base/chunks/source_chunks.jsonl")
-PROMPT_PATH = DEFAULT_STATEMENTS_DIR / "atomic_extraction_prompt.md"
-ATOMIC_STATEMENTS_PATH = DEFAULT_STATEMENTS_DIR / "atomic_statements.jsonl"
-EXTRACTION_ERRORS_PATH = DEFAULT_STATEMENTS_DIR / "extraction_errors.jsonl"
-COVERAGE_WARNINGS_PATH = DEFAULT_STATEMENTS_DIR / "coverage_warnings.jsonl"
 
 SOURCE_ITEM_RE = re.compile(r"^\s*(?:[-*•]\s+|\\-\s+|\d+[.)]\s+|[A-Za-zА-Яа-я]\)\s+)")
 SOURCE_FIELD_RE = re.compile(r"^[A-Za-zА-Яа-яЁё0-9№][^<>\n]{2,100}\s[-–—:]$")
@@ -218,15 +212,16 @@ def prompt_input_for_chunk(chunk: dict[str, Any]) -> dict[str, Any]:
 
 def prepare_run(args: argparse.Namespace) -> int:
     project_root = Path(args.project_root).resolve()
-    chunks = load_jsonl(project_root / DEFAULT_CHUNKS_PATH)
-    prompt_path = project_root / PROMPT_PATH
+    config = project_config.load_project_config(project_root, args.config)
+    chunks = load_jsonl(project_config.config_path(project_root, config, "chunks"))
+    prompt_path = project_config.config_path(project_root, config, "prompt")
     if not prompt_path.exists():
         print(f"Prompt not found: {prompt_path}", file=sys.stderr)
         return 1
 
     selected = select_chunks(chunks, args.include_review, args.limit, set(args.chunk_id or []))
     run_id = args.run_id or datetime.now().strftime("run_%Y%m%d_%H%M%S")
-    run_dir = project_root / DEFAULT_STATEMENTS_DIR / "runs" / run_id
+    run_dir = project_config.config_path(project_root, config, "statements_dir") / "runs" / run_id
     inputs_dir = run_dir / "inputs"
     raw_dir = run_dir / "raw"
     parsed_dir = run_dir / "parsed"
@@ -273,6 +268,8 @@ def prepare_run(args: argparse.Namespace) -> int:
     write_jsonl(run_dir / "queue.jsonl", queue_rows)
     manifest = {
         "run_id": run_id,
+        "project_id": config.get("project_id"),
+        "corpus_id": config.get("corpus_id"),
         "created_at": datetime.now().isoformat(timespec="seconds"),
         "mode": "prepare",
         "chunk_count": len(selected),
@@ -627,6 +624,7 @@ def source_item_is_covered(candidate_quote: str, covered_quotes: list[str]) -> b
 
 def collect_run(args: argparse.Namespace) -> int:
     project_root = Path(args.project_root).resolve()
+    config = project_config.load_project_config(project_root, args.config)
     run_dir = (project_root / args.run_dir).resolve()
     raw_dir = run_dir / "raw"
     parsed_dir = run_dir / "parsed"
@@ -640,7 +638,7 @@ def collect_run(args: argparse.Namespace) -> int:
         return 1
     parsed_dir.mkdir(parents=True, exist_ok=True)
 
-    chunks = statement_validator.load_chunks(project_root)
+    chunks = statement_validator.load_chunks(project_root, config)
     queue_rows = load_jsonl(queue_path)
     all_statements: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
@@ -714,9 +712,9 @@ def collect_run(args: argparse.Namespace) -> int:
     write_jsonl(parsed_dir / "coverage_warnings.jsonl", coverage_warnings)
 
     if args.promote:
-        write_jsonl(project_root / ATOMIC_STATEMENTS_PATH, all_statements)
-        write_jsonl(project_root / EXTRACTION_ERRORS_PATH, errors)
-        write_jsonl(project_root / COVERAGE_WARNINGS_PATH, coverage_warnings)
+        write_jsonl(project_config.config_path(project_root, config, "statements"), all_statements)
+        write_jsonl(project_config.config_path(project_root, config, "extraction_errors"), errors)
+        write_jsonl(project_config.config_path(project_root, config, "coverage_warnings"), coverage_warnings)
 
     summary = {
         "run_dir": str(run_dir),
@@ -742,6 +740,7 @@ def main(argv: list[str]) -> int:
 
     prepare = subparsers.add_parser("prepare", help="Prepare prompt packets for selected chunks.")
     prepare.add_argument("project_root")
+    prepare.add_argument("--config", help="Project config path relative to project root.")
     prepare.add_argument("--run-id")
     prepare.add_argument("--include-review", action="store_true")
     prepare.add_argument("--limit", type=int)
@@ -751,6 +750,7 @@ def main(argv: list[str]) -> int:
     collect = subparsers.add_parser("collect", help="Parse and validate raw model outputs for a run.")
     collect.add_argument("project_root")
     collect.add_argument("run_dir")
+    collect.add_argument("--config", help="Project config path relative to project root.")
     collect.add_argument("--promote", action="store_true", help="Write parsed outputs to canonical statements files.")
     collect.add_argument("--fail-on-errors", action="store_true")
     collect.add_argument("--fail-on-warnings", action="store_true")

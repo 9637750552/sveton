@@ -21,7 +21,7 @@ Project boundaries are documented in `01_docs/governance/PROJECT_BOUNDARIES.md` 
 
 ## Next Checklist
 
-- [ ] Extract hardcoded corpus paths from semantic scripts into project config.
+- [x] Extract hardcoded corpus paths from semantic scripts into project config.
 - [ ] Create or initialize the separate `semantic-analysis-engine` project.
 - [ ] Define the `sveton-knowledge-base` repository/package layout.
 - [ ] Plan the first migration commit set without breaking current canonical data.

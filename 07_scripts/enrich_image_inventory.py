@@ -7,6 +7,8 @@ import re
 import sys
 from pathlib import Path
 
+import semantic_project_config as project_config
+
 
 IMG_RE = re.compile(r"<img\b[^>]*\bsrc=\"media/image(?P<num>\d+)\.(?P<ext>[^\"]+)\"[^>]*>", re.IGNORECASE)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
@@ -67,8 +69,8 @@ def media_ref_from_filename(file_name: str) -> str:
     return ""
 
 
-def extracted_path(project_root: Path, source_file: str) -> Path | None:
-    extracted = project_root / "00_input/documents/electricians_knowledge_base/extracted"
+def extracted_path(project_root: Path, config: dict[str, str], source_file: str) -> Path | None:
+    extracted = project_config.config_path(project_root, config, "extracted_texts")
     stem = Path(source_file).stem
     for suffix in (".md", ".txt"):
         path = extracted / f"{stem}{suffix}"
@@ -177,12 +179,12 @@ def caption_for(row: dict[str, str]) -> str:
     return caption or "Technical visual pending detailed caption"
 
 
-def enrich_rows(project_root: Path, rows: list[dict[str, str]]) -> list[dict[str, str]]:
+def enrich_rows(project_root: Path, config: dict[str, str], rows: list[dict[str, str]]) -> list[dict[str, str]]:
     context_cache: dict[str, dict[str, dict[str, str]]] = {}
     for row in rows:
         source_file = row["source_file"]
         if source_file not in context_cache:
-            path = extracted_path(project_root, source_file)
+            path = extracted_path(project_root, config, source_file)
             context_cache[source_file] = build_markdown_context(path) if path and path.suffix == ".md" else {}
 
         media_ref = media_ref_from_filename(row["file_name"])
@@ -208,19 +210,18 @@ def enrich_rows(project_root: Path, rows: list[dict[str, str]]) -> list[dict[str
 
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
-        print("Usage: enrich_image_inventory.py <project_root> [inventory_csv]", file=sys.stderr)
+        print("Usage: enrich_image_inventory.py <project_root> [inventory_csv] [config_path]", file=sys.stderr)
         return 1
 
     project_root = Path(argv[1]).resolve()
-    inventory_csv = project_root / (
-        argv[2] if len(argv) > 2 else "00_input/documents/electricians_knowledge_base/images/inventory.csv"
-    )
+    config = project_config.load_project_config(project_root, argv[3] if len(argv) > 3 else None)
+    inventory_csv = project_root / (argv[2] if len(argv) > 2 else config["images_inventory"])
 
     with inventory_csv.open(encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
         rows = list(reader)
 
-    rows = enrich_rows(project_root, rows)
+    rows = enrich_rows(project_root, config, rows)
     fieldnames = [
         "image_id",
         "file_name",

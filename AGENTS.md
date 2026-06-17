@@ -58,6 +58,20 @@ When building or editing knowledge-base sections:
 - do not hide source-quality issues or contradictions;
 - mark safety-critical technical content for review when needed.
 
+### Editorial Section Assembly Methodology
+
+All source-backed knowledge-base sections must be assembled with the same methodology as the existing sections.
+
+Mandatory rules:
+
+- Facts in editorial sections must come from `atomic_statements.jsonl` and the relevant canonical cluster, not from images or free-form interpretation.
+- Approved images must come from `statement_images.jsonl`; raw extraction `related_image_ids` are not enough by themselves to create an editorial visual layer.
+- Images never create new facts. They only illustrate already extracted canonical statements.
+- Visual examples must be placed inline next to the relevant semantic subsection and linked statements, using the established pattern: image, `image_id`, and `statement_id -> image_id` links.
+- Do not add a standalone top-level "visual layer" or image catalog to a section when the rest of the knowledge base uses inline visual examples.
+- Manual image links are allowed only as a separate documented pass. Do not silently mix manual visual links into extraction-backed editorial sections.
+- If a section needs a different visual presentation, update the methodology explicitly first; do not introduce a one-off format inside a single section.
+
 ## Semantic Extraction Rules
 
 Do not run naive full-document summarization as a substitute for semantic extraction.

@@ -31,6 +31,6 @@ Epic checklist:
 - [x] Approve schema and migration approach.
 - [x] Create dev Postgres DB/schema in `Sv-a3d`.
 - [x] Import current extraction snapshot into Postgres.
-- [ ] Enable reviewer queue workflow.
+- [x] Enable reviewer queue workflow.
 - [ ] Validate pilot review on installation process statements.
 - [ ] Export reviewed decisions back to repository snapshots.

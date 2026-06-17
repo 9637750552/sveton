@@ -24,10 +24,10 @@ Added a plain-language strategy document for colleagues:
 
 - `01_docs/strategy/KNOWLEDGE_BASE_VALUE_FOR_SOUTH_BRANCH.md`
 
-The document explains:
+The final version explains:
 
-- what kind of knowledge base Sveton is building;
-- why it matters specifically for the south branch;
-- how it will be used in day-to-day work;
-- how it reduces training and support costs;
-- what long-term business value it creates.
+- why ordinary Word documents do not work as an operational knowledge base;
+- what a digitized knowledge base means in this project;
+- how documents become atomic semantic statements;
+- why identifiers, themes, clusters, source links, and duplicate control matter;
+- how search, a bot, CRM UI, or an assistant can use the structured statements to answer practical questions.

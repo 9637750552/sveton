@@ -29,6 +29,51 @@
 - самостоятельный чек-лист для монтажника;
 - автоматическую рекомендацию ассистента без статуса review.
 
+## Результат pre-expert safety audit
+
+Дата: 2026-06-17
+
+Статус audit: выполнен методологический pre-expert pass. Это не является инженерным утверждением технических инструкций.
+
+Итог:
+
+- `approved_for_instruction`: `0` утверждений;
+- `approved_for_checklist`: `0` утверждений;
+- `approved_for_training`: допускается только как source-backed черновой учебный материал с видимой пометкой `safety-review`;
+- `blocked_for_instruction`: все `77` safety-critical утверждений до экспертного technical review.
+
+Разрешенное использование до expert review:
+
+- структура вопросов к инженеру;
+- source-backed учебный черновик для внутреннего обсуждения;
+- карта технических рисков и мест, где нужны ТЗ, документация производителя или visual review.
+
+Запрещенное использование до expert review:
+
+- пошаговая инструкция монтажнику;
+- клиентский или партнерский чек-лист;
+- автоматические рекомендации ассистента;
+- универсализация числовых параметров, схем и сечений из примера без подтверждения инженером.
+
+### Pre-expert решения по блокам
+
+| Review block | Pre-expert статус | Главные блокеры перед публикацией |
+|:---|:---|:---|
+| `SR011` | `blocked_for_instruction` | Нужны роли, предварительные условия, порядок проверок и право на имитацию отключения сети. |
+| `SR012` | `blocked_for_instruction` | Нужна инженерная проверка DC-полярности, схем АКБ, сечений, длин кабелей и применимости комплектации. |
+| `SR013` | `blocked_for_instruction` | Нужна проверка байпаса, AC input/output, реверсивной линии, отступов, кабеля и запрета замыкания входа/выхода. |
+| `SR014` | `blocked_for_instruction` | Нужна проверка работ в щите, УЗО, нулей, переноса фаз и границы между примером и универсальной инструкцией. |
+| `SR015` | `blocked_for_instruction` | Нужна проверка последовательности пуска, подачи питания, измерений, имитации аварии и формулировки `мгновенно`. |
+| `SR016` | `blocked_for_instruction` | Нужна сверка параметров инвертора, типа АКБ, зарядного тока и примеров с документацией производителя. |
+
+### Редакционные решения audit
+
+- Не менять canonical statements без новой extraction/review-процедуры.
+- Не снимать `safety-review` с пунктов в `04_installation_process.md`.
+- Не превращать раздел в чек-лист монтажника до expert review.
+- Оставить визуальные материалы как иллюстрации к `statement_id`, а не как самостоятельные технические доказательства.
+- После expert review создать явные списки `approved_for_training`, `approved_for_checklist` и `blocked_for_instruction`.
+
 ## Итоговая карта
 
 | Review block | Тема | Утверждений | Решение до expert review |
@@ -212,10 +257,10 @@ Statement ids:
 
 Все `77` safety-critical утверждений `C009` разнесены по review-блокам `SR011-SR016`.
 
-Текущий downstream-статус раздела `04_installation_process.md`: `source-backed draft`, не `approved_for_instruction`.
+Pre-expert safety audit выполнен. Текущий downstream-статус раздела `04_installation_process.md`: `source-backed draft`, не `approved_for_instruction`.
 
 Следующие действия:
 
 1. Эксперт проходит блоки `SR011-SR016` и отмечает решения по каждому блоку.
-2. После review можно создать список утверждений `approved_for_training`, `approved_for_checklist` и `blocked_for_instruction`.
-3. После image-link pass нужно добавить проверенные связи `statement_id -> image_id` в `statement_images.jsonl`.
+2. После expert review можно создать список утверждений `approved_for_training`, `approved_for_checklist` и `blocked_for_instruction`.
+3. Только после expert review можно собирать финальный чек-лист монтажника или инструкцию на базе `04_installation_process.md`.

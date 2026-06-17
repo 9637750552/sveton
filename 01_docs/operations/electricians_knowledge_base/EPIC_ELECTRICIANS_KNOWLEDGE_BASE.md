@@ -29,7 +29,7 @@ Canonical-набор утверждений создан и расширен bat
 - `01_basic_knowledge.md`: раздел базовых знаний по ИБП, AC/DC и подключению АКБ, собран из кластера `C006 / basic_knowledge`, содержит `14` ссылок на `statement_id`, схему подключения АКБ и отдельную пометку о противоречии в исходнике по `DC`.
 - `02_ups_components.md`: раздел состава ИБП и компонентов системы, собран из кластера `C007 / ups_components`, содержит `59` ссылок на `statement_id`, визуальный слой по инвертору, группе АКБ, байпасу, балансирам, перемычкам, DC-защите, стеллажу, панелям и GSM-розетке.
 - `03_distribution_boards.md`: раздел распределительных щитов, УЗО, PE/N-шин, контактора и мастер-выключателя, собран из кластера `C008 / distribution_boards`, содержит `62` ссылки на `statement_id` и визуальный слой из `17` содержательных изображений.
-- `04_installation_process.md`: раздел этапов монтажа ИБП, собран из кластера `C009 / installation_process`, содержит `101` ссылку на `statement_id`, `77` пометок `safety-review`, детальный пакет `SR011-SR016` и `26` утвержденных изображений из `doc_015`.
+- `04_installation_process.md`: раздел этапов монтажа ИБП, собран из кластера `C009 / installation_process`, содержит `101` ссылку на `statement_id`, `77` пометок `safety-review`, детальный пакет `SR011-SR016`, pre-expert audit и `26` утвержденных изображений из `doc_015`.
 - `07_photo_report.md`: раздел фотоотчета и фотофиксации монтажа, собран из кластера `C004 / photo_report`, содержит `30` ссылок на `statement_id`, `2` визуальных примера и пометки `safety-review`.
 - `08_installer_roles.md`: раздел обязанностей монтажника на выезде, собран из кластера `C002 / installer_roles`, содержит `31` ссылку на `statement_id` и контрольный чек-лист выезда.
 - `09_installation_report.md`: раздел отчета по монтажу, собран из кластера `C003 / reporting`, содержит `51` ссылку на `statement_id`, копируемый шаблон отчета и пример заполнения.
@@ -38,11 +38,11 @@ Canonical-набор утверждений создан и расширен bat
 
 Source coverage gate показывает, что девять текущих закрытых источников покрыты: прямыми canonical-утверждениями или явными coverage overrides для split/duplicate-фрагментов.
 
-Раздел `04_installation_process.md` теперь имеет source-backed canonical extraction, собственный кластер `C009`, editorial layer, image-link pass и safety-review пакет. Перед финальным использованием нужен экспертный technical safety-review.
+Раздел `04_installation_process.md` теперь имеет source-backed canonical extraction, собственный кластер `C009`, editorial layer, image-link pass, safety-review пакет и pre-expert audit. Все safety-critical пункты остаются `blocked_for_instruction`; перед финальным использованием нужен экспертный technical safety-review.
 
 Разделы `05/06/11/13` пока не имеют собственного canonical-кластера. Их можно собирать только как редакционные композитные документы поверх готовых кластеров или после нового extraction по дополнительным источникам.
 
-Следующий шаг: провести экспертный technical safety-review по `SR011-SR016`.
+Следующий шаг: провести экспертный technical safety-review по `SR011-SR016` и после него разнести утверждения по downstream-статусам `approved_for_training`, `approved_for_checklist` и `blocked_for_instruction`.
 
 ## 1. Цель
 

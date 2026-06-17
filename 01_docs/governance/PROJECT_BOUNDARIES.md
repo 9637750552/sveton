@@ -124,6 +124,12 @@ images: 00_input/documents/electricians_knowledge_base/images/inventory.csv
 - Оставить в `Sveton` только project config и данные.
 - Зафиксировать версию engine, которой создан текущий canonical слой.
 
+Статус на 2026-06-17: initial standalone project создан рядом с `Sveton`:
+
+- `/home/sergey/semantic-analysis-engine`
+
+Текущий перенос выполнен копированием reusable engine assets. Локальные scripts в `Sveton` пока сохранены, чтобы не ломать существующий workflow до появления thin wrappers или package install.
+
 ### Phase 3: отделить `sveton-knowledge-base`
 
 - Перенести canonical knowledge, clusters, image links, safety review и editorial sections.

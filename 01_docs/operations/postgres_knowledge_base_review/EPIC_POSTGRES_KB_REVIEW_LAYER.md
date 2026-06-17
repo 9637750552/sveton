@@ -64,25 +64,25 @@ Known current scale:
 
 Core tables:
 
-- `kb_projects`;
-- `kb_corpora`;
-- `kb_import_runs`;
-- `kb_sources`;
-- `kb_chunks`;
-- `kb_images`;
-- `kb_statements`;
-- `kb_clusters`;
-- `kb_statement_clusters`;
-- `kb_statement_relations`;
-- `kb_statement_images`;
-- `kb_review_tasks`;
-- `kb_review_decisions`;
-- `kb_review_events`;
-- `kb_proposed_rewrites`.
+- `kb.projects`;
+- `kb.corpora`;
+- `kb.import_runs`;
+- `kb.sources`;
+- `kb.chunks`;
+- `kb.images`;
+- `kb.statements`;
+- `kb.clusters`;
+- `kb.statement_clusters`;
+- `kb.statement_relations`;
+- `kb.statement_images`;
+- `kb.review_tasks`;
+- `kb.review_decisions`;
+- `kb.review_events`;
+- `kb.proposed_rewrites`.
 
 Important rule:
 
-`kb_statements.statement_text` imported from extraction is immutable. Human changes go to review decisions or proposed rewrites, not into the original statement row.
+`kb.statements.statement_text` imported from extraction is immutable. Human changes go to review decisions or proposed rewrites, not into the original statement row.
 
 ## 5. Review Status Model
 
@@ -128,12 +128,12 @@ Review decision actions:
 Importer steps:
 
 1. Read `semantic_project.yml`.
-2. Create or update `kb_projects` and `kb_corpora`.
-3. Create `kb_import_runs` with source paths, schema version, engine version, git commit, and timestamp.
-4. Import source inventory into `kb_sources`.
-5. Import `source_chunks.jsonl` into `kb_chunks`.
-6. Import image inventory into `kb_images`.
-7. Import `atomic_statements.jsonl` into immutable `kb_statements`.
+2. Create or update `kb.projects` and `kb.corpora`.
+3. Create `kb.import_runs` with source paths, schema version, engine version, git commit, and timestamp.
+4. Import source inventory into `kb.sources`.
+5. Import `source_chunks.jsonl` into `kb.chunks`.
+6. Import image inventory into `kb.images`.
+7. Import `atomic_statements.jsonl` into immutable `kb.statements`.
 8. Import clusters and statement-cluster links.
 9. Import statement relations.
 10. Import statement-image links.
@@ -302,6 +302,10 @@ Tasks:
 - `Sv-baj`: Plan OmniCRM Knowledge Base viewer integration.
 - `Sv-uw4`: Export reviewed decisions back to reproducible snapshots.
 - `Sv-mys`: Run pilot review on installation process statements.
+
+Import contract:
+
+- [IMPORT_CONTRACT.md](IMPORT_CONTRACT.md)
 
 ## 12. Recommended Development Order
 

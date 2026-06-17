@@ -13,6 +13,7 @@ Specify how OmniCRM universal viewer opens Knowledge Base queues and submits rev
 Checklist:
 - [ ] Inspect OmniCRM universal viewer contract.
 - [ ] Decide whether OmniCRM reads Postgres directly or through API.
+- [ ] Confirm OmniCRM owns only the reviewer UI, not canonical storage or extraction pipeline.
 - [ ] Define `База знаний` navigation entry.
 - [ ] Map KB queue columns to viewer list fields.
 - [ ] Map statement detail to viewer detail panel.

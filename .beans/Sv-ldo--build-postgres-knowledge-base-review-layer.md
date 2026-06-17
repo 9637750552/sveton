@@ -29,6 +29,7 @@ Epic checklist:
 - [x] Create detailed implementation plan.
 - [x] Create child Beans tasks.
 - [ ] Approve schema and migration approach.
+- [ ] Create dev Postgres DB/schema in `Sv-a3d`.
 - [ ] Import current extraction snapshot into Postgres.
 - [ ] Enable reviewer queue workflow.
 - [ ] Validate pilot review on installation process statements.

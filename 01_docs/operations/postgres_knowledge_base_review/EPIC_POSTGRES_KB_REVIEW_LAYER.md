@@ -151,7 +151,31 @@ Importer must be idempotent by natural keys:
 - `cluster_id`;
 - `import_run_id`.
 
-## 7. Read Models / API Contract
+## 7. When We Create Postgres DB/Schema
+
+The real dev Postgres DB/schema is created in `Sv-a3d`, before the import contract and importer tasks.
+
+`Sv-a3d` has two gates:
+
+1. Design gate: choose DB ownership, database/schema names, namespace, migration location, and immutable/audit constraints.
+2. Infrastructure gate: create the dev DB/schema, apply the first empty/schema migration, and verify connectivity.
+
+No import work starts before the infrastructure gate is complete.
+
+Concrete order inside `Sv-a3d`:
+
+1. Read the server/DB access source of truth.
+2. Decide whether KB uses a separate database or a separate schema in an existing Postgres instance.
+3. Decide names for DB/schema/user/search path without committing secrets.
+4. Write migration `001`.
+5. Create the dev DB/schema.
+6. Apply migration `001`.
+7. Verify connection and table visibility.
+8. Record DB/schema name and migration status in docs/Beans.
+
+After this, `Sv-yzh` maps artifacts to the created schema, and `Sv-7sd` imports the current `387` statements.
+
+## 8. Read Models / API Contract
 
 Minimum UI views:
 
@@ -197,9 +221,11 @@ Statement detail must expose:
 - decision history;
 - proposed rewrite if any.
 
-## 8. OmniCRM Viewer Integration
+## 9. OmniCRM Viewer Integration
 
 OmniCRM should not read repository files directly.
+
+Step 6 in the development order hands the review surface to OmniCRM, not the whole extraction result or source-of-truth storage.
 
 Target integration:
 
@@ -209,6 +235,21 @@ Target integration:
 - canonical extraction rows remain immutable;
 - every decision is auditable.
 
+OmniCRM owns:
+
+- navigation entry;
+- list/detail viewer;
+- reviewer actions;
+- UI state and permissions.
+
+OmniCRM does not own:
+
+- raw source documents;
+- extraction runner;
+- canonical file snapshots;
+- immutable extraction rows;
+- export-back workflow.
+
 First UI pilot:
 
 - corpus: `electricians_knowledge_base`;
@@ -216,7 +257,7 @@ First UI pilot:
 - risk: `safety_critical`;
 - known block: 77 statements currently blocked for instruction.
 
-## 9. Export Back To Snapshots
+## 10. Export Back To Snapshots
 
 Postgres decisions must be exportable back to file artifacts:
 
@@ -237,7 +278,7 @@ Export snapshots must include:
 - changed statuses;
 - unresolved items.
 
-## 10. Beans Work Breakdown
+## 11. Beans Work Breakdown
 
 Epic:
 
@@ -254,18 +295,18 @@ Tasks:
 - `Sv-uw4`: Export reviewed decisions back to reproducible snapshots.
 - `Sv-mys`: Run pilot review on installation process statements.
 
-## 11. Recommended Development Order
+## 12. Recommended Development Order
 
-1. `Sv-a3d`: schema first.
-2. `Sv-yzh`: exact artifact mapping.
-3. `Sv-7sd`: importer and dry-run summary.
-4. `Sv-dhj`: review queues.
-5. `Sv-c7a`: read models/API.
-6. `Sv-baj`: OmniCRM integration plan.
-7. `Sv-uw4`: export snapshots.
+1. `Sv-a3d`: design schema, create dev DB/schema, apply migration `001`, verify connectivity.
+2. `Sv-yzh`: exact artifact mapping against the created schema.
+3. `Sv-7sd`: importer and dry-run summary, then import current `387` statements.
+4. `Sv-dhj`: review queues and status model.
+5. `Sv-c7a`: read models/API over Postgres.
+6. `Sv-baj`: OmniCRM integration plan for the `База знаний` reviewer UI.
+7. `Sv-uw4`: export snapshots from Postgres decisions back to repository files.
 8. `Sv-mys`: pilot review on installation process.
 
-## 12. Definition Of Done
+## 13. Definition Of Done
 
 The epic is done when:
 

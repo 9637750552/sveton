@@ -10,11 +10,16 @@ Primary active workstreams:
 - semantic extraction engine for atomic statements;
 - future business / sales / commercial knowledge base from leadership interviews.
 
+These workstreams follow the project boundaries defined in
+`01_docs/governance/PROJECT_BOUNDARIES.md`: `Sveton`,
+`Semantic Analysis Engine`, and `Sveton Knowledge Base`.
+
 ## Source Of Truth
 
 For project rules and process details, use these files first:
 
 - `01_docs/governance/GUIDE.md`
+- `01_docs/governance/PROJECT_BOUNDARIES.md`
 - `01_docs/operations/electricians_knowledge_base/EPIC_ELECTRICIANS_KNOWLEDGE_BASE.md`
 - `01_docs/operations/electricians_knowledge_base/README.md`
 - `01_docs/operations/semantic_analysis_engine/EPIC_SEMANTIC_ANALYSIS_ENGINE.md`
@@ -41,6 +46,35 @@ Required format:
 Exception:
 
 - If the user explicitly asks to update this rule itself, the rule text may be edited immediately.
+
+## Beans Workflow
+
+Before starting engineering work in this repository, run:
+
+```bash
+beans prime
+```
+
+Use its output as part of the working instructions. In this project, Beans is the main local task tracker.
+
+Rules:
+
+- Create a bean for new engineering work if there is no suitable existing bean already.
+- For short consultations, quick answers, and analysis without file changes, a bean is optional.
+- For a small local fix, reuse an existing bean when it matches; otherwise create a short `bug` bean if the fix should stay in project history.
+- Keep the checklist in the bean body current while working: convert `- [ ]` to `- [x]` as work is completed.
+- Mark a bean as `completed` only when its checklist is genuinely finished.
+- Include `.beans/` changes together with code and documentation changes in the same commit when the task used Beans.
+
+Recommended types:
+
+- `milestone`: large checkpoint.
+- `epic`: group of related work.
+- `feature`: user-facing or workflow capability.
+- `task`: concrete technical task.
+- `bug`: defect fix.
+
+Project Beans prefix: `Sv-`.
 
 ## Knowledge-Base Build Rules
 

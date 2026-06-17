@@ -1,0 +1,9 @@
+project:
+  name: Sveton
+
+beans:
+  path: .beans
+  prefix: Sv-
+  id_length: 3
+  default_status: todo
+  default_type: task

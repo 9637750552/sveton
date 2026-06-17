@@ -1,0 +1,26 @@
+{
+  "chunk_id": "doc_013_chunk_0002",
+  "source_document_id": "doc_013",
+  "source_file": "ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx",
+  "topic": "Состав ИБП",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания",
+    "Состав ИБП:"
+  ],
+  "text": "**Состав ИБП:**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "**ЭЛК-Базовые знания**",
+  "next_context": "**Основные элементы, входящие в состав источника бесперебойного питания (ИБП)**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "ups_components",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

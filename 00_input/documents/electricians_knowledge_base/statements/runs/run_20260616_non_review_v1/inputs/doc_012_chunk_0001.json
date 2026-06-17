@@ -1,0 +1,47 @@
+{
+  "chunk_id": "doc_012_chunk_0001",
+  "source_document_id": "doc_012",
+  "source_file": "ЭЛК_2_1 техн.карты изделий..docx",
+  "topic": "Технические карты изделий",
+  "roles": [
+    "монтажник",
+    "электрик",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Изготовление кабеля «Инвертор-щит»"
+  ],
+  "text": "**Изготовление кабеля «Инвертор-щит»**\n\n<table>\n<colgroup>\n<col style=\"width: 5%\" />\n<col style=\"width: 23%\" />\n<col style=\"width: 44%\" />\n<col style=\"width: 26%\" />\n</colgroup>\n<thead>\n<tr>\n<th style=\"text-align: center;\">№П\\П</th>\n<th style=\"text-align: center;\"><blockquote>\n<p>Этапы обработки</p>\n</blockquote></th>\n<th style=\"text-align: center;\">Графическое изображение</th>\n<th style=\"text-align: center;\">Инструменты</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: center;\">1.</td>\n<td>Отрезать кусок кабеля 5Х4, длинной 2 метра:</td>\n<td style=\"text-align: center;\">[IMAGE:img_0004|media/image1.png|exclude_candidate|Small icon or fragment]</td>\n<td style=\"text-align: center;\"><p>[IMAGE:img_0005|media/image2.jpeg|candidate_for_linking|Бокорез]</p>\n<p>Бокорез</p></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">2.</td>\n<td><p>Зачистить концы кабеля:</p>\n<blockquote>\n<p>-с одной стороны 100мм.</p>\n<p>-с другой стороны 200мм.</p>\n</blockquote></td>\n<td style=\"text-align: center;\">[IMAGE:img_0006|media/image3.png|candidate_for_linking|Нож для разделки кабеля][IMAGE:img_0007|media/image4.png|candidate_for_linking|Нож для разделки кабеля]</td>\n<td style=\"text-align: center;\"><p>[IMAGE:img_0008|media/image5.png|candidate_for_linking|Нож для разделки кабеля]</p>\n<p>Нож для разделки кабеля</p></td>\n</tr>\n<tr>\n<td colspan=\"4\" style=\"text-align: center;\"><p>2.1.Чтобы разделать конец кабеля:</p>\n<blockquote>\n<p>1)Нужно надеть нож на кабель согласно размеру отреза указанному в п.2., провернуть несколько оборотов вокруг кабеля, чтобы прорезать внешнюю изоляцию.</p>\n</blockquote>\n<p>2)Затем, не снимая нож с кабеля, потянуть его в сторону края кабеля, прорезая тем самым изоляцию вдоль кабеля.(Важно!\n\nПеред разделкой необходимо отрегулировать вылет лезвия, чтобы не повредить изоляцию жил.)</p>\n<p>1)[IMAGE:img_0009|media/image6.png|candidate_for_linking|Зачистить концы жил:] 2) [IMAGE:img_0010|media/image7.png|candidate_for_linking|Зачистить концы жил:]</p></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">3.</td>\n<td style=\"text-align: left;\"><blockquote>\n<p>Зачистить концы жил:</p>\n</blockquote></td>\n<td style=\"text-align: center;\">[IMAGE:img_0011|media/image8.png|candidate_for_linking|Стрипер][IMAGE:img_0012|media/image9.png|candidate_for_linking|Стрипер]</td>\n<td style=\"text-align: center;\"><p>[IMAGE:img_0013|media/image10.png|candidate_for_linking|Стрипер]</p>\n<p>Стрипер</p></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">4.</td>\n<td>Надеть и <strong>опресовать</strong> наконечники сечением <strong>4мм</strong> на все зачищенные концы жил кабеля с обоих концов:.</td>\n<td style=\"text-align: center;\">[IMAGE:img_0014|media/image11.jpeg|candidate_for_linking|Пресс-клещи][IMAGE:img_0015|media/image12.png|candidate_for_linking|Пресс-клещи][IMAGE:img_0016|media/image13.png|candidate_for_linking|Пресс-клещи]</td>\n<td style=\"text-align: center;\"><p>[IMAGE:img_0017|media/image14.jpeg|candidate_for_linking|Пресс-клещи]</p>\n<p>Пресс-клещи</p></td>\n</tr>\n<tr>\n<td colspan=\"4\" style=\"text-align: center;\"><p>4.1.\n\nПравильная опресовка наконечника: 1- из под «юбки» наконечника не торчит оголенная жила или её часть; 2- длинна зачищенного участка жилы соответствует длине втулки наконечника.</p>\n<p>[IMAGE:img_0018|media/image15.jpeg|candidate_for_linking|Отрезать кусок гофротрубы ф25 длинной 1,7 м .надеть на подготовленный кабель][IMAGE:img_0018|media/image15.jpeg|candidate_for_linking|Отрезать кусок гофротрубы ф25 длинной 1,7 м .надеть на подготовленный кабель]</p></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">5.</td>\n<td>Отрезать кусок гофротрубы ф25 длинной <strong>1,7 м</strong>.надеть на подготовленный кабель</td>\n<td style=\"text-align: center;\">[IMAGE:img_0019|media/image16.png|candidate_for_linking|Наклеить на край гофротрубы (там, где длина жил кабеля 100 мм .) наклейку с маркировкой кабеля.]</td>\n<td style=\"text-align: center;\">[IMAGE:img_0020|media/image17.jpeg|candidate_for_linking|Наклеить на край гофротрубы (там, где длина жил кабеля 100 мм .) наклейку с маркировкой кабеля.]</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">6.</td>\n<td>Наклеить на край гофротрубы (там, где длина жил кабеля <strong>100 мм</strong>.) наклейку с маркировкой кабеля.</td>\n<td style=\"text-align: center;\">[IMAGE:img_0021|media/image18.png|candidate_for_linking|Изготовление перемычек для АКБ]</td>\n<td style=\"text-align: center;\"></td>\n</tr>\n</tbody>\n</table>",
+  "related_image_ids": [
+    "img_0005",
+    "img_0006",
+    "img_0007",
+    "img_0008",
+    "img_0009",
+    "img_0010",
+    "img_0011",
+    "img_0012",
+    "img_0013",
+    "img_0014",
+    "img_0015",
+    "img_0016",
+    "img_0017",
+    "img_0018",
+    "img_0019",
+    "img_0020",
+    "img_0021"
+  ],
+  "excluded_image_ids": [
+    "img_0004"
+  ],
+  "previous_context": "",
+  "next_context": "**Изготовление перемычек для АКБ** Виды используемых перемычек: - перемычка АКБ 0,1 м. ф25 черная. - перемычка АКБ 0,1 м ф35 красная. - перемычка АКБ 0,3 м. ф25 черная. - перемычка АКБ 0,7 м. ф25 черная. - перемычка АКБ 0,7 м. ф25 красная. - перемычка АКБ 1,4 м. ф35 красная Н/Н. - перемычка АКБ 1,4 м. ф35 черная Н/Ш. и другие … [IMAGE:img_0022|medi",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "ups_components",
+  "suggested_roles": [
+    "electrician",
+    "hq_engineer",
+    "installer"
+  ]
+}

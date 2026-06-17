@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_005_chunk_0029",
+  "source_document_id": "doc_005",
+  "source_file": "Отчет по монтажу р1.docx",
+  "topic": "Отчетность по монтажу",
+  "roles": [
+    "монтажник",
+    "менеджер",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Шаблон отчета по монтажу:",
+    "Пример: Установлена Бесперебойная система контроль 5/400",
+    "Температура в месте установки 24C."
+  ],
+  "text": "*Температура в месте установки 24C.*",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "*Напряжение внешней сети 234В.*",
+  "next_context": "*4. В группе резерва установлены автоматы:*",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "reporting",
+  "suggested_roles": [
+    "hq_engineer",
+    "installer",
+    "manager"
+  ]
+}

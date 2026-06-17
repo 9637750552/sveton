@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/atomic_statement.schema.json",
+  "title": "AtomicStatement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "statement_id",
+    "statement",
+    "statement_type",
+    "roles",
+    "topic",
+    "source_document_id",
+    "source_file",
+    "source_chunk_id",
+    "section_path",
+    "source_quote",
+    "source_quote_is_exact",
+    "related_image_ids",
+    "visual_review_required",
+    "risk_level",
+    "confidence",
+    "review_status",
+    "scope",
+    "condition",
+    "action",
+    "object",
+    "normalized_terms",
+    "extraction_notes"
+  ],
+  "properties": {
+    "statement_id": {
+      "type": "string",
+      "pattern": "^(doc_[0-9]{3}_chunk_[0-9]{4}_stmt_[0-9]{3}|stmt_[0-9]{6})$"
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 8
+    },
+    "statement_type": {
+      "type": "string",
+      "enum": [
+        "definition",
+        "requirement",
+        "instruction_step",
+        "checklist_item",
+        "recommendation",
+        "prohibition",
+        "warning",
+        "process_step",
+        "qualification_criterion",
+        "interview_signal",
+        "reporting_requirement"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "installer",
+          "electrician",
+          "manager",
+          "hq_engineer",
+          "project_lead",
+          "leader",
+          "customer"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "topic": {
+      "type": "string",
+      "enum": [
+        "basic_knowledge",
+        "ups_components",
+        "distribution_boards",
+        "installation_process",
+        "work_on_site",
+        "service_visit",
+        "photo_report",
+        "installer_roles",
+        "training_levels",
+        "hiring_and_interview",
+        "installation_request_check",
+        "quality_control",
+        "reporting",
+        "safety",
+        "unknown"
+      ]
+    },
+    "source_document_id": {
+      "type": "string",
+      "pattern": "^doc_[0-9]{3}$"
+    },
+    "source_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_chunk_id": {
+      "type": "string",
+      "pattern": "^doc_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "section_path": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_quote": {
+      "type": "string",
+      "minLength": 4
+    },
+    "source_quote_is_exact": {
+      "type": "boolean",
+      "const": true
+    },
+    "related_image_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^img_[0-9]{4}$"
+      },
+      "uniqueItems": true
+    },
+    "visual_review_required": {
+      "type": "boolean"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["ordinary", "important", "safety_critical"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["extracted", "review_required", "rejected"]
+    },
+    "scope": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "object": {
+      "type": "string"
+    },
+    "normalized_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "extraction_notes": {
+      "type": "string"
+    }
+  }
+}

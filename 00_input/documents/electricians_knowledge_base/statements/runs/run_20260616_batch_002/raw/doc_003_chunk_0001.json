@@ -1,0 +1,1002 @@
+{
+  "source_chunk_id": "doc_003_chunk_0001",
+  "coverage_summary": {
+    "source_items_detected": 33,
+    "source_items_extracted": 33,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_001",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Краткое интервью:.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "1.  Краткое интервью:",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Краткое интервью:",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_002",
+      "statement": "В кратком интервью нужно выяснить, есть ли у монтажника вопросы или затруднения по работе.",
+      "statement_type": "interview_signal",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- какие есть вопросы по работе (есть ли затруднения)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "какие есть вопросы по работе (есть ли затруднения)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_003",
+      "statement": "В кратком интервью нужно выяснить, какие знания монтажник хотел бы восполнить.",
+      "statement_type": "interview_signal",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- какие знания хотелось бы восполнить",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "какие знания хотелось бы восполнить",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_004",
+      "statement": "В кратком интервью нужно выяснить, какие функции монтажник выполняет на выезде при монтаже.",
+      "statement_type": "interview_signal",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- какие функции исполняет на выезде при монтаже.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "какие функции исполняет на выезде при монтаже.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_005",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Задание для переборки щита:.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "2\\. Задание для переборки щита:",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Задание для переборки щита:",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_006",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: простая переборка ( щит котельной).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- простая переборка ( щит котельной).",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "простая переборка ( щит котельной).",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_007",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: использование вводного узо на резервную группу (щит гаража).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- использование вводного узо на резервную группу (щит гаража)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "использование вводного узо на резервную группу (щит гаража)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_008",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: установка узо в щит байпаса (выделение нулей).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- установка узо в щит байпаса (выделение нулей).",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "установка узо в щит байпаса (выделение нулей).",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_009",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: подключение мастер выключателя (щит гаража).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- подключение мастер выключателя (щит гаража)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "подключение мастер выключателя (щит гаража)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_010",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: подключение в резерв одной фазы в другом щите (щит дома/котельной/гаража).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- подключение в резерв одной фазы в другом щите (щит дома/котельной/гаража).",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "подключение в резерв одной фазы в другом щите (щит дома/котельной/гаража).",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_011",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Работа с нулями в щите дома.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- Работа с нулями в щите дома",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Работа с нулями в щите дома",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_012",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: работа с контактором.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "\\- работа с контактором.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "работа с контактором.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_013",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Комментарий:.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*Комментарий:*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Комментарий:",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_014",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Обозначение группы резерва происходит по месту (клеятся стикеры на автоматы) как правило, они одни и те же т.к. вариантов особо не много, щиты «не большие».",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*Обозначение группы резерва происходит по месту (клеятся стикеры на автоматы) как правило, они одни и те же т.к. вариантов особо не много, щиты «не большие».*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Обозначение группы резерва происходит по месту (клеятся стикеры на автоматы) как правило, они одни и те же т.к. варианто",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_015",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: В процессе работы испытуемый может задавать вопросы, если есть явные затруднения.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*В процессе работы испытуемый может задавать вопросы, если есть явные затруднения.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "В процессе работы испытуемый может задавать вопросы, если есть явные затруднения.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_016",
+      "statement": "Ответы на вопросы обучаемого должны быть исчерпывающими, теоретическими и без прямых указаний к действию.",
+      "statement_type": "prohibition",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*Ответы на вопросы должны быть исчерпывающими и содержать теоретическую информацию - основные аспекты и принципы действия, но не содержать прямого указания к действию: «бери это.., подключай тут.., и т.д.»*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Ответы на вопросы должны быть исчерпывающими и содержать теоретическую информацию - основные аспекты и принципы действия",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_017",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: В процессе работы необходимо наблюдать за действиями для оценки способностей.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*В процессе работы необходимо наблюдать за действиями для оценки способностей.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "В процессе работы необходимо наблюдать за действиями для оценки способностей.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_018",
+      "statement": "При работе обучаемого в щите не нужно указывать на ошибки до того, как он сам их обнаружит; можно задавать наводящие вопросы.",
+      "statement_type": "prohibition",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*работа в щите- не указывать на ошибки до того момента пока обучаемый ее сам не обнаружит. Можно задавать наводящие вопросы.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "работа в щите- не указывать на ошибки до того момента пока обучаемый ее сам не обнаружит. Можно задавать наводящие вопро",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_019",
+      "statement": "При обучении нужно оценивать использование инструмента согласно его назначению.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "*работа с инструментом – использование инструмента согласно его назначению.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "работа с инструментом – использование инструмента согласно его назначению.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_020",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Подключение инвертора и акб.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "3.  Подключение инвертора и акб",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Подключение инвертора и акб",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_021",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Сборка группы, сложные варианты (письменно????).",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "4.  Сборка группы, сложные варианты (письменно????)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Сборка группы, сложные варианты (письменно????)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_022",
+      "statement": "При обучении нужно оценивать использование инструмента согласно его назначению.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td style=\"text-align: left;\">Владение инструментом</td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Владение инструментом",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_023",
+      "statement": "При обучении нужно оценивать использование инструмента согласно его назначению.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td colspan=\"2\"><p><em>Знание инструмента</em></p>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Знание инструмента",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_024",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Бережливость.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<p><em>Бережливость</em></p>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Бережливость",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_025",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Уверенность.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<p><em>Уверенность.</em></p></td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Уверенность.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_026",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Безопасность при работе в щите.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td style=\"text-align: left;\">Безопасность при работе в щите</td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Безопасность при работе в щите",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_027",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Осторожность.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td colspan=\"2\"><p><em>Осторожность</em></p>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Осторожность",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_028",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Отключения перед началом работы.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<p><em>Отключения перед началом работы.</em></p></td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Отключения перед началом работы.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_029",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Знания по профилю.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td style=\"text-align: left;\">Знания по профилю</td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Знания по профилю",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_030",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Удовлетворительные.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td colspan=\"2\"><p><em>Удовлетворительные</em></p>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Удовлетворительные",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_031",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Неудовлетворительные.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<p><em>Неудовлетворительные</em></p></td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Неудовлетворительные",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_032",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Работа над ошибками.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td style=\"text-align: left;\">Работа над ошибками</td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Работа над ошибками",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_003_chunk_0001_stmt_033",
+      "statement": "В офисном обучении монтажника нужно отработать или оценить: Совершает ошибки и находит/не находит , исправляет/не исправляет.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "training_levels",
+      "source_document_id": "doc_003",
+      "source_file": "Обучение в офисе.docx",
+      "source_chunk_id": "doc_003_chunk_0001",
+      "section_path": [
+        "Обучение в офисе"
+      ],
+      "source_quote": "<td colspan=\"2\"><em>Совершает ошибки и находит/не находит , исправляет/не исправляет</em></td>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Офисное обучение монтажников",
+      "condition": "",
+      "action": "",
+      "object": "Совершает ошибки и находит/не находит , исправляет/не исправляет",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

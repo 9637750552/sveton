@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_013_chunk_0023",
+  "source_document_id": "doc_013",
+  "source_file": "ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx",
+  "topic": "Состав ИБП",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания",
+    "Состав ИБП:",
+    "Защитные панели"
+  ],
+  "text": "**Защитные панели**\n\n[IMAGE:img_0044|media/image14.png|candidate_for_linking|GSM-розетка]",
+  "related_image_ids": [
+    "img_0044"
+  ],
+  "excluded_image_ids": [],
+  "previous_context": "**Стеллаж** Стойка для установки АКБ. Отличается от обычных стеллажей тем, что имеет усиленную конструкцию и выдерживает большую нагрузку. [IMAGE:img_0043|media/image13.png|candidate_for_linking|Защитные панели]",
+  "next_context": "**GSM-розетка** [IMAGE:img_0045|media/image15.png|candidate_for_linking|GSM-розетка работает при помощи SIM-карты.] GSM-розетка работает при помощи SIM-карты. Она получает команды по SMS, а также отправляет SMS о необходимых событиях. Но для розетки Телеметрика есть приложение, которое упрощает работу с SMS и Клиент приобретает СИМ-карту самостояте",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "ups_components",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

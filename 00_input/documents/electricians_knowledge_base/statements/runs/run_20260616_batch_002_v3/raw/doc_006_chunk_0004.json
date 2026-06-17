@@ -1,0 +1,81 @@
+{
+  "source_chunk_id": "doc_006_chunk_0004",
+  "coverage_summary": {
+    "source_items_detected": 3,
+    "source_items_extracted": 2,
+    "source_items_skipped": 1,
+    "coverage_notes": "Все извлеченные пункты имеют точные цитаты; заголовки и неразобранные табличные блоки вынесены в skipped_source_items."
+  },
+  "skipped_source_items": [
+    {
+      "source_item_quote": "Фото аккумуляторной сборки после подключения:",
+      "source_item_type": "heading",
+      "reason": "heading",
+      "notes": "Заголовок раздела фотофиксации, не самостоятельное утверждение."
+    }
+  ],
+  "statements": [
+    {
+      "statement_id": "doc_006_chunk_0004_stmt_001",
+      "statement": "Фотоотчет должен содержать фото общего вида всех АКБ.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "hq_engineer",
+        "installer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0004",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Фото аккумуляторной сборки после подключения:"
+      ],
+      "source_quote": "\\[ \\] Общий вид всех АКБ.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Контрольный лист",
+      "condition": "",
+      "action": "",
+      "object": "",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 v3 with heading/table quality controls."
+    },
+    {
+      "statement_id": "doc_006_chunk_0004_stmt_002",
+      "statement": "Фотоотчет должен содержать отдельное фото АКБ на каждой полке стеллажа.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "hq_engineer",
+        "installer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0004",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Фото аккумуляторной сборки после подключения:"
+      ],
+      "source_quote": "\\[ \\] Отдельно АКБ на каждой полке стеллажа.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Контрольный лист",
+      "condition": "",
+      "action": "",
+      "object": "",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 v3 with heading/table quality controls."
+    }
+  ]
+}

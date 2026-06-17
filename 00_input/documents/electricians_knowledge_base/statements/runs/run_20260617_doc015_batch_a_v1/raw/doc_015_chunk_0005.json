@@ -1,0 +1,91 @@
+{
+  "source_chunk_id": "doc_015_chunk_0005",
+  "coverage_summary": {
+    "source_items_detected": 4,
+    "source_items_extracted": 3,
+    "source_items_skipped": 1,
+    "coverage_notes": "Извлечены все 3 самостоятельных пункта сборки ИБП; заголовок пропущен."
+  },
+  "skipped_source_items": [
+    {
+      "source_item_quote": "**2) Сборка ИБП:**",
+      "source_item_type": "heading",
+      "reason": "heading",
+      "notes": "Заголовок раздела не является самостоятельным знанием."
+    }
+  ],
+  "statements": [
+    {
+      "statement_id": "doc_015_chunk_0005_stmt_001",
+      "statement": "На этапе сборки ИБП монтажник должен собрать систему, включая стеллаж, аккумуляторы, защитные предохранители, балансиры и другое необходимое оборудование.",
+      "statement_type": "process_step",
+      "roles": ["electrician", "installer"],
+      "topic": "installation_process",
+      "source_document_id": "doc_015",
+      "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+      "source_chunk_id": "doc_015_chunk_0005",
+      "section_path": ["ЭЛК-Базовые знания", "Этапы монтажа", "2) Сборка ИБП:"],
+      "source_quote": "\\- Сборка системы: сборка стеллажа, подключение аккумуляторов, защитных предохранителей, балансиров и другого оборудования, необходимого для работы ИБП.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Сборка ИБП",
+      "condition": "",
+      "action": "Собрать систему ИБП",
+      "object": "Стеллаж, аккумуляторы, защитные предохранители, балансиры и другое оборудование ИБП",
+      "normalized_terms": ["ИБП", "АКБ", "защитные предохранители", "балансиры"],
+      "extraction_notes": "Пункт затрагивает подключение аккумуляторов и защитных элементов, поэтому помечен как safety-critical."
+    },
+    {
+      "statement_id": "doc_015_chunk_0005_stmt_002",
+      "statement": "На этапе сборки ИБП монтажник должен установить инвертор, байпасный щит и дополнительную резервную розетку возле ИБП.",
+      "statement_type": "process_step",
+      "roles": ["electrician", "installer"],
+      "topic": "installation_process",
+      "source_document_id": "doc_015",
+      "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+      "source_chunk_id": "doc_015_chunk_0005",
+      "section_path": ["ЭЛК-Базовые знания", "Этапы монтажа", "2) Сборка ИБП:"],
+      "source_quote": "\\- Установка инвертора, байпасного щита, дополнительной резервной розетки возле ИБП.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Сборка ИБП",
+      "condition": "",
+      "action": "Установить инвертор, байпасный щит и дополнительную резервную розетку",
+      "object": "Инвертор, байпасный щит и дополнительная резервная розетка",
+      "normalized_terms": ["инвертор", "байпасный щит", "резервная розетка", "ИБП"],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_015_chunk_0005_stmt_003",
+      "statement": "На этапе сборки ИБП монтажник должен смонтировать кабель-трассу от ИБП к щиту заказчика.",
+      "statement_type": "process_step",
+      "roles": ["electrician", "installer"],
+      "topic": "installation_process",
+      "source_document_id": "doc_015",
+      "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+      "source_chunk_id": "doc_015_chunk_0005",
+      "section_path": ["ЭЛК-Базовые знания", "Этапы монтажа", "2) Сборка ИБП:"],
+      "source_quote": "\\- Монтаж кабель-трассы от ИБП к щиту заказчика.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Сборка ИБП",
+      "condition": "",
+      "action": "Смонтировать кабель-трассу",
+      "object": "Кабель-трасса от ИБП к щиту заказчика",
+      "normalized_terms": ["ИБП", "кабель-трасса", "щит заказчика"],
+      "extraction_notes": ""
+    }
+  ]
+}

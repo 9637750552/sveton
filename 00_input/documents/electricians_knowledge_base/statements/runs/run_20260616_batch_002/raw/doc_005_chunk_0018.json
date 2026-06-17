@@ -1,0 +1,74 @@
+{
+  "source_chunk_id": "doc_005_chunk_0018",
+  "coverage_summary": {
+    "source_items_detected": 2,
+    "source_items_extracted": 2,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_005_chunk_0018_stmt_001",
+      "statement": "В отчете по монтажу нужно указать или учитывать: Напряжение в сети 180В.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "reporting",
+      "source_document_id": "doc_005",
+      "source_file": "Отчет по монтажу р1.docx",
+      "source_chunk_id": "doc_005_chunk_0018",
+      "section_path": [
+        "Шаблон отчета по монтажу:",
+        "Пример: Установлена Бесперебойная система контроль 5/400",
+        "Напряжение в сети 180В."
+      ],
+      "source_quote": "**Напряжение в сети 180В.**",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Отчетность по монтажу",
+      "condition": "",
+      "action": "",
+      "object": "Напряжение в сети 180В.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_005_chunk_0018_stmt_002",
+      "statement": "В отчете по монтажу нужно указать или учитывать: 4 Аномальная температура в месте установки(меньше -8С и больше +26С).",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "reporting",
+      "source_document_id": "doc_005",
+      "source_file": "Отчет по монтажу р1.docx",
+      "source_chunk_id": "doc_005_chunk_0018",
+      "section_path": [
+        "Шаблон отчета по монтажу:",
+        "Пример: Установлена Бесперебойная система контроль 5/400",
+        "Напряжение в сети 180В."
+      ],
+      "source_quote": "6.4 Аномальная температура в месте установки(меньше -8С и больше +26С).",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Отчетность по монтажу",
+      "condition": "",
+      "action": "",
+      "object": "4 Аномальная температура в месте установки(меньше -8С и больше +26С).",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

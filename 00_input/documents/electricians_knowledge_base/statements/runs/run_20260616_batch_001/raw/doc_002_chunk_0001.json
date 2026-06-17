@@ -1,0 +1,70 @@
+{
+  "source_chunk_id": "doc_002_chunk_0001",
+  "statements": [
+    {
+      "statement_id": "doc_002_chunk_0001_stmt_001",
+      "statement": "Сотрудничество с электриками оформляется не как трудоустройство в штат, а по договору с самозанятыми или ИП.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0001",
+      "section_path": [
+        "Ищем электриков для сотрудничества"
+      ],
+      "source_quote": "Важно: **это не трудоустройство в штат**. Мы сотрудничаем **по договору** с исполнителями, которые оформлены как **самозанятые или ИП**.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Поиск электриков для сотрудничества",
+      "condition": "",
+      "action": "Оформлять сотрудничество по договору",
+      "object": "Самозанятые или ИП электрики",
+      "normalized_terms": [
+        "самозанятый",
+        "ИП",
+        "договор"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0001_stmt_002",
+      "statement": "Компания ищет электриков для монтажа систем бесперебойного питания в частных домах, коттеджах, офисах и на объектах малого бизнеса.",
+      "statement_type": "interview_signal",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0001",
+      "section_path": [
+        "Ищем электриков для сотрудничества"
+      ],
+      "source_quote": "Компания **Ромашка** приглашает электриков к сотрудничеству по монтажу систем бесперебойного питания (ИБП) в частных домах, коттеджах, офисах и на объектах малого бизнеса.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Поиск электриков для сотрудничества",
+      "condition": "",
+      "action": "Искать электриков под монтаж ИБП",
+      "object": "ИБП в частных домах, коттеджах, офисах и на объектах малого бизнеса",
+      "normalized_terms": [
+        "ИБП",
+        "монтаж"
+      ],
+      "extraction_notes": ""
+    }
+  ]
+}

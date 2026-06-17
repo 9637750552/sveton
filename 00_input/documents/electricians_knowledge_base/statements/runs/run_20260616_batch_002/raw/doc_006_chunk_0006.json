@@ -1,0 +1,198 @@
+{
+  "source_chunk_id": "doc_006_chunk_0006",
+  "coverage_summary": {
+    "source_items_detected": 6,
+    "source_items_extracted": 6,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_001",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: Инвертор и солнечный контроллер (если присутствует):.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "*Инвертор и солнечный контроллер (если присутствует):*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "Инвертор и солнечный контроллер (если присутствует):",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_002",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: Записать на видео все настройки инвертора. Если не удаётся записать видео, то сфотографировать все пункты меню настройки.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "> \\[ \\] Записать на видео <span class=\"mark\">все</span> настройки инвертора. Если не удаётся записать видео, то сфотографировать все пункты меню настройки.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "Записать на видео все настройки инвертора. Если не удаётся записать видео, то сфотографировать все пункты меню настройки",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_003",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: Показания на дисплее при работе с сетью.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "> \\[ \\] Показания на дисплее при работе с сетью.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "Показания на дисплее при работе с сетью.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_004",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: Показания на дисплее без сети.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "> \\[ \\] Показания на дисплее без сети.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "Показания на дисплее без сети.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_005",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: Показания на дисплее, максимальная нагрузка.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "> \\[ \\] Показания на дисплее, максимальная нагрузка.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "Показания на дисплее, максимальная нагрузка.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_006_chunk_0006_stmt_006",
+      "statement": "Для фотофиксации монтажа нужно выполнить требование: \\[ \\] Подключенный инвертор без нижней планки.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0006",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Инвертор и солнечный контроллер (если присутствует):"
+      ],
+      "source_quote": "> <span class=\"mark\">\\[ \\] Подключенный инвертор без нижней планки.</span>",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Фотофиксация монтажа",
+      "condition": "",
+      "action": "",
+      "object": "\\[ \\] Подключенный инвертор без нижней планки.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

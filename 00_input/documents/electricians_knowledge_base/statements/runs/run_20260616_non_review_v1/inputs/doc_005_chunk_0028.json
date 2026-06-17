@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_005_chunk_0028",
+  "source_document_id": "doc_005",
+  "source_file": "Отчет по монтажу р1.docx",
+  "topic": "Отчетность по монтажу",
+  "roles": [
+    "монтажник",
+    "менеджер",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Шаблон отчета по монтажу:",
+    "Пример: Установлена Бесперебойная система контроль 5/400",
+    "Напряжение внешней сети 234В."
+  ],
+  "text": "*Напряжение внешней сети 234В.*",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "*3. На инверторе установлен ток заряда 20А, замер тока составил составил 15А. Максимальная нагрузка составила 5,2 кВт.*",
+  "next_context": "*Температура в месте установки 24C.*",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "reporting",
+  "suggested_roles": [
+    "hq_engineer",
+    "installer",
+    "manager"
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "source_chunk_id": "doc_002_chunk_0004",
+  "statements": [
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_001",
+      "statement": "Условием сотрудничества является работа по договору.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "- сотрудничество по договору;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Условия сотрудничества с электриками",
+      "condition": "При сотрудничестве",
+      "action": "Оформлять по договору",
+      "object": "Сотрудничество",
+      "normalized_terms": [
+        "договор"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_002",
+      "statement": "Сотрудничество предусматривает свободный график.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "- свободный график;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Условия сотрудничества с электриками",
+      "condition": "При сотрудничестве",
+      "action": "Предоставлять",
+      "object": "Свободный график",
+      "normalized_terms": [
+        "свободный график"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_003",
+      "statement": "Заказы передаются по мере поступления в регионе исполнителя.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "- заказы по мере поступления в вашем регионе;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Условия сотрудничества с электриками",
+      "condition": "По мере поступления заказов",
+      "action": "Передавать заказы",
+      "object": "Заказы в регионе исполнителя",
+      "normalized_terms": [
+        "заказ",
+        "регион"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_004",
+      "statement": "В сотрудничестве используются понятные технические задания.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "- понятные технические задания;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Условия сотрудничества с электриками",
+      "condition": "При передаче работ",
+      "action": "Предоставлять",
+      "object": "Понятные технические задания",
+      "normalized_terms": [
+        "ТЗ",
+        "техническое задание"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_005",
+      "statement": "Оплата производится за выполненные объекты.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "- оплата за выполненные объекты;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Условия сотрудничества с электриками",
+      "condition": "После выполнения объекта",
+      "action": "Оплачивать",
+      "object": "Выполненные объекты",
+      "normalized_terms": [
+        "оплата",
+        "объект"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0004_stmt_006",
+      "statement": "Для отклика кандидат должен написать немного о себе и указать наличие опыта установки ИБП или генераторов, если такой опыт есть.",
+      "statement_type": "interview_signal",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0004",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:",
+        "Условия:"
+      ],
+      "source_quote": "Для отклика напишите немного о себе и укажите если есть опыт установки ИБП или генераторов.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Отклик кандидата на сотрудничество",
+      "condition": "Если кандидат откликается",
+      "action": "Написать о себе и указать опыт",
+      "object": "Опыт установки ИБП или генераторов",
+      "normalized_terms": [
+        "ИБП",
+        "генератор",
+        "кандидат"
+      ],
+      "extraction_notes": ""
+    }
+  ]
+}

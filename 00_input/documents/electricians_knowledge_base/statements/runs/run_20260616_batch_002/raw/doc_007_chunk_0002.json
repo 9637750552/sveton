@@ -1,0 +1,11 @@
+{
+  "source_chunk_id": "doc_007_chunk_0002",
+  "coverage_summary": {
+    "source_items_detected": 0,
+    "source_items_extracted": 0,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": []
+}

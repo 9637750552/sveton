@@ -1,0 +1,236 @@
+{
+  "source_chunk_id": "doc_004_chunk_0001",
+  "coverage_summary": {
+    "source_items_detected": 8,
+    "source_items_extracted": 8,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_001",
+      "statement": "Монтажник должен: Перед выездом на монтаж (сервис) получить задание от начальника МО в письменном (электронном) виде и с устными комментариями к заданию (фото, схемы, инструкции и т.п.).",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "1)  Перед выездом на монтаж (сервис) получить задание от начальника МО в письменном (электронном) виде и с устными комментариями к заданию (фото, схемы, инструкции и т.п.)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Перед выездом на монтаж (сервис) получить задание от начальника МО в письменном (электронном) виде и с устными комментар",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_002",
+      "statement": "Монтажник должен: Согласно выданным документам загрузить в автомобиль оборудование и материалы для монтажа, так же проверить расходные материалы и ЗИП (согласно списка), постоянно хранящегося в автомобиле.",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "2)  Согласно выданным документам загрузить в автомобиль оборудование и материалы для монтажа, так же проверить расходные материалы и ЗИП (согласно списка), постоянно хранящегося в автомобиле.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Согласно выданным документам загрузить в автомобиль оборудование и материалы для монтажа, так же проверить расходные мат",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_003",
+      "statement": "Монтажник должен: Осмотреть и проверить автомобиль перед началом движения по заданию ( крепление груза, состояние осветительных приборов, номерных знаков, колес и т.п. При выявлении не устранимых недостатков доложить начальнику МО.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "3)  Осмотреть и проверить автомобиль перед началом движения по заданию ( крепление груза, состояние осветительных приборов, номерных знаков, колес и т.п. При выявлении не устранимых недостатков доложить начальнику МО",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Осмотреть и проверить автомобиль перед началом движения по заданию ( крепление груза, состояние осветительных приборов, ",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_004",
+      "statement": "Монтажник должен: Набор основного инструмента и принадлежностей находящихся в автомобиле при невозможности использования по причине плохого состояния или выхода из строя сообщать начальнику МО (желательно заранее).",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "4)  Набор основного инструмента и принадлежностей находящихся в автомобиле при невозможности использования по причине плохого состояния или выхода из строя сообщать начальнику МО (желательно заранее)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Набор основного инструмента и принадлежностей находящихся в автомобиле при невозможности использования по причине плохог",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_005",
+      "statement": "Монтажник должен: По прибытии на объект (перед разгрузкой) осмотреть место монтажа (место установки оборудования, щит заказчика, прохождение трасс) на соответствие полученному заданию.",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "5)  По прибытии на объект (перед разгрузкой) осмотреть место монтажа (место установки оборудования, щит заказчика, прохождение трасс) на соответствие полученному заданию.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "По прибытии на объект (перед разгрузкой) осмотреть место монтажа (место установки оборудования, щит заказчика, прохожден",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_006",
+      "statement": "Монтажник должен: При выявлении значительных расхождений и невозможности проведения монтажа по полученному заданию информируется начальник МО (фиксируется на фото с последующим описанием по итогу выезда). Озвучить заказчику сумму и методы оплаты и получить подтверждение что он ознакомлен.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "При выявлении значительных расхождений и невозможности проведения монтажа по полученному заданию информируется начальник МО (фиксируется на фото с последующим описанием по итогу выезда). Озвучить заказчику сумму и методы оплаты и получить подтверждение что он ознакомлен.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "При выявлении значительных расхождений и невозможности проведения монтажа по полученному заданию информируется начальник",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_007",
+      "statement": "Монтажник должен: Производство монтажа (сервиса) согласно задания (уточненного при необходимости у начальника МО).",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "6)  Производство монтажа (сервиса) согласно задания (уточненного при необходимости у начальника МО)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Производство монтажа (сервиса) согласно задания (уточненного при необходимости у начальника МО)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0001_stmt_008",
+      "statement": "Монтажник должен: При невозможности проведения монтажа (сервиса) по техническим причинам не зависящим от монтажников (пример: по ошибке менеджера) делается дополнительный осмотр (замеры, фото и т.п) для проведения работ позднее с учетом выявленных недостатков, проводятся работы и установка оборудования возможные в данный момент и не превышающие период основного рабочего времени. Все остальные работы, дополнительные материалы и т.п. переносятся на другой день (согласовывает начальник МО или другие руководящие сотрудники через него).",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0001",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "7)  При невозможности проведения монтажа (сервиса) по техническим причинам не зависящим от монтажников (пример: по ошибке менеджера) делается дополнительный осмотр (замеры, фото и т.п) для проведения работ позднее с учетом выявленных недостатков, проводятся работы и установка оборудования возможные в данный момент и не превышающие период основного рабочего времени. Все остальные работы, дополнительные материалы и т.п. переносятся на другой день (согласовывает начальник МО или другие руководящие сотрудники через него)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "При невозможности проведения монтажа (сервиса) по техническим причинам не зависящим от монтажников (пример: по ошибке ме",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

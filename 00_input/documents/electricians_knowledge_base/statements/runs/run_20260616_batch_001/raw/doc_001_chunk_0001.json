@@ -1,0 +1,104 @@
+{
+  "source_chunk_id": "doc_001_chunk_0001",
+  "statements": [
+    {
+      "statement_id": "doc_001_chunk_0001_stmt_001",
+      "statement": "Во время сервисного выезда по выравниванию АКБ нужно проверять затяжку проводов в клеммных терминалах инвертора и щитах.",
+      "statement_type": "checklist_item",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "service_visit",
+      "source_document_id": "doc_001",
+      "source_file": "Действия на сервисном выезде.docx",
+      "source_chunk_id": "doc_001_chunk_0001",
+      "section_path": [
+        "Методика проведения сервисного выезда по выравниванию АКБ."
+      ],
+      "source_quote": "- Проверка затяжки проводов в клеммных терминалах инвертора, щитах.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Сервисный выезд по выравниванию АКБ",
+      "condition": "",
+      "action": "Проверить затяжку проводов",
+      "object": "Клеммные терминалы инвертора и щиты",
+      "normalized_terms": [
+        "АКБ",
+        "инвертор",
+        "щит"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_001_chunk_0001_stmt_002",
+      "statement": "Продувку инвертора нужно проводить при выключенном инверторе.",
+      "statement_type": "instruction_step",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "service_visit",
+      "source_document_id": "doc_001",
+      "source_file": "Действия на сервисном выезде.docx",
+      "source_chunk_id": "doc_001_chunk_0001",
+      "section_path": [
+        "Методика проведения сервисного выезда по выравниванию АКБ."
+      ],
+      "source_quote": "- Продувка инвертора(при выключенном инверторе).",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Сервисный выезд по выравниванию АКБ",
+      "condition": "При продувке инвертора",
+      "action": "Продувать при выключенном инверторе",
+      "object": "Инвертор",
+      "normalized_terms": [
+        "инвертор"
+      ],
+      "extraction_notes": "Safety-critical из-за условия выключенного инвертора."
+    },
+    {
+      "statement_id": "doc_001_chunk_0001_stmt_003",
+      "statement": "По итогам сервисного выезда нужно делать фотографии и видеозаписи настроек оборудования, измерений и выполненной работы.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "electrician",
+        "hq_engineer"
+      ],
+      "topic": "service_visit",
+      "source_document_id": "doc_001",
+      "source_file": "Действия на сервисном выезде.docx",
+      "source_chunk_id": "doc_001_chunk_0001",
+      "section_path": [
+        "Методика проведения сервисного выезда по выравниванию АКБ."
+      ],
+      "source_quote": "- Фотографии и видеозаписи настроек оборудования, измерений, выполненной работы.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "ordinary",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Сервисный выезд по выравниванию АКБ",
+      "condition": "",
+      "action": "Сделать фотографии и видеозаписи",
+      "object": "Настройки оборудования, измерения и выполненная работа",
+      "normalized_terms": [
+        "фотофиксация",
+        "видеозапись"
+      ],
+      "extraction_notes": ""
+    }
+  ]
+}

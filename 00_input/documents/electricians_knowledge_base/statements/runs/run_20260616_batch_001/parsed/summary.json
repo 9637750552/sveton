@@ -1,0 +1,8 @@
+{
+  "run_dir": "/home/sergey/Sveton/00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001",
+  "queue_chunks": 10,
+  "parsed_chunk_results": 10,
+  "valid_statements": 33,
+  "errors": 0,
+  "promoted": false
+}

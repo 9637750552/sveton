@@ -1,0 +1,103 @@
+{
+  "source_chunk_id": "doc_002_chunk_0002",
+  "statements": [
+    {
+      "statement_id": "doc_002_chunk_0002_stmt_001",
+      "statement": "В рамках сотрудничества электрик выполняет монтаж и подключение резервных линий к ИБП.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0002",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:"
+      ],
+      "source_quote": "- монтаж и подключение резервных линий к ИБП;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Поиск электриков для сотрудничества",
+      "condition": "В рамках сотрудничества",
+      "action": "Выполнять монтаж и подключение",
+      "object": "Резервные линии к ИБП",
+      "normalized_terms": [
+        "ИБП",
+        "резервная линия"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0002_stmt_002",
+      "statement": "В рамках сотрудничества электрик аккуратно прокладывает кабель.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0002",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:"
+      ],
+      "source_quote": "- аккуратная прокладка кабеля;",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Поиск электриков для сотрудничества",
+      "condition": "В рамках сотрудничества",
+      "action": "Аккуратно прокладывать",
+      "object": "Кабель",
+      "normalized_terms": [
+        "кабельная трасса"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_002_chunk_0002_stmt_003",
+      "statement": "После монтажа электрик настраивает систему.",
+      "statement_type": "requirement",
+      "roles": [
+        "manager",
+        "leader"
+      ],
+      "topic": "hiring_and_interview",
+      "source_document_id": "doc_002",
+      "source_file": "Ищем_электриков_для_сотрудничества.docx",
+      "source_chunk_id": "doc_002_chunk_0002",
+      "section_path": [
+        "Ищем электриков для сотрудничества",
+        "Что нужно делать:"
+      ],
+      "source_quote": "- настройка системы после монтажа.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Поиск электриков для сотрудничества",
+      "condition": "После монтажа",
+      "action": "Настроить",
+      "object": "Система",
+      "normalized_terms": [
+        "настройка системы",
+        "монтаж"
+      ],
+      "extraction_notes": ""
+    }
+  ]
+}

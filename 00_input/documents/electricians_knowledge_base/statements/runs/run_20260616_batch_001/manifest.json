@@ -1,0 +1,17 @@
+{
+  "run_id": "run_20260616_batch_001",
+  "created_at": "2026-06-16T16:21:26",
+  "mode": "prepare",
+  "chunk_count": 10,
+  "include_review": false,
+  "prompt": "00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001/atomic_extraction_prompt.md",
+  "queue": "00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001/queue.jsonl",
+  "inputs_dir": "00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001/inputs",
+  "raw_dir": "00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001/raw",
+  "parsed_dir": "00_input/documents/electricians_knowledge_base/statements/runs/run_20260616_batch_001/parsed",
+  "notes": [
+    "Put one model response per chunk into raw/<chunk_id>.json.",
+    "Each raw response must be a JSON object with source_chunk_id and statements.",
+    "Run collect mode after raw outputs are present."
+  ]
+}

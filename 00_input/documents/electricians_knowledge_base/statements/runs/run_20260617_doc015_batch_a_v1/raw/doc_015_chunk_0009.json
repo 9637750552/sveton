@@ -1,0 +1,43 @@
+{
+  "source_chunk_id": "doc_015_chunk_0009",
+  "coverage_summary": {
+    "source_items_detected": 2,
+    "source_items_extracted": 1,
+    "source_items_skipped": 1,
+    "coverage_notes": "Извлечено требование по соблюдению технических требований и инструкций производителя; заголовок пропущен."
+  },
+  "skipped_source_items": [
+    {
+      "source_item_quote": "**7)Подписание закрывающих актов.**",
+      "source_item_type": "heading",
+      "reason": "heading",
+      "notes": "Заголовок раздела не является самостоятельным знанием."
+    }
+  ],
+  "statements": [
+    {
+      "statement_id": "doc_015_chunk_0009_stmt_001",
+      "statement": "Для безопасного монтажа и работы ИБП необходимо соблюдать технические требования и инструкции производителя.",
+      "statement_type": "requirement",
+      "roles": ["electrician", "installer"],
+      "topic": "installation_process",
+      "source_document_id": "doc_015",
+      "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+      "source_chunk_id": "doc_015_chunk_0009",
+      "section_path": ["ЭЛК-Базовые знания", "Этапы монтажа", "7)Подписание закрывающих актов."],
+      "source_quote": "Важно помнить, что для безопасного монтажа и работы ИБП необходимо соблюдать технические требования и инструкции производителя.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Безопасный монтаж и работа ИБП",
+      "condition": "",
+      "action": "Соблюдать технические требования и инструкции производителя",
+      "object": "Технические требования и инструкции производителя",
+      "normalized_terms": ["ИБП", "технические требования", "инструкции производителя"],
+      "extraction_notes": ""
+    }
+  ]
+}

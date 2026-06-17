@@ -1,0 +1,25 @@
+{
+  "chunk_id": "doc_013_chunk_0001",
+  "source_document_id": "doc_013",
+  "source_file": "ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx",
+  "topic": "Состав ИБП",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания"
+  ],
+  "text": "**ЭЛК-Базовые знания**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "",
+  "next_context": "**Состав ИБП:**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "ups_components",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

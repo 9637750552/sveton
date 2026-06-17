@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_005_chunk_0018",
+  "source_document_id": "doc_005",
+  "source_file": "Отчет по монтажу р1.docx",
+  "topic": "Отчетность по монтажу",
+  "roles": [
+    "монтажник",
+    "менеджер",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Шаблон отчета по монтажу:",
+    "Пример: Установлена Бесперебойная система контроль 5/400",
+    "Напряжение в сети 180В."
+  ],
+  "text": "**Напряжение в сети 180В.**\n\n6.4 Аномальная температура в месте установки(меньше -8С и больше +26С).",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "**Пример:**",
+  "next_context": "**Пример:**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "reporting",
+  "suggested_roles": [
+    "hq_engineer",
+    "installer",
+    "manager"
+  ]
+}

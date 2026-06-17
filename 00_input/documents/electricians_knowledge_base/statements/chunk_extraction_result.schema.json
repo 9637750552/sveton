@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/chunk_extraction_result.schema.json",
+  "title": "ChunkExtractionResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_chunk_id", "coverage_summary", "skipped_source_items", "statements"],
+  "properties": {
+    "source_chunk_id": {
+      "type": "string",
+      "pattern": "^doc_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_items_detected",
+        "source_items_extracted",
+        "source_items_skipped",
+        "coverage_notes"
+      ],
+      "properties": {
+        "source_items_detected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_items_extracted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_items_skipped": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "skipped_source_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_item_quote", "source_item_type", "reason", "notes"],
+        "properties": {
+          "source_item_quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_item_type": {
+            "type": "string",
+            "enum": [
+              "heading",
+              "instruction",
+              "requirement",
+              "table_row",
+              "table_header",
+              "example",
+              "note",
+              "empty",
+              "context_only",
+              "unknown"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "duplicate",
+              "heading",
+              "not_atomic",
+              "not_actionable",
+              "table_header",
+              "context_only",
+              "image_only",
+              "no_exact_quote",
+              "unclear",
+              "out_of_scope"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "statements": {
+      "type": "array",
+      "items": {
+        "$ref": "atomic_statement.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "doc_007_chunk_0001",
+  "source_document_id": "doc_007",
+  "source_file": "Проверка_соответвие_описания_менеджера_правилам_заявки_на_монтаж.docx",
+  "topic": "Проверка заявки на монтаж",
+  "roles": [
+    "менеджер",
+    "инженер ГО",
+    "руководитель"
+  ],
+  "section_path": [
+    "Контроль исполнения технических функций менеджера по продажам"
+  ],
+  "text": "**Контроль исполнения технических функций менеджера по продажам**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "",
+  "next_context": "**Требования к действиям менеджера по продажам при оформлении заявки на монтаж**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "installation_request_check",
+  "suggested_roles": [
+    "hq_engineer",
+    "leader",
+    "manager"
+  ]
+}

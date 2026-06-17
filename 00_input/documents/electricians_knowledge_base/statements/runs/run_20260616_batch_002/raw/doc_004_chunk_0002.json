@@ -1,0 +1,236 @@
+{
+  "source_chunk_id": "doc_004_chunk_0002",
+  "coverage_summary": {
+    "source_items_detected": 8,
+    "source_items_extracted": 8,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_001",
+      "statement": "Монтажник должен: При выполнении работ сверх нормативного времени, в выходной день, с учетом так же сложности работ и количества работающих учитываются начальником МО после окончания выезда, согласно таблицы повышающих коэффициентов. Случаи, при которых возникают спорные вопросы по мотивации оплаты выезда, рассматриваются отдельно после проведения работ.",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "8)  При выполнении работ сверх нормативного времени, в выходной день, с учетом так же сложности работ и количества работающих учитываются начальником МО после окончания выезда, согласно таблицы повышающих коэффициентов. Случаи, при которых возникают спорные вопросы по мотивации оплаты выезда, рассматриваются отдельно после проведения работ.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "При выполнении работ сверх нормативного времени, в выходной день, с учетом так же сложности работ и количества работающи",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_002",
+      "statement": "Монтажник должен: По окончании работ необходимо провести уборку мусора с места монтажа (веник, пылесос).",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "9)  По окончании работ необходимо провести уборку мусора с места монтажа (веник, пылесос)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "По окончании работ необходимо провести уборку мусора с места монтажа (веник, пылесос)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_003",
+      "statement": "Монтажник должен: При сдаче монтажа (сервиса) сделать фото (см. требования по фото объектов).",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "10) При сдаче монтажа (сервиса) сделать фото (см. требования по фото объектов)",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "При сдаче монтажа (сервиса) сделать фото (см. требования по фото объектов)",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_004",
+      "statement": "Монтажник должен: Подписать у клиента закрывающие документы (накладные, акты), выдать инструкции, гарантийные талоны, схемы и т.п. полученные для передачи заказчику от начальника МО. При получении оплату (доплату), согласно заданию, информировать об этом бухгалтера через приложение.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "11) Подписать у клиента закрывающие документы (накладные, акты), выдать инструкции, гарантийные талоны, схемы и т.п. полученные для передачи заказчику от начальника МО. При получении оплату (доплату), согласно заданию, информировать об этом бухгалтера через приложение.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Подписать у клиента закрывающие документы (накладные, акты), выдать инструкции, гарантийные талоны, схемы и т.п. получен",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_005",
+      "statement": "Монтажник должен: Возвращение на автомобиле домой или на рабочее место в конце дня согласовывается с начальником МО.",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "12) Возвращение на автомобиле домой или на рабочее место в конце дня согласовывается с начальником МО.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Возвращение на автомобиле домой или на рабочее место в конце дня согласовывается с начальником МО.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_006",
+      "statement": "Монтажник должен: При поломке автомобиля в пути осуществить возможный ремонт (при оплате, брать чеки, сообщив об этом начальнику МО). При невозможности продолжать движение так же сообщить об этом начальнику МО и участвовать в организации эвакуации автомобиля и сотрудников.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "13) При поломке автомобиля в пути осуществить возможный ремонт (при оплате, брать чеки, сообщив об этом начальнику МО). При невозможности продолжать движение так же сообщить об этом начальнику МО и участвовать в организации эвакуации автомобиля и сотрудников.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "При поломке автомобиля в пути осуществить возможный ремонт (при оплате, брать чеки, сообщив об этом начальнику МО). При ",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_007",
+      "statement": "Монтажник должен: По окончании выезда ответственный за выезд делает описание исполнения задания, и передает их в письменном или электронном виде начальнику МО вместе с фотографиями.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "14) По окончании выезда ответственный за выезд делает описание исполнения задания, и передает их в письменном или электронном виде начальнику МО вместе с фотографиями.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "По окончании выезда ответственный за выезд делает описание исполнения задания, и передает их в письменном или электронно",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_004_chunk_0002_stmt_008",
+      "statement": "Монтажник должен: Задания по сборке и изготовлению продукции без выезда на объект на базе мастерской выдаются начальником МО, оплата произведенной продукции производится согласно установленным на данный вид изделия нормочасам.",
+      "statement_type": "requirement",
+      "roles": [
+        "installer"
+      ],
+      "topic": "installer_roles",
+      "source_document_id": "doc_004",
+      "source_file": "Обязанности монтажника.docx",
+      "source_chunk_id": "doc_004_chunk_0002",
+      "section_path": [
+        "Обязанности монтажника"
+      ],
+      "source_quote": "15) Задания по сборке и изготовлению продукции без выезда на объект на базе мастерской выдаются начальником МО, оплата произведенной продукции производится согласно установленным на данный вид изделия нормочасам.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Обязанности монтажника",
+      "condition": "",
+      "action": "",
+      "object": "Задания по сборке и изготовлению продукции без выезда на объект на базе мастерской выдаются начальником МО, оплата произ",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

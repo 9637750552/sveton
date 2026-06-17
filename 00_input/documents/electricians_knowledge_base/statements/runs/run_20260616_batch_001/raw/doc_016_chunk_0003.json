@@ -1,0 +1,76 @@
+{
+  "source_chunk_id": "doc_016_chunk_0003",
+  "statements": [
+    {
+      "statement_id": "doc_016_chunk_0003_stmt_001",
+      "statement": "Заземляющий проводник PE от контура заземления дома идет к шине заземления в щитке.",
+      "statement_type": "definition",
+      "roles": [
+        "installer",
+        "electrician"
+      ],
+      "topic": "distribution_boards",
+      "source_document_id": "doc_016",
+      "source_file": "ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx",
+      "source_chunk_id": "doc_016_chunk_0003",
+      "section_path": [
+        "Электрический щит клиента и его компоненты",
+        "Необходимо разобраться в схеме электрощита и понять его схему следующим образом:",
+        "Подключение заземляющих проводников."
+      ],
+      "source_quote": "Заземляющий проводник (PE) от заземляющего контура дома идет к шине заземления в щитке.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Подключение заземляющих проводников",
+      "condition": "",
+      "action": "",
+      "object": "Заземляющий проводник PE",
+      "normalized_terms": [
+        "PE",
+        "заземление",
+        "шина заземления",
+        "щит"
+      ],
+      "extraction_notes": "Safety-critical из-за темы заземления."
+    },
+    {
+      "statement_id": "doc_016_chunk_0003_stmt_002",
+      "statement": "От шины заземления отходят PE-кабели к розеткам, где они подключаются к своим клеммам.",
+      "statement_type": "definition",
+      "roles": [
+        "installer",
+        "electrician"
+      ],
+      "topic": "distribution_boards",
+      "source_document_id": "doc_016",
+      "source_file": "ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx",
+      "source_chunk_id": "doc_016_chunk_0003",
+      "section_path": [
+        "Электрический щит клиента и его компоненты",
+        "Необходимо разобраться в схеме электрощита и понять его схему следующим образом:",
+        "Подключение заземляющих проводников."
+      ],
+      "source_quote": "От нее отходят PE-кабели к розеткам, в которых они подключаются к своим клеммам.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Подключение заземляющих проводников",
+      "condition": "",
+      "action": "",
+      "object": "PE-кабели к розеткам",
+      "normalized_terms": [
+        "PE",
+        "розетка",
+        "заземление"
+      ],
+      "extraction_notes": "Safety-critical из-за темы заземления."
+    }
+  ]
+}

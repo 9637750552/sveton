@@ -1,0 +1,25 @@
+{
+  "chunk_id": "doc_015_chunk_0001",
+  "source_document_id": "doc_015",
+  "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+  "topic": "Этапы монтажа",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания"
+  ],
+  "text": "**ЭЛК-Базовые знания**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "",
+  "next_context": "**Этапы монтажа**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "installation_process",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

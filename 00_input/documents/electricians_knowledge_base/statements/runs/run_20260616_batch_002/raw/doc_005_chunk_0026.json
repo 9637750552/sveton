@@ -1,0 +1,74 @@
+{
+  "source_chunk_id": "doc_005_chunk_0026",
+  "coverage_summary": {
+    "source_items_detected": 2,
+    "source_items_extracted": 2,
+    "source_items_skipped": 0,
+    "coverage_notes": "Все выделенные source items извлечены или объясненно пропущены; рекрутинговый файл не включался."
+  },
+  "skipped_source_items": [],
+  "statements": [
+    {
+      "statement_id": "doc_005_chunk_0026_stmt_001",
+      "statement": "В отчете по монтажу нужно указать или учитывать: Установлена Бесперебойная система контроль 5/400.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "reporting",
+      "source_document_id": "doc_005",
+      "source_file": "Отчет по монтажу р1.docx",
+      "source_chunk_id": "doc_005_chunk_0026",
+      "section_path": [
+        "Шаблон отчета по монтажу:",
+        "Пример: Установлена Бесперебойная система контроль 5/400",
+        "1. Установлена Бесперебойная система контроль 5/400."
+      ],
+      "source_quote": "*1. Установлена Бесперебойная система контроль 5/400.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Отчетность по монтажу",
+      "condition": "",
+      "action": "",
+      "object": "Установлена Бесперебойная система контроль 5/400.",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    },
+    {
+      "statement_id": "doc_005_chunk_0026_stmt_002",
+      "statement": "В отчете по монтажу нужно указать или учитывать: Установлен стабилизатор Штиль IS7000, защитные панели на стеллаж(с левой стороны с пенофолом),GSM розетка, байпас для генератора в щит клиента, розетка для подключения холодильника.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "installer",
+        "hq_engineer"
+      ],
+      "topic": "reporting",
+      "source_document_id": "doc_005",
+      "source_file": "Отчет по монтажу р1.docx",
+      "source_chunk_id": "doc_005_chunk_0026",
+      "section_path": [
+        "Шаблон отчета по монтажу:",
+        "Пример: Установлена Бесперебойная система контроль 5/400",
+        "1. Установлена Бесперебойная система контроль 5/400."
+      ],
+      "source_quote": "*2. Установлен стабилизатор Штиль IS7000, защитные панели на стеллаж(с левой стороны с пенофолом),GSM розетка, байпас для генератора в щит клиента, розетка для подключения холодильника.*",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Отчетность по монтажу",
+      "condition": "",
+      "action": "",
+      "object": "Установлен стабилизатор Штиль IS7000, защитные панели на стеллаж(с левой стороны с пенофолом),GSM розетка, байпас для ге",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 with coverage control."
+    }
+  ]
+}

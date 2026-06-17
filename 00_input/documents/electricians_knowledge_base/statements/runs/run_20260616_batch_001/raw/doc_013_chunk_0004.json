@@ -1,0 +1,76 @@
+{
+  "source_chunk_id": "doc_013_chunk_0004",
+  "statements": [
+    {
+      "statement_id": "doc_013_chunk_0004_stmt_001",
+      "statement": "Инвертор преобразует постоянный ток аккумуляторов в переменный ток для питания стандартных электропотребителей.",
+      "statement_type": "definition",
+      "roles": [
+        "installer",
+        "electrician"
+      ],
+      "topic": "ups_components",
+      "source_document_id": "doc_013",
+      "source_file": "ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx",
+      "source_chunk_id": "doc_013_chunk_0004",
+      "section_path": [
+        "ЭЛК-Базовые знания",
+        "Состав ИБП:",
+        "- Инвертор"
+      ],
+      "source_quote": "Преобразует постоянный ток (DC) аккумуляторов в переменный (AC) для питания стандартных электропотребителей.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Состав ИБП",
+      "condition": "",
+      "action": "",
+      "object": "Инвертор",
+      "normalized_terms": [
+        "инвертор",
+        "DC",
+        "AC",
+        "АКБ"
+      ],
+      "extraction_notes": ""
+    },
+    {
+      "statement_id": "doc_013_chunk_0004_stmt_002",
+      "statement": "Все используемые в системах инверторы имеют зарядные устройства и при необходимости подзаряжают аккумуляторы.",
+      "statement_type": "definition",
+      "roles": [
+        "installer",
+        "electrician"
+      ],
+      "topic": "ups_components",
+      "source_document_id": "doc_013",
+      "source_file": "ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx",
+      "source_chunk_id": "doc_013_chunk_0004",
+      "section_path": [
+        "ЭЛК-Базовые знания",
+        "Состав ИБП:",
+        "- Инвертор"
+      ],
+      "source_quote": "Все инверторы, используемые в наших системах, имеют зарядные устройства, то есть при необходимости подзаряжают аккумуляторы.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Состав ИБП",
+      "condition": "",
+      "action": "Подзаряжать аккумуляторы при необходимости",
+      "object": "Инверторы с зарядными устройствами",
+      "normalized_terms": [
+        "инвертор",
+        "зарядное устройство",
+        "АКБ"
+      ],
+      "extraction_notes": ""
+    }
+  ]
+}

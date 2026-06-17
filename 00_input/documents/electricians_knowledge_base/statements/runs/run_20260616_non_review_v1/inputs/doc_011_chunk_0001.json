@@ -1,0 +1,25 @@
+{
+  "chunk_id": "doc_011_chunk_0001",
+  "source_document_id": "doc_011",
+  "source_file": "ЭЛК_1_Базовые_знания_Основные_понятия_ред1_1.docx",
+  "topic": "Базовые понятия",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания"
+  ],
+  "text": "**ЭЛК-Базовые знания**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "",
+  "next_context": "**Основные понятия:**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "basic_knowledge",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

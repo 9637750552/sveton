@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_005_chunk_0021",
+  "source_document_id": "doc_005",
+  "source_file": "Отчет по монтажу р1.docx",
+  "topic": "Отчетность по монтажу",
+  "roles": [
+    "монтажник",
+    "менеджер",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Шаблон отчета по монтажу:",
+    "Пример: Установлена Бесперебойная система контроль 5/400",
+    "Пример:"
+  ],
+  "text": "**Пример:**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "**Температура в месте установки -10С.** 6.5 Малая ёмкость АКБ(когда необходимы аккумуляторы большей емкости, или нужна еще одна группа).",
+  "next_context": "**Постоянная нагрузка на инверторе 4кВт.,**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "reporting",
+  "suggested_roles": [
+    "hq_engineer",
+    "installer",
+    "manager"
+  ]
+}

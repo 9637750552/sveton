@@ -1,0 +1,29 @@
+{
+  "chunk_id": "doc_005_chunk_0030",
+  "source_document_id": "doc_005",
+  "source_file": "Отчет по монтажу р1.docx",
+  "topic": "Отчетность по монтажу",
+  "roles": [
+    "монтажник",
+    "менеджер",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Шаблон отчета по монтажу:",
+    "Пример: Установлена Бесперебойная система контроль 5/400",
+    "4. В группе резерва установлены автоматы:"
+  ],
+  "text": "*4. В группе резерва установлены автоматы:*",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "*Температура в месте установки 24C.*",
+  "next_context": "*Щит гаража №6,8,9, первая фаза автомата №2 щит(щит дома), Третья фаза автомата*",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "reporting",
+  "suggested_roles": [
+    "hq_engineer",
+    "installer",
+    "manager"
+  ]
+}

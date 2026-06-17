@@ -1,0 +1,26 @@
+{
+  "chunk_id": "doc_015_chunk_0002",
+  "source_document_id": "doc_015",
+  "source_file": "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+  "topic": "Этапы монтажа",
+  "roles": [
+    "монтажник",
+    "электрик"
+  ],
+  "section_path": [
+    "ЭЛК-Базовые знания",
+    "Этапы монтажа"
+  ],
+  "text": "**Этапы монтажа**",
+  "related_image_ids": [],
+  "excluded_image_ids": [],
+  "previous_context": "**ЭЛК-Базовые знания**",
+  "next_context": "**Монтаж ИБП включает в себя следующие этапы**",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "installation_process",
+  "suggested_roles": [
+    "electrician",
+    "installer"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "source_chunk_id": "doc_006_chunk_0009",
+  "coverage_summary": {
+    "source_items_detected": 4,
+    "source_items_extracted": 3,
+    "source_items_skipped": 1,
+    "coverage_notes": "Все извлеченные пункты имеют точные цитаты; заголовки и неразобранные табличные блоки вынесены в skipped_source_items."
+  },
+  "skipped_source_items": [
+    {
+      "source_item_quote": "Иные фотографии:",
+      "source_item_type": "heading",
+      "reason": "heading",
+      "notes": "Заголовок раздела фотофиксации, не самостоятельное утверждение."
+    }
+  ],
+  "statements": [
+    {
+      "statement_id": "doc_006_chunk_0009_stmt_001",
+      "statement": "Фотоотчет по монтажу должен содержать фото подгорелой проводки в щите.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "hq_engineer",
+        "installer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0009",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Иные фотографии:"
+      ],
+      "source_quote": "\\[ \\] Подгорелая проводка в щите; батарея рядом с системой, даже если заглушена; пыльное помещение, помещение, в котором происходит ремонт и т.д.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "safety_critical",
+      "confidence": "high",
+      "review_status": "review_required",
+      "scope": "Контрольный лист",
+      "condition": "",
+      "action": "",
+      "object": "",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 v3 with heading/table quality controls."
+    },
+    {
+      "statement_id": "doc_006_chunk_0009_stmt_002",
+      "statement": "Фотоотчет по монтажу должен содержать фото батареи рядом с системой, даже если батарея заглушена.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "hq_engineer",
+        "installer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0009",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Иные фотографии:"
+      ],
+      "source_quote": "\\[ \\] Подгорелая проводка в щите; батарея рядом с системой, даже если заглушена; пыльное помещение, помещение, в котором происходит ремонт и т.д.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Контрольный лист",
+      "condition": "",
+      "action": "",
+      "object": "",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 v3 with heading/table quality controls."
+    },
+    {
+      "statement_id": "doc_006_chunk_0009_stmt_003",
+      "statement": "Фотоотчет по монтажу должен содержать фото пыльного помещения или помещения, в котором происходит ремонт.",
+      "statement_type": "reporting_requirement",
+      "roles": [
+        "hq_engineer",
+        "installer"
+      ],
+      "topic": "photo_report",
+      "source_document_id": "doc_006",
+      "source_file": "Правила_фотосъемки_монтажа_Чек_лист_ред1.docx",
+      "source_chunk_id": "doc_006_chunk_0009",
+      "section_path": [
+        "Контрольный лист",
+        "Фото монтажа",
+        "Иные фотографии:"
+      ],
+      "source_quote": "\\[ \\] Подгорелая проводка в щите; батарея рядом с системой, даже если заглушена; пыльное помещение, помещение, в котором происходит ремонт и т.д.",
+      "source_quote_is_exact": true,
+      "related_image_ids": [],
+      "visual_review_required": false,
+      "risk_level": "important",
+      "confidence": "high",
+      "review_status": "extracted",
+      "scope": "Контрольный лист",
+      "condition": "",
+      "action": "",
+      "object": "",
+      "normalized_terms": [],
+      "extraction_notes": "Generated in batch 002 v3 with heading/table quality controls."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "chunk_id": "doc_012_chunk_0003",
+  "source_document_id": "doc_012",
+  "source_file": "ЭЛК_2_1 техн.карты изделий..docx",
+  "topic": "Технические карты изделий",
+  "roles": [
+    "монтажник",
+    "электрик",
+    "инженер ГО"
+  ],
+  "section_path": [
+    "Изготовление кабеля «Инвертор-щит»",
+    "Изготовление перемычек для АКБ",
+    "Назначение матриц пресс-клещей (CTF) из набора инструмента монтажника."
+  ],
+  "text": "**Назначение матриц пресс-клещей (CTF) из набора инструмента монтажника.**\n\n[IMAGE:img_0030|media/image27.png|candidate_for_linking|Назначение матриц пресс-клещей (CTF) из набора инструмента монтажника.]",
+  "related_image_ids": [
+    "img_0030"
+  ],
+  "excluded_image_ids": [],
+  "previous_context": "авномерно прогреть отрезок термоусадки до полного обволакивания втулки наконечника [IMAGE:img_0027|media/image24.png|candidate_for_linking|ф35-35/25] [IMAGE:img_0028|media/image25.png|candidate_for_linking|ф35-35/25] ** ** [IMAGE:img_0029|media/image26.png|candidate_for_linking|Назначение матриц пресс-клещей (CTF) из набора инструмента монтажника.]",
+  "next_context": "",
+  "needs_review": false,
+  "review_reasons": [],
+  "suggested_topic": "ups_components",
+  "suggested_roles": [
+    "electrician",
+    "hq_engineer",
+    "installer"
+  ]
+}

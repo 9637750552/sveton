@@ -2,6 +2,8 @@
 
 | Дата | Событие / Решение | Ответственный | Ссылка на док |
 |:---|:---|:---|:---|
+| 2026-06-22 | Выполнен promotion-pass по `doc_008 / work_on_site`: добавлено 66 canonical statements, canonical расширен до 513 утверждений, создан кластер `C011`, добавлено 20 relation-связей с `C002/C004/C009/C010`, source coverage gate закрывает 11 источников; 39 safety-critical пунктов вынесены в `SR018`. | Codex | [batch_008_doc008_work_on_site_summary.md](../../00_input/documents/electricians_knowledge_base/statements/batch_008_doc008_work_on_site_summary.md), [statement_clusters.json](../../00_input/documents/electricians_knowledge_base/statements/statement_clusters.json), [README.md](../operations/electricians_knowledge_base/README.md) |
+| 2026-06-22 | Выполнен promotion-pass по `doc_010 / qualification_levels`: добавлено 60 canonical statements, canonical расширен до 447 утверждений, создан кластер `C010`, source coverage gate закрывает 10 источников; 25 safety-critical пунктов вынесены в `SR017`. | Codex | [batch_007_doc010_qualification_levels_summary.md](../../00_input/documents/electricians_knowledge_base/statements/batch_007_doc010_qualification_levels_summary.md), [statement_clusters.json](../../00_input/documents/electricians_knowledge_base/statements/statement_clusters.json), [README.md](../operations/electricians_knowledge_base/README.md) |
 | 2026-05-24 | Инициация проекта Sveton-South. | Руководитель | [EXECUTIVE_SUMMARY.md](../strategy/EXECUTIVE_SUMMARY.md) |
 | 2026-05-24 | Утвержден гипер-детальный план (Ревизия "Максимум"). | Руководитель | [ROADMAP.md](../strategy/ROADMAP.md) |
 | 2026-05-24 | Переход на мессенджер MAX (Макс) как основной канал. | Руководитель | [GEMINI.md](../../GEMINI.md) |

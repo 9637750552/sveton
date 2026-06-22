@@ -2,11 +2,11 @@
 
 ## Текущий статус canonical v1
 
-Дата обновления: 2026-06-17
+Дата обновления: 2026-06-22
 
-Canonical-набор утверждений создан и расширен batch 006 по этапам монтажа:
+Canonical-набор утверждений создан и расширен promotion-pass по `doc_008 / work_on_site`:
 
-- `387` валидных атомарных утверждений;
+- `513` валидных атомарных утверждений;
 - `0` extraction errors;
 - `0` coverage / quality warnings;
 - источник: `00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl`.
@@ -22,7 +22,7 @@ Canonical-набор утверждений создан и расширен bat
 - source coverage gate: `07_scripts/check_source_coverage.py`, отчеты `source_coverage_report.md`, `source_coverage_doc007.md` и `source_coverage_doc015.md`.
 - карта покрытия canonical -> editorial sections: `README.md`.
 
-Точные связи `statement_id -> cluster_id` добавлены для всех `387` canonical-утверждений. Новые `101` утверждение batch 006 по `doc_015 / installation_process` сгруппированы в `C009 / installation_process`.
+Точные связи `statement_id -> cluster_id` добавлены для всех `513` canonical-утверждений. Новые `60` утверждений promotion-pass по `doc_010 / qualification_levels` сгруппированы в `C010 / qualification_levels`. Новые `66` утверждений promotion-pass по `doc_008 / work_on_site` сгруппированы в `C011 / work_on_site`.
 
 Редакционные разделы, собранные из canonical-кластеров:
 
@@ -36,11 +36,15 @@ Canonical-набор утверждений создан и расширен bat
 - `10_training_levels.md`: раздел офисного обучения и проверки монтажника, собран из кластера `C001 / training_levels`, содержит `19` ссылок на `statement_id` и отдельную пометку о table-aware разборе контрольного листа.
 - `12_installation_request_check.md`: раздел проверки заявки на монтаж, собран из кластера `C005 / installation_request_check`, содержит `20` ссылок на `statement_id` после completion-pass по исходнику.
 
-Source coverage gate показывает, что девять текущих закрытых источников покрыты: прямыми canonical-утверждениями или явными coverage overrides для split/duplicate-фрагментов.
+Source coverage gate показывает, что одиннадцать текущих закрытых источников покрыты: прямыми canonical-утверждениями или явными coverage overrides для split/duplicate-фрагментов.
 
 Раздел `04_installation_process.md` теперь имеет source-backed canonical extraction, собственный кластер `C009`, editorial layer, image-link pass, safety-review пакет и pre-expert audit. Все safety-critical пункты остаются `blocked_for_instruction`; перед финальным использованием нужен экспертный technical safety-review.
 
-Разделы `05/06/11/13` пока не имеют собственного canonical-кластера. Их можно собирать только как редакционные композитные документы поверх готовых кластеров или после нового extraction по дополнительным источникам.
+Квалификационная лестница монтажника теперь имеет source-backed canonical extraction и кластер `C010 / qualification_levels`: `60` утверждений, включая `25` `safety_critical / review_required` пунктов в `SR017`. Editorial layer по квалификационным уровням еще не собран.
+
+Работа на объекте теперь имеет source-backed canonical extraction и кластер `C011 / work_on_site`: `66` утверждений, включая `39` `safety_critical / review_required` пунктов в `SR018`. Editorial layer `05_work_on_site.md` еще не собран.
+
+Разделы `06/11/13` пока не имеют собственного canonical-кластера. Их можно собирать только как редакционные композитные документы поверх готовых кластеров или после нового extraction по дополнительным источникам.
 
 Следующий шаг: провести экспертный technical safety-review по `SR011-SR016` и после него разнести утверждения по downstream-статусам `approved_for_training`, `approved_for_checklist` и `blocked_for_instruction`.
 

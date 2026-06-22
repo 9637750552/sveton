@@ -1,0 +1,9 @@
+{
+  "run_dir": "/home/sergey/Sveton/00_input/documents/electricians_knowledge_base/statements/runs/run_20260622_doc008_work_on_site_v1",
+  "queue_chunks": 5,
+  "parsed_chunk_results": 5,
+  "valid_statements": 66,
+  "errors": 0,
+  "coverage_warnings": 0,
+  "promoted": false
+}

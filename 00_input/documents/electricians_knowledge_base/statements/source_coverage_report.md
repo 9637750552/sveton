@@ -2,14 +2,18 @@
 
 ## Summary
 
-- Source files checked: `2`
-- Chunks checked: `2`
+- Source files checked: `1`
+- Chunks checked: `3`
 - `covered`: `2`
+- `needs_review`: `1`
 
 ## By File
 
-- `Действия на сервисном выезде.docx`: `covered`: `1`
-- `Установка УЗО при монтаже.docx`: `covered`: `1`
+- `ЭЛК_2_1 техн.карты изделий..docx`: `covered`: `2`, `needs_review`: `1`
+
+## Review Chunks
+
+- `doc_012_chunk_0003` / `ЭЛК_2_1 техн.карты изделий..docx`: visual_only_ocr_manual_review_required
 
 ## Machine Rows
 

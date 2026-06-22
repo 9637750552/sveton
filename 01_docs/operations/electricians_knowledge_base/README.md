@@ -4,18 +4,19 @@
 
 ## Текущее состояние
 
-Редакционная база знаний сейчас опирается на canonical statements после batch 010 по `doc_001`:
+Редакционная база знаний сейчас опирается на canonical statements после batch 011 по `doc_012`:
 
-- `537` валидных атомарных утверждений;
-- `13` канонических кластеров покрывают все `537` утверждений;
+- `574` валидных атомарных утверждения;
+- `14` канонических кластеров покрывают все `574` утверждения;
 - `101` утверждение по `doc_015 / installation_process` сгруппировано в `C009`;
 - `60` утверждений по `doc_010 / qualification_levels` сгруппировано в `C010`;
 - `66` утверждений по `doc_008 / work_on_site` сгруппировано в `C011`;
 - `12` утверждений по `doc_009 / uzo_installation` сгруппировано в `C012`;
 - `12` утверждений по `doc_001 / service_visit` сгруппировано в `C013`;
+- `37` утверждений по `doc_012 / technical_cards` сгруппировано в `C014`;
 - `9` собранных markdown-разделов;
 - `0` extraction errors;
-- `9` coverage / review warnings после batch 010: `3` по `doc_009` и `6` по `doc_001`.
+- `14` coverage / review warnings после batch 011: `3` по `doc_009`, `6` по `doc_001`, `5` по `doc_012`.
 
 Источники состояния:
 
@@ -33,6 +34,7 @@
 | `03_distribution_boards.md` | собран | `C008 / distribution_boards` | 62 | 17 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | Почти весь раздел требует технического review перед использованием как монтажной инструкции. |
 | `04_installation_process.md` | собран | `C009 / installation_process` | 101 | 26 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` | Раздел собран как черновик; `77` пунктов разнесены в safety-review пакет `SR011-SR016`, pre-expert audit выполнен, все safety-critical пункты остаются `blocked_for_instruction` до expert review. |
 | будущий `06_service_visit.md` | canonical готов, editorial не собран | `C013 / service_visit` | 12 | 15 context links | `Действия на сервисном выезде.docx` | Кластер покрывает сервисный выезд по выравниванию АКБ: проверки инвертора, АКБ, балансира, затяжки соединений и фото/видео фиксацию. Визуальный слой добавлен как cross-source context из уже accepted image links; прямых изображений в источнике нет. |
+| будущий `16_technical_cards.md` | canonical text-backed готов, OCR/manual pending | `C014 / technical_cards` | 37 | 0 | `ЭЛК_2_1 техн.карты изделий..docx` | Кластер покрывает table-aware text-backed технические карты изготовления кабеля «Инвертор-щит» и перемычек АКБ. Факты из `img_0029` и `img_0030` не извлекались; они требуют отдельного OCR/manual review pass. |
 | `07_photo_report.md` | собран | `C004 / photo_report` | 30 | 2 | `Правила_фотосъемки_монтажа_Чек_лист_ред1.docx` | Раздел собран как чек-лист фотофиксации и контроль состава фотоотчета. |
 | `08_installer_roles.md` | собран | `C002 / installer_roles` | 31 | 0 | `Обязанности монтажника.docx` | Организационный регламент выезда, закрытия работ и передачи результата. |
 | `09_installation_report.md` | собран | `C003 / reporting` | 51 | 0 | `Отчет по монтажу р1.docx` | Есть rule/example связи; они сохранены, а не схлопнуты. |
@@ -44,7 +46,7 @@
 
 ## Что покрыто полностью
 
-Сейчас в рабочем контуре закрыты тринадцать исходных документов:
+Сейчас в рабочем контуре закрыты тринадцать исходных документов полностью и один источник закрыт по text-backed extraction с OCR/manual остатком:
 
 - `Действия на сервисном выезде.docx`
 - `Обучение в офисе.docx`
@@ -61,6 +63,8 @@
 - `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx`
 
 По `source_coverage_report.md` эти документы закрыты прямыми canonical-утверждениями или явными coverage overrides для split/duplicate-фрагментов.
+
+`ЭЛК_2_1 техн.карты изделий..docx` закрыт по текстовым HTML-таблицам chunks `doc_012_chunk_0001` и `doc_012_chunk_0002`; chunk `doc_012_chunk_0003` оставлен `needs_review`, потому что содержит image-only таблицу назначения матриц пресс-клещей и требует OCR/manual extraction.
 
 ## Что пока не собрано как самостоятельные разделы
 
@@ -82,6 +86,8 @@
 
 Для `06_service_visit.md` canonical extraction и кластер `C013 / service_visit` уже собраны; editorial layer еще не собран, все технические statements остаются `safety_critical/review_required`, а warnings по напряжению АКБ, режимам инвертора, процедуре выравнивания и отсутствию прямого visual evidence из самого `doc_001` требуют review. Визуальный слой есть как `visual_context` links к уже accepted изображениям из других источников.
 
+Для будущего раздела технических карт изделий canonical text-backed extraction и кластер `C014 / technical_cards` уже собраны; editorial layer еще не собран, все операции изготовления кабеля, перемычек АКБ, опрессовки, матриц и термоусадки остаются `review_required`, а `img_0029` и `img_0030` заблокированы до отдельного OCR/manual review pass.
+
 Для `11/13` сейчас нет отдельного канонического кластера. Это означает следующее:
 
 - их нельзя честно объявлять самостоятельными source-backed разделами;
@@ -95,6 +101,7 @@
 | `04_installation_process.md` | source-backed draft собран | `C009 / installation_process` |
 | `05_work_on_site.md` | source-backed editorial layer после review-структурирования | `C011 / work_on_site` + связи с `C002`, `C004`, `C003`, `C009`, `C010` |
 | `06_service_visit.md` | source-backed editorial layer после expert review | `C013 / service_visit` + связи с `C002`, `C003`, `C004`, `C007`, `C009`, `C010`, `C011` |
+| `16_technical_cards.md` | source-backed editorial layer после technical/OCR review | `C014 / technical_cards` + связи с `C007`, `C009`, `C010` |
 | `11_hiring_and_interview.md` | не собирать до нового extraction | рекрутинговый файл исключен из benchmark и не лежит в canonical как технический источник |
 | `13_quality_control.md` | композитный editorial layer | `C004` + `C005` + `C003` + future safety-review |
 | `14_qualification_levels.md` | source-backed editorial layer после review-структурирования | `C010 / qualification_levels` |

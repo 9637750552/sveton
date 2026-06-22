@@ -2,14 +2,14 @@
 
 ## Summary
 
-- Source files checked: `1`
-- Chunks checked: `6`
-- `covered`: `5`
-- `ignored`: `1`
+- Source files checked: `2`
+- Chunks checked: `2`
+- `covered`: `2`
 
 ## By File
 
-- `Работа на объекте 2024 ред1_7.docx`: `covered`: `5`, `ignored`: `1`
+- `Действия на сервисном выезде.docx`: `covered`: `1`
+- `Установка УЗО при монтаже.docx`: `covered`: `1`
 
 ## Machine Rows
 

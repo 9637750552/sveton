@@ -2,7 +2,7 @@
   "version": "v1",
   "created_at": "2026-06-16",
   "source": "00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl",
-  "canonical_statement_count": 513,
+  "canonical_statement_count": 537,
   "clusters": [
     {
       "cluster_id": "C001",
@@ -707,6 +707,64 @@
         "doc_008_chunk_0006_stmt_013",
         "doc_008_chunk_0006_stmt_014",
         "doc_008_chunk_0006_stmt_015"
+      ]
+    },
+    {
+      "cluster_id": "C012",
+      "title": "Установка УЗО при монтаже ИБП",
+      "topic": "uzo_installation",
+      "source_files": [
+        "Установка УЗО при монтаже.docx"
+      ],
+      "primary_outputs": [
+        "uzo_installation_article",
+        "technical_review_queue",
+        "installer_training_material"
+      ],
+      "notes": "Кластер фиксирует safety-critical методику установки УЗО при монтаже и сервисе: риск схемы с ИБП между УЗО и автоматами резервной группы, распределение резервных автоматов на одно или несколько УЗО после ИБП, установку дополнительного УЗО из ЗИП, варианты размещения УЗО и обязательное обращение к начальнику монтажно-сервисной службы. Все 12 утверждений имеют safety_critical/review_required и не должны использоваться как финальная инструкция до expert review.",
+      "statement_count": 12,
+      "statement_ids": [
+        "doc_009_chunk_0001_stmt_001",
+        "doc_009_chunk_0001_stmt_002",
+        "doc_009_chunk_0001_stmt_003",
+        "doc_009_chunk_0001_stmt_004",
+        "doc_009_chunk_0001_stmt_005",
+        "doc_009_chunk_0001_stmt_006",
+        "doc_009_chunk_0001_stmt_007",
+        "doc_009_chunk_0001_stmt_008",
+        "doc_009_chunk_0001_stmt_009",
+        "doc_009_chunk_0001_stmt_010",
+        "doc_009_chunk_0001_stmt_011",
+        "doc_009_chunk_0001_stmt_012"
+      ]
+    },
+    {
+      "cluster_id": "C013",
+      "title": "Сервисный выезд по выравниванию АКБ",
+      "topic": "service_visit",
+      "source_files": [
+        "Действия на сервисном выезде.docx"
+      ],
+      "primary_outputs": [
+        "06_service_visit.md",
+        "service_visit_checklist",
+        "technical_review_queue"
+      ],
+      "notes": "Кластер покрывает сервисный checklist по выравниванию АКБ: проверки инвертора, АКБ, балансира, электрических соединений и отчетную фото/видео фиксацию. Все технические пункты требуют expert review перед использованием как инструкции.",
+      "statement_count": 12,
+      "statement_ids": [
+        "doc_001_chunk_0001_stmt_001",
+        "doc_001_chunk_0001_stmt_002",
+        "doc_001_chunk_0001_stmt_003",
+        "doc_001_chunk_0001_stmt_004",
+        "doc_001_chunk_0001_stmt_005",
+        "doc_001_chunk_0001_stmt_006",
+        "doc_001_chunk_0001_stmt_007",
+        "doc_001_chunk_0001_stmt_008",
+        "doc_001_chunk_0001_stmt_009",
+        "doc_001_chunk_0001_stmt_010",
+        "doc_001_chunk_0001_stmt_011",
+        "doc_001_chunk_0001_stmt_012"
       ]
     }
   ],

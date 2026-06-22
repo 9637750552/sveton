@@ -2,7 +2,7 @@
   "version": "v1",
   "created_at": "2026-06-16",
   "source": "00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl",
-  "canonical_statement_count": 574,
+  "canonical_statement_count": 590,
   "clusters": [
     {
       "cluster_id": "C001",
@@ -779,8 +779,8 @@
         "technical_review_queue",
         "installer_training_material"
       ],
-      "notes": "Кластер фиксирует text-backed технические карты изготовления кабеля «Инвертор-щит» и перемычек АКБ: операции, размеры, инструменты, матрицы и критерии опрессовки. Atomic statements используют topic ups_components для совместимости с текущей схемой; C014 является semantic cluster technical_cards. Факты из img_0029 и img_0030 не извлекались и требуют отдельного OCR/manual review pass.",
-      "statement_count": 37,
+      "notes": "Кластер фиксирует технические карты изготовления кабеля «Инвертор-щит», перемычек АКБ, подготовки проводов балансира и назначения матриц пресс-клещей CTF. Text-backed таблицы и manual OCR transcript из img_0029/img_0030 сохранены source-backed; все технические statements остаются review_required.",
+      "statement_count": 53,
       "statement_ids": [
         "doc_012_chunk_0001_stmt_001",
         "doc_012_chunk_0001_stmt_002",
@@ -818,7 +818,23 @@
         "doc_012_chunk_0002_stmt_016",
         "doc_012_chunk_0002_stmt_017",
         "doc_012_chunk_0002_stmt_018",
-        "doc_012_chunk_0002_stmt_019"
+        "doc_012_chunk_0002_stmt_019",
+        "doc_012_chunk_0002_stmt_020",
+        "doc_012_chunk_0002_stmt_021",
+        "doc_012_chunk_0002_stmt_022",
+        "doc_012_chunk_0002_stmt_023",
+        "doc_012_chunk_0002_stmt_024",
+        "doc_012_chunk_0002_stmt_025",
+        "doc_012_chunk_0002_stmt_026",
+        "doc_012_chunk_0002_stmt_027",
+        "doc_012_chunk_0002_stmt_028",
+        "doc_012_chunk_0002_stmt_029",
+        "doc_012_chunk_0002_stmt_030",
+        "doc_012_chunk_0003_stmt_001",
+        "doc_012_chunk_0003_stmt_002",
+        "doc_012_chunk_0003_stmt_003",
+        "doc_012_chunk_0003_stmt_004",
+        "doc_012_chunk_0003_stmt_005"
       ]
     }
   ],

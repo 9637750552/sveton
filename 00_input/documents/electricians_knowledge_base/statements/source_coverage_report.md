@@ -4,16 +4,11 @@
 
 - Source files checked: `1`
 - Chunks checked: `3`
-- `covered`: `2`
-- `needs_review`: `1`
+- `covered`: `3`
 
 ## By File
 
-- `ЭЛК_2_1 техн.карты изделий..docx`: `covered`: `2`, `needs_review`: `1`
-
-## Review Chunks
-
-- `doc_012_chunk_0003` / `ЭЛК_2_1 техн.карты изделий..docx`: visual_only_ocr_manual_review_required
+- `ЭЛК_2_1 техн.карты изделий..docx`: `covered`: `3`
 
 ## Machine Rows
 

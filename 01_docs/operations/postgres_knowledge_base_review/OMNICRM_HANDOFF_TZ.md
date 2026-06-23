@@ -79,9 +79,38 @@ Dev Postgres:
 
 OmniCRM должен получать доступ к данным через свой backend/API. Frontend не должен подключаться к Postgres напрямую.
 
-## 5. Текущее состояние данных
+## 5. Обновление базы новыми утверждениями
 
-Загруженный snapshot:
+`OmniCRM` не импортирует canonical artifacts из репозитория `Sveton`.
+
+Порядок обновления базы знаний такой:
+
+1. В проекте `Sveton` выполняется semantic extraction очередного документа.
+2. В `Sveton` обновляются и коммитятся canonical artifacts:
+   - `atomic_statements.jsonl`;
+   - `statement_clusters.json`;
+   - `statement_relations.jsonl`;
+   - `statement_images.jsonl`, если есть подтвержденные связи;
+   - coverage reports;
+   - warnings/errors;
+   - batch summary/review notes.
+3. В `Sveton` запускается Postgres importer `07_scripts/import_kb_snapshot_to_postgres.py`.
+4. В `Sveton` запускается seed review queues `07_scripts/seed_kb_review_tasks.py`.
+5. `OmniCRM` через свой backend/API читает уже обновленную Postgres KB и автоматически показывает новые statements/review tasks в разделе `База знаний`.
+
+Граница ответственности:
+
+- `Sveton` добавляет новые canonical statements в Postgres;
+- `Sveton` создает/обновляет review tasks;
+- `OmniCRM` не читает JSONL/JSON/MD-файлы напрямую;
+- `OmniCRM` не создает statement ids и не меняет immutable extracted evidence;
+- `OmniCRM` показывает актуальное состояние Postgres и пишет только review decisions/events/proposed rewrites через разрешенный backend workflow.
+
+Для `OmniCRM` это означает: раздел `База знаний` должен быть рассчитан не на один фиксированный snapshot, а на регулярное появление новых statements и review tasks после каждого re-import/re-seed со стороны `Sveton`.
+
+## 6. Текущее состояние данных
+
+Первичный snapshot, уже загруженный в Postgres:
 
 | Entity | Count |
 |---|---:|
@@ -94,6 +123,8 @@ OmniCRM должен получать доступ к данным через с
 | `kb.images` | 118 |
 | `kb.statement_images` | 182 |
 | `kb.review_tasks` | 705 |
+
+Текущий canonical snapshot в репозитории после последующих extraction-батчей содержит около `590` statements. После очередного запуска importer/re-seed в `Sveton` Postgres KB должна получить эти новые statements и новые review tasks. `OmniCRM` должен показывать результат из Postgres после обновления, а не пытаться импортировать файлы самостоятельно.
 
 Очереди ревью:
 
@@ -112,7 +143,7 @@ OmniCRM должен получать доступ к данным через с
 - `77` safety-critical statements;
 - все `77` должны быть видны в очереди `instruction_block_review`.
 
-## 6. MVP Scope
+## 7. MVP Scope
 
 В первый релиз входит:
 
@@ -136,7 +167,7 @@ OmniCRM должен получать доступ к данным через с
 - экспорт решений обратно в файлы;
 - запуск новых extraction runs.
 
-## 7. Навигация
+## 8. Навигация
 
 Добавить раздел:
 
@@ -154,7 +185,7 @@ OmniCRM должен получать доступ к данным через с
 
 Если текущая универсальная смотрелка уже работает как list/detail layout, использовать ее.
 
-## 8. Основной экран: очередь ревью
+## 9. Основной экран: очередь ревью
 
 Список должен показывать review tasks из `kb.review_tasks`.
 
@@ -181,7 +212,7 @@ OmniCRM должен получать доступ к данным через с
 2. `task_type`: `instruction_block_review`, `technical_safety_review`, `statement_review_required`, `visual_evidence_review`, `source_chunk_review`;
 3. newest task first or stable by `review_tasks.id`.
 
-## 9. Фильтры очереди
+## 10. Фильтры очереди
 
 Обязательные фильтры:
 
@@ -209,7 +240,7 @@ OmniCRM должен получать доступ к данным через с
 - `Требует visual review`;
 - `Проблемы источника`.
 
-## 10. Карточка утверждения
+## 11. Карточка утверждения
 
 При открытии задачи пользователь должен видеть одну рабочую карточку.
 
@@ -271,7 +302,7 @@ OmniCRM должен получать доступ к данным через с
 - proposed rewrites;
 - review events.
 
-## 11. Reviewer Actions
+## 12. Reviewer Actions
 
 В карточке должны быть действия:
 
@@ -294,7 +325,7 @@ OmniCRM должен получать доступ к данным через с
 
 Для `mark_duplicate` и `mark_conflict` желательно поле `related_statement_id`.
 
-## 12. Decision Payload
+## 13. Decision Payload
 
 Рекомендуемый payload от frontend к backend:
 
@@ -333,7 +364,7 @@ Backend должен:
 
 Эти поля защищены как immutable extracted evidence.
 
-## 13. Recommended API Endpoints
+## 14. Recommended API Endpoints
 
 Финальный стиль endpoint-ов должен соответствовать паттернам `OmniCRM`.
 
@@ -355,7 +386,7 @@ For MVP можно сделать только:
 - get review task detail;
 - submit review decision.
 
-## 14. Recommended Read Model Shape
+## 15. Recommended Read Model Shape
 
 Queue item DTO:
 
@@ -408,7 +439,7 @@ Task detail DTO:
 }
 ```
 
-## 15. Permissions
+## 16. Permissions
 
 Минимальные роли:
 
@@ -425,7 +456,7 @@ Safety-critical approval rule:
 
 - `approve_for_instruction` for `safety_critical` statements should be allowed only to `kb.engineer_reviewer` or `kb.admin`.
 
-## 16. UI Kit Expectations
+## 17. UI Kit Expectations
 
 Использовать существующие паттерны `OmniCRM`:
 
@@ -441,7 +472,7 @@ Safety-critical approval rule:
 
 Не делать отдельный визуальный стиль. Раздел должен выглядеть как рабочий CRM-инструмент, а не как лендинг или справочник.
 
-## 17. Error And Conflict Handling
+## 18. Error And Conflict Handling
 
 Frontend должен показывать понятные ошибки:
 
@@ -458,12 +489,13 @@ Backend должен защищать от двойной отправки:
 - task status должен обновляться предсказуемо;
 - повторная отправка той же формы не должна создавать конфликтные статусы.
 
-## 18. MVP Acceptance Criteria
+## 19. MVP Acceptance Criteria
 
 MVP считается готовым, если:
 
 - в `OmniCRM` есть раздел `База знаний`;
-- пользователь видит список `705` review tasks из dev DB;
+- пользователь видит актуальный список review tasks из dev DB;
+- после re-import/re-seed в `Sveton` новые statements и review tasks появляются в `OmniCRM` без чтения файлов репозитория;
 - preset `Этапы монтажа: 77` показывает ровно 77 blocked installation-process statements;
 - карточка statement показывает statement text, source quote, chunk context, source file и cluster;
 - visual review tasks показывают связанные images;
@@ -474,7 +506,7 @@ MVP считается готовым, если:
 - immutable extracted fields не меняются;
 - UI не требует открытия файлов из репозитория `Sveton`.
 
-## 19. Suggested OmniCRM Tasks
+## 20. Suggested OmniCRM Tasks
 
 После утверждения этого ТЗ в проекте `OmniCRM` нужно создать отдельные задачи:
 
@@ -488,8 +520,9 @@ MVP считается готовым, если:
 8. Build decision modal and validation.
 9. Add permissions for KB reviewer roles.
 10. Run pilot on `installation_process` 77-statement block.
+11. Verify that newly imported Sveton statements appear in the KB UI after re-import/re-seed without OmniCRM-side file import.
 
-## 20. Open Questions For OmniCRM Project
+## 21. Open Questions For OmniCRM Project
 
 Before implementation, confirm:
 
@@ -500,7 +533,7 @@ Before implementation, confirm:
 - whether images should be served from file paths, static storage, or a backend file endpoint;
 - whether the MVP should write directly into `kb.review_decisions` or through an internal service layer.
 
-## 21. References
+## 22. References
 
 - [EPIC_POSTGRES_KB_REVIEW_LAYER.md](EPIC_POSTGRES_KB_REVIEW_LAYER.md)
 - [IMPORT_CONTRACT.md](IMPORT_CONTRACT.md)

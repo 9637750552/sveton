@@ -1,0 +1,9 @@
+{
+  "run_dir": "/home/sergey/Sveton/00_input/documents/electricians_knowledge_base/statements/runs/run_20260622_doc010_qualification_levels_v1",
+  "queue_chunks": 3,
+  "parsed_chunk_results": 3,
+  "valid_statements": 60,
+  "errors": 0,
+  "coverage_warnings": 0,
+  "promoted": false
+}

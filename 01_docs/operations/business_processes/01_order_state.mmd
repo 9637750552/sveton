@@ -1,0 +1,22 @@
+stateDiagram-v2
+    [*] --> Lead: клиент обратился
+    Lead --> DataCollection: первичный разговор
+    DataCollection --> DataRequested: данных недостаточно
+    DataRequested --> DataCollection: клиент прислал фото/сведения
+    DataCollection --> PreliminaryAssessment: данных достаточно
+    PreliminaryAssessment --> Rejected: красные линии / невозможно
+    PreliminaryAssessment --> OfferPrepared: ТЗ/КП сформированы
+    OfferPrepared --> OfferSent: ТЗ/КП отправлены клиенту
+    OfferSent --> Paused: клиент не согласен / думает
+    OfferSent --> FirstVisitPlanned: клиент согласен на осмотр
+    FirstVisitPlanned --> FirstVisitDone: осмотр, замеры, фото
+    FirstVisitDone --> Rejected: монтаж не подтвержден
+    FirstVisitDone --> TZConfirmed: клиент подтвердил ТЗ
+    TZConfirmed --> EquipmentDelivery: поставка оборудования
+    EquipmentDelivery --> SecondVisitPlanned: оборудование доставлено
+    SecondVisitPlanned --> Installed: монтаж выполнен
+    Installed --> Accepted: удаленная приемка пройдена
+    Accepted --> Closed: акт, отчет, обратная связь
+    Rejected --> [*]
+    Paused --> [*]
+    Closed --> [*]

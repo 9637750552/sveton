@@ -1,0 +1,39 @@
+title: "Опрос гостей кемпинга"
+description: "Помогите улучшить сервис и инфраструктуру."
+isAnonymous: true
+submitMultiple: false
+allowEditSubmissions: false
+showExpiration: false
+submissionMessage: "Спасибо за ответ."
+
+questions:
+  - text: "Как вы оцениваете проживание?"
+    type: "multiple_unique"
+    isRequired: true
+    options:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+
+  - text: "Что понравилось больше всего?"
+    type: "long"
+    isRequired: false
+
+  - text: "Какие услуги вам интересны?"
+    type: "multiple"
+    isRequired: false
+    extraSettings:
+      optionsLimitMax: 3
+    options:
+      - "Баня"
+      - "Прокат"
+      - "Экскурсии"
+      - "Кафе"
+
+  - text: "Оставьте email для обратной связи"
+    type: "short"
+    isRequired: false
+    extraSettings:
+      validationType: "email"

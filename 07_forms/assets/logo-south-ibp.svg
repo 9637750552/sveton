@@ -1,0 +1,15 @@
+<svg id="logo-south-ibp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 160" role="img" aria-labelledby="title desc">
+  <title id="title">ИБП</title>
+  <desc id="desc">Neutral logo for backup power services with the original house and battery icon.</desc>
+  <defs>
+    <style>
+      .text-main { fill: #444240; font-family: Arial, Helvetica, sans-serif; font-size: 76px; font-weight: 800; letter-spacing: 1px; }
+      .text-sub { fill: #444240; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <image href="logo-south-ibp-icon.png" x="12" y="20" width="96" height="96" preserveAspectRatio="xMidYMid meet"/>
+  <text class="text-main" x="130" y="84">ИБП</text>
+  <rect x="130" y="99" width="345" height="2.5" rx="1.25" fill="#f5d946"/>
+  <text class="text-sub" x="130" y="132">Бесперебойное электропитание</text>
+</svg>

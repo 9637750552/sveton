@@ -1,0 +1,31 @@
+title: "Анкета Светона"
+description: |
+  Пожалуйста, ответьте на несколько коротких вопросов.
+  Это поможет Светону лучше понять ваш запрос и подготовить подходящее решение.
+isAnonymous: false
+submitMultiple: false
+allowEditSubmissions: false
+showExpiration: false
+submissionMessage: "Спасибо, ответы получены."
+
+questions:
+  - text: "Как вас зовут?"
+    type: "short"
+    isRequired: true
+
+  - text: "Какой объект или задача вас интересует?"
+    type: "long"
+    isRequired: true
+
+  - text: "Какой вариант связи вам удобнее?"
+    type: "multiple_unique"
+    isRequired: true
+    options:
+      - "Телефон"
+      - "WhatsApp"
+      - "Telegram"
+      - "Email"
+
+  - text: "Укажите ваш контакт"
+    type: "short"
+    isRequired: true

@@ -6,6 +6,8 @@ __pycache__/
 *:Zone.Identifier
 ~$*
 99_tmp/
+07_forms/.venv/
+07_forms/.deps/
 00_input/audio/
 *.wav
 *.m4a

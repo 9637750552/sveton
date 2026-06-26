@@ -50,7 +50,7 @@ case "$output_format" in
       --output "$(wslpath -w "$temp_html")"
 
     powershell.exe -NoProfile -ExecutionPolicy Bypass \
-      -File "$(wslpath -w "${PWD}/07_scripts/export_html_to_pdf.ps1")" \
+      -File "$(wslpath -w "${PWD}/06_scripts/export_html_to_pdf.ps1")" \
       "$(wslpath -w "$temp_html")" \
       "$(wslpath -w "$output_file")"
 

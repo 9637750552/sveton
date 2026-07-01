@@ -36,6 +36,8 @@
 
 Результат анализа референс-проекта: [previous_project_review.md](previous_project_review.md).
 
+Фактическое обобщение completed electricians KB pipeline и предложение по превращению процесса в переиспользуемый продукт: [TECHNICAL_DOCUMENT_SEMANTIC_ANALYSIS_PIPELINE.md](TECHNICAL_DOCUMENT_SEMANTIC_ANALYSIS_PIPELINE.md).
+
 ## 2. Проблема
 
 Нельзя просить модель одним проходом "сделать базу знаний" из большого корпуса документов. При таком подходе модель:

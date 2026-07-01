@@ -2,9 +2,10 @@
 
 ## Summary
 
-- Source files checked: `16`
-- Chunks checked: `151`
+- Source files checked: `17`
+- Chunks checked: `158`
 - `covered`: `102`
+- `covered_review_candidate`: `7`
 - `ignored`: `45`
 - `uncovered_content`: `4`
 
@@ -26,6 +27,7 @@
 - `ЭЛК_3_1процесс монтажа.docx`: `covered`: `5`, `ignored`: `4`
 - `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx`: `covered`: `16`, `ignored`: `4`
 - `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx`: `covered`: `8`
+- `ЭЛК_5 - Переборка щитов_1.0.docx`: `covered_review_candidate`: `7`
 
 ## Uncovered Content Chunks
 
@@ -118,6 +120,69 @@
 - Reason: `visual_scheme_labels_manual_review`
 - Covered by: `doc_015_chunk_0016_stmt_003`, `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`
 - Notes: Подключение проводов реверсивной линии в однофазном байпасном щите представлено главным образом схемой и короткими labels; image-only/diagram-only facts не продвигались в canonical.
+
+### `doc_017_chunk_0001`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_016_chunk_0006_stmt_007`, `doc_016_chunk_0006_stmt_012`
+- Review image: `img_0123`
+- Statement: `doc_017_chunk_0001_stmt_001`
+- Notes: Page 1 is a component lineup with A1/A2 visible on a contactor-like element. It is preserved as `doc_017_scheme_001`; component and wiring implications require manual visual review before any doc_017-specific claim.
+
+### `doc_017_chunk_0002`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0012_stmt_002`, `doc_015_chunk_0012_stmt_003`, `doc_016_chunk_0006_stmt_007`
+- Review image: `img_0124`
+- Statement: `doc_017_chunk_0002_stmt_001`
+- Notes: Page 2 left scheme contains labels Ввод, N, A1/A2. It is preserved as `doc_017_scheme_002`; conductor routing remains manual-review before canonical promotion.
+
+### `doc_017_chunk_0003`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0012_stmt_003`, `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`, `doc_016_chunk_0006_stmt_007`
+- Review image: `img_0125`
+- Statement: `doc_017_chunk_0003_stmt_001`
+- Notes: Page 2 right scheme has inverter input/output phase labels. It is preserved as `doc_017_scheme_003`; exact terminal assignments and routes remain manual-review before canonical promotion.
+
+### `doc_017_chunk_0004`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0012_stmt_003`, `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`
+- Review image: `img_0126`
+- Statement: `doc_017_chunk_0004_stmt_001`
+- Notes: Page 3 is preserved as `doc_017_scheme_004`, a single assembled scheme with inverter input/output labels; without expert review it remains blocked from canonical promotion.
+
+### `doc_017_chunk_0005`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`, `doc_016_chunk_0006_stmt_003`, `doc_016_chunk_0006_stmt_004`
+- Review image: `img_0127`
+- Statement: `doc_017_chunk_0005_stmt_001`
+- Notes: Page 4 is preserved as `doc_017_scheme_005`; numbered outputs and PE/L/N input-output mapping remain blocked pending expert visual review.
+
+### `doc_017_chunk_0006`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`, `doc_016_chunk_0006_stmt_003`, `doc_016_chunk_0006_stmt_004`, `doc_016_chunk_0008_stmt_001`
+- Review image: `img_0128`
+- Statement: `doc_017_chunk_0006_stmt_001`
+- Notes: Page 5 is preserved as `doc_017_scheme_006`, an alternate split-output/routing scheme. Existing canonical covers general reserve/input-output concepts, but doc_017-specific mapping remains manual-review.
+
+### `doc_017_chunk_0007`
+
+- Source: `ЭЛК_5 - Переборка щитов_1.0.docx`
+- Reason: `visual_review_candidate_statement`
+- Covered by: `doc_015_chunk_0016_stmt_004`, `doc_015_chunk_0016_stmt_005`, `doc_016_chunk_0006_stmt_003`, `doc_016_chunk_0006_stmt_004`
+- Review image: `img_0129`
+- Statement: `doc_017_chunk_0007_stmt_001`
+- Notes: Page 6 is preserved as `doc_017_scheme_007`, an alternate visual routing scheme. No text-backed atomic statements were promoted before review.
 
 
 ## Machine Rows

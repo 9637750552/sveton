@@ -29,8 +29,9 @@
 
 ## Текущий итог
 
-- Всего визуальных артефактов: `110`.
+- Всего визуальных артефактов: `117`.
 - Из DOCX извлечено встроенных изображений: `110`.
+- DOCX-derived page/scheme renders для manual review: `7`.
 - Из PDF отрендерено страниц: `0`.
 - Папка исходных изображений: `00_input/documents/electricians_knowledge_base/images/raw/`.
 - Папка нормализованных изображений: `00_input/documents/electricians_knowledge_base/images/normalized/`.
@@ -40,7 +41,7 @@
 
 Распределение по предварительным типам:
 
-- `diagram`: `94`;
+- `diagram`: `101`;
 - `photo_example`: `3`;
 - `decorative_or_unclear`: `13`.
 
@@ -49,18 +50,21 @@
 - `raw_extracted|needs_classification`: `84`;
 - `raw_extracted|ready_for_linking`: `13`;
 - `raw_extracted|exclude_candidate|needs_classification`: `13`.
+- `docx_page_render|review_required|candidate_for_manual_review`: `7`.
 
 Распределение по linking buckets:
 
 - `ready_for_linking`: `13`;
 - `candidate_for_linking`: `84`;
+- `candidate_for_manual_review`: `7`;
 - `exclude_candidate`: `13`.
 
 Контекст:
 
-- `source_anchor` заполнен для `110` из `110` строк;
-- `nearby_text` заполнен для `110` из `110` строк;
+- `source_anchor` заполнен для `117` из `117` строк;
+- `nearby_text` заполнен для `117` из `117` строк;
 - DOCX-контекст привязан через исходные `media/imageN`;
+- `doc_017` context привязан через DOCX-derived page/scheme renders, потому что цельные схемы собраны на странице из множества embedded fragments;
 - PDF-derived visual artifacts for `doc_014`/`doc_017` removed; current `doc_014` visual links use DOCX embedded media only.
 
 ## Метод извлечения
@@ -86,6 +90,7 @@
 | `ЭЛК_3_1процесс монтажа.docx` | DOCX | 10 | selected embedded media | `diagram` / `photo_example` | `raw_extracted, ready_for_linking` | Отобранные вручную DOCX-картинки для accepted links к уже существующим `doc_014` text-backed statements; visual-only схемы не продвигались. |
 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` | DOCX | 28 | embedded media | `diagram` / `photo_example` | `raw_extracted, needs_classification` | Крупный визуальный блок по этапам монтажа. Возможна смесь схем и фото. |
 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | DOCX | 27 | embedded media | `diagram` | `raw_extracted, needs_classification` | Вероятные схемы и иллюстрации элементов щитов. |
+| `ЭЛК_5 - Переборка щитов_1.0.docx` | DOCX | 7 | DOCX-derived page/scheme render | `diagram` | `docx_page_render, review_required, candidate_for_manual_review` | Ценные цельные схемы переборки щитов сохранены как отдельные visual review units `img_0123`-`img_0129`; не являются accepted `statement_images.jsonl` evidence до ручного review. |
 
 ## Что уже понятно по визуальному корпусу
 
@@ -99,7 +104,7 @@
 
 - [x] Извлечь изображения в `images/raw/`.
 - [x] Просмотреть визуальные артефакты и отделить полезные изображения от декоративных/шумовых.
-- [x] Заполнить первичную per-image классификацию для всех 118 артефактов в `inventory.csv`.
+- [x] Заполнить первичную per-image классификацию для всех 117 артефактов в `inventory.csv`.
 - [x] Добавить `image_id` для всех строк `inventory.csv`.
 - [x] Подготовить `nearby_text`, `source_anchor` и первичные captions.
 - [x] Выбрать изображения для разделов `photo_report`, `installation_process`, `ups_components`, `distribution_boards`.

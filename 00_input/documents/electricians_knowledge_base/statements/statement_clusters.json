@@ -2,7 +2,7 @@
   "version": "v1",
   "created_at": "2026-06-16",
   "source": "00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl",
-  "canonical_statement_count": 612,
+  "canonical_statement_count": 619,
   "clusters": [
     {
       "cluster_id": "C001",
@@ -353,7 +353,8 @@
       "title": "Электрический щит клиента, УЗО, шины и мастер-выключатель",
       "topic": "distribution_boards",
       "source_files": [
-        "ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx"
+        "ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx",
+        "ЭЛК_5 - Переборка щитов_1.0.docx"
       ],
       "primary_outputs": [
         "distribution_boards_article",
@@ -361,8 +362,8 @@
         "uzo_review_questions",
         "master_switch_review_questions"
       ],
-      "notes": "Почти все утверждения safety-critical: разбор щита, фазы/нули до и после УЗО, PE/N-шины, переборка щита, группа резерва, контактор и мастер-выключатель. Опечатки источника вынесены в source-quality issues.",
-      "statement_count": 62,
+      "notes": "Почти все утверждения safety-critical: разбор щита, фазы/нули до и после УЗО, PE/N-шины, переборка щита, группа резерва, контактор и мастер-выключатель. Опечатки источника вынесены в source-quality issues. doc_017 добавлен как visual_review_candidate слой: 7 схем переборки щита требуют ручного review перед превращением в инструкции.",
+      "statement_count": 69,
       "statement_ids": [
         "doc_016_chunk_0001_stmt_001",
         "doc_016_chunk_0001_stmt_002",
@@ -425,7 +426,14 @@
         "doc_016_chunk_0007_stmt_009",
         "doc_016_chunk_0007_stmt_010",
         "doc_016_chunk_0007_stmt_011",
-        "doc_016_chunk_0008_stmt_001"
+        "doc_016_chunk_0008_stmt_001",
+        "doc_017_chunk_0001_stmt_001",
+        "doc_017_chunk_0002_stmt_001",
+        "doc_017_chunk_0003_stmt_001",
+        "doc_017_chunk_0004_stmt_001",
+        "doc_017_chunk_0005_stmt_001",
+        "doc_017_chunk_0006_stmt_001",
+        "doc_017_chunk_0007_stmt_001"
       ]
     },
     {

@@ -41,7 +41,7 @@
 | 14 | `ЭЛК_3_1процесс монтажа.docx` | DOCX | обучение / инструкция | Процесс монтажа | монтажник, электрик | raw, extracted, chunked, review_required | Word-источник добавлен вместо шумного PDF; controlled DOCX-based extraction выполнен с dedupe-gate против doc_015 / C009. |
 | 15 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` | DOCX | обучение / инструкция | Этапы монтажа | монтажник, электрик | raw, extracted, chunked | Сравнить с doc_014 по процессу монтажа после DOCX extraction. |
 | 16 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | DOCX | обучение / справочник | Элементы распределительных щитов | монтажник, электрик | raw, extracted, chunked | Техническая база по щитам. |
-| 17 | `ЭЛК_5 - Переборка щитов_1.0.docx` | DOCX | обучение / инструкция | Переборка щитов | монтажник, электрик, инженер ГО | raw, pending_extraction | Word-источник добавлен вместо шумного PDF; extraction/chunking нужно выполнить заново из DOCX. |
+| 17 | `ЭЛК_5 - Переборка щитов_1.0.docx` | DOCX | обучение / инструкция | Переборка щитов | монтажник, электрик, инженер ГО | raw, extracted, chunked, visual_review_extracted, review_required | Controlled DOCX-based pass выполнен page-aware; 7 схем сохранены как review artifacts, canonical statements не добавлены до ручного review. |
 
 ## Следующие действия
 

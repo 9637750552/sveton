@@ -4,10 +4,11 @@
 
 ## Текущее состояние
 
-Редакционная база знаний сейчас опирается на canonical statements после controlled extraction batch 014 по `doc_014`:
+Редакционная база знаний сейчас опирается на canonical statements после controlled extraction batch 017, включая `doc_017` visual-review candidates:
 
-- `612` валидных атомарных утверждений;
-- `14` канонических кластеров покрывают все `612` утверждений;
+- `619` валидных атомарных утверждений;
+- `14` канонических кластеров покрывают все `619` утверждений;
+- `69` утверждений по `distribution_boards` сгруппированы в `C008`: `62` из `doc_016` и `7` visual-review candidates из `doc_017`;
 - `123` утверждения по `installation_process` сгруппированы в `C009`: `101` из `doc_015` и `22` из `doc_014`;
 - `60` утверждений по `doc_010 / qualification_levels` сгруппировано в `C010`;
 - `66` утверждений по `doc_008 / work_on_site` сгруппировано в `C011`;
@@ -16,7 +17,7 @@
 - `53` утверждения по `doc_012 / technical_cards` сгруппированы в `C014`;
 - `9` собранных markdown-разделов;
 - `0` extraction errors;
-- `18` coverage / review warnings после batch 014: `3` по `doc_009`, `6` по `doc_001`, `5` по `doc_012`, `4` по `doc_014`.
+- `25` coverage / review warnings после batch 017: `3` по `doc_009`, `6` по `doc_001`, `5` по `doc_012`, `4` по `doc_014`, `7` по `doc_017`.
 
 Источники состояния:
 
@@ -31,7 +32,7 @@
 |:---|:---|:---|---:|---:|:---|:---|
 | `01_basic_knowledge.md` | собран | `C006 / basic_knowledge` | 14 | 1 | `ЭЛК_1_Базовые_знания_Основные_понятия_ред1_1.docx` | Есть source-quality issue по строке про `DC`; раздел годится как учебный слой, не как финальная инструкция без review. |
 | `02_ups_components.md` | собран | `C007 / ups_components` | 59 | 14 | `ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx` | Много `safety_critical` знаний: байпас, балансиры, перемычки, DC-защита, GSM-розетка. |
-| `03_distribution_boards.md` | собран | `C008 / distribution_boards` | 62 | 17 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | Почти весь раздел требует технического review перед использованием как монтажной инструкции. |
+| `03_distribution_boards.md` | собран + visual-review candidates | `C008 / distribution_boards` | 69 | 17 accepted + 7 review-required | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` + `ЭЛК_5 - Переборка щитов_1.0.docx` | 7 схем `doc_017` заведены как `visual_review_candidate` и связаны в `statement_images.jsonl` со статусом `review_required`; они требуют ручного review перед превращением в монтажные инструкции. |
 | `04_installation_process.md` | собран | `C009 / installation_process` | 123 | 26 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` + `ЭЛК_3_1процесс монтажа.docx` | Раздел собран как черновик по `doc_015`; `doc_014` добавил 22 source-backed уточнения без нового visual layer. Все safety-critical пункты остаются `blocked_for_instruction` до expert review. |
 | будущий `06_service_visit.md` | canonical готов, editorial не собран | `C013 / service_visit` | 12 | 15 context links | `Действия на сервисном выезде.docx` | Кластер покрывает сервисный выезд по выравниванию АКБ: проверки инвертора, АКБ, балансира, затяжки соединений и фото/видео фиксацию. Визуальный слой добавлен как cross-source context из уже accepted image links; прямых изображений в источнике нет. |
 | будущий `16_technical_cards.md` | canonical + manual OCR готов, editorial не собран | `C014 / technical_cards` | 53 | 16 OCR source links | `ЭЛК_2_1 техн.карты изделий..docx` | Кластер покрывает table-aware text-backed технические карты изготовления кабеля «Инвертор-щит», перемычек АКБ, подготовку проводов балансира из `img_0029` и таблицу матриц CTF из `img_0030`. Остальные row-level изображения остаются candidate/review. |
@@ -69,6 +70,8 @@
 `ЭЛК_2_1 техн.карты изделий..docx` закрыт по текстовым HTML-таблицам и отдельному manual OCR pass для `img_0029` / `img_0030`. Все технические statements из этого источника остаются `review_required`; обычные row-level изображения технических карт пока не утверждены как editorial visual layer.
 
 `ЭЛК_3_1процесс монтажа.docx` закрыт controlled DOCX-based extraction: `22` новых text-backed statements добавлены в `C009`, `3` chunks закрыты coverage overrides как duplicate/manual visual review, accepted `statement_images.jsonl` links не добавлялись. Схемы и embedded media `doc_014` остаются manual-review candidates.
+
+`ЭЛК_5 - Переборка щитов_1.0.docx` обработан controlled DOCX-based visual pass: `7` page/scheme-aware chunks сохранены как `covered_review_candidate`, созданы `7` DOCX-derived scheme artifacts `img_0123`-`img_0129` и `7` atomic statements типа `visual_review_candidate` для ручного review. Это не финальные wiring-инструкции.
 
 ## Что пока не собрано как самостоятельные разделы
 

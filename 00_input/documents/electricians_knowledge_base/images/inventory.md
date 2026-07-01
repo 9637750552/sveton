@@ -86,10 +86,8 @@
 | `ЭЛК_1_Базовые_знания_Основные_понятия_ред1_1.docx` | DOCX | 1 | embedded media | `diagram` | `raw_extracted, ready_for_linking` | Похоже на базовую схему/иллюстрацию по понятиям. |
 | `ЭЛК_2_1 техн.карты изделий..docx` | DOCX | 27 | embedded media | `diagram` / `table_image` | `raw_extracted, needs_classification` | Крупный визуальный блок техкарт. Здесь вероятны схемы, карточки, таблицы и мелкие декоративные фрагменты. |
 | `ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx` | DOCX | 15 | embedded media | `diagram` | `raw_extracted, needs_classification` | Вероятные схемы и составные элементы ИБП. Высокая ценность для учебника. |
-| `ЭЛК_3_1процесс монтажа.pdf` | PDF | 12 | page render | `pdf_page_render` | `raw_extracted, review_required` | Все страницы сохранены как PNG. Нужен отбор страниц и привязка к nearby text. |
 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` | DOCX | 28 | embedded media | `diagram` / `photo_example` | `raw_extracted, needs_classification` | Крупный визуальный блок по этапам монтажа. Возможна смесь схем и фото. |
 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | DOCX | 27 | embedded media | `diagram` | `raw_extracted, needs_classification` | Вероятные схемы и иллюстрации элементов щитов. |
-| `ЭЛК_5 - Переборка щитов_1.0.pdf` | PDF | 6 | page render | `pdf_page_render` | `raw_extracted, review_required` | Все страницы сохранены как PNG. Требуется ручной отбор полезных страниц. |
 
 ## Что уже понятно по визуальному корпусу
 

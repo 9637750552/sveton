@@ -2,6 +2,20 @@
 
 Дата обновления: 2026-07-01
 
+## Статус этапа
+
+Этап создания electricians knowledge base завершен.
+
+Это означает, что:
+
+- весь запланированный корпус инструкций текущего этапа обработан;
+- собран canonical snapshot на `619` утверждений;
+- visual layer доведен до рабочего состояния;
+- snapshot импортирован в Postgres / OmniCRM review layer;
+- дальнейшая работа идет уже как review, approval/reject и downstream use, а не как незавершенное первичное наполнение.
+
+Отдельная фиксация завершения этапа: [KB_CANONICAL_CREATION_COMPLETE.md](/home/sergey/Sveton/01_docs/operations/electricians_knowledge_base/KB_CANONICAL_CREATION_COMPLETE.md)
+
 ## Текущее состояние
 
 Редакционная база знаний сейчас опирается на canonical statements после controlled extraction batch 017, включая `doc_017` visual-review candidates:

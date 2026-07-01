@@ -29,9 +29,9 @@
 
 ## Текущий итог
 
-- Всего визуальных артефактов: `118`.
-- Из DOCX извлечено встроенных изображений: `100`.
-- Из PDF отрендерено страниц: `18`.
+- Всего визуальных артефактов: `110`.
+- Из DOCX извлечено встроенных изображений: `110`.
+- Из PDF отрендерено страниц: `0`.
 - Папка исходных изображений: `00_input/documents/electricians_knowledge_base/images/raw/`.
 - Папка нормализованных изображений: `00_input/documents/electricians_knowledge_base/images/normalized/`.
 - Для раздела `photo_report` созданы normalized-копии с короткими ASCII-именами: `photo_report_img_001.jpeg`, `photo_report_img_002.jpeg`.
@@ -40,41 +40,38 @@
 
 Распределение по предварительным типам:
 
-- `diagram`: `85`;
-- `photo_example`: `2`;
-- `pdf_page_render`: `18`;
+- `diagram`: `94`;
+- `photo_example`: `3`;
 - `decorative_or_unclear`: `13`.
 
 Распределение по статусам:
 
 - `raw_extracted|needs_classification`: `84`;
-- `raw_extracted|ready_for_linking`: `3`;
-- `raw_extracted|review_required`: `18`;
+- `raw_extracted|ready_for_linking`: `13`;
 - `raw_extracted|exclude_candidate|needs_classification`: `13`.
 
 Распределение по linking buckets:
 
-- `ready_for_linking`: `3`;
+- `ready_for_linking`: `13`;
 - `candidate_for_linking`: `84`;
-- `manual_pdf_review`: `18`;
 - `exclude_candidate`: `13`.
 
 Контекст:
 
-- `source_anchor` заполнен для `118` из `118` строк;
-- `nearby_text` заполнен для `118` из `118` строк;
+- `source_anchor` заполнен для `110` из `110` строк;
+- `nearby_text` заполнен для `110` из `110` строк;
 - DOCX-контекст привязан через исходные `media/imageN`;
-- PDF-контекст пока page-level и требует ручного просмотра.
+- PDF-derived visual artifacts for `doc_014`/`doc_017` removed; current `doc_014` visual links use DOCX embedded media only.
 
 ## Метод извлечения
 
 - `DOCX`: извлечение встроенных файлов из `word/media/`.
-- `PDF`: рендер страниц в PNG через `ghostscript`.
+- `PDF`: рендер страниц в PNG через `ghostscript` only when explicitly approved for a source; obsolete `doc_014`/`doc_017` PDF renders are not part of the current corpus.
 
 Важно:
 
 - Для DOCX имя извлеченного файла сохраняет исходный номер `media/imageN`, чтобы можно было надежно связать картинку с markdown-текстом.
-- PDF на текущем шаге сохранены как page renders. Это полезно для ревью и визуальной привязки, но не означает, что каждая страница уже является отдельной "утверждающей" картинкой.
+- PDF page renders are not used for current `doc_014` links.
 - Картинка не должна порождать техническое правило без nearby text, подписи или ручной проверки.
 - Мелкие иконки, пустые фрагменты и cropped-объекты помечаются `exclude_candidate`, пока не доказана их полезность.
 
@@ -86,6 +83,7 @@
 | `ЭЛК_1_Базовые_знания_Основные_понятия_ред1_1.docx` | DOCX | 1 | embedded media | `diagram` | `raw_extracted, ready_for_linking` | Похоже на базовую схему/иллюстрацию по понятиям. |
 | `ЭЛК_2_1 техн.карты изделий..docx` | DOCX | 27 | embedded media | `diagram` / `table_image` | `raw_extracted, needs_classification` | Крупный визуальный блок техкарт. Здесь вероятны схемы, карточки, таблицы и мелкие декоративные фрагменты. |
 | `ЭЛК_2_Базовые_знания_Состав_ИБП_ред1_5.docx` | DOCX | 15 | embedded media | `diagram` | `raw_extracted, needs_classification` | Вероятные схемы и составные элементы ИБП. Высокая ценность для учебника. |
+| `ЭЛК_3_1процесс монтажа.docx` | DOCX | 10 | selected embedded media | `diagram` / `photo_example` | `raw_extracted, ready_for_linking` | Отобранные вручную DOCX-картинки для accepted links к уже существующим `doc_014` text-backed statements; visual-only схемы не продвигались. |
 | `ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx` | DOCX | 28 | embedded media | `diagram` / `photo_example` | `raw_extracted, needs_classification` | Крупный визуальный блок по этапам монтажа. Возможна смесь схем и фото. |
 | `ЭЛК_4_Базовые_знания_Элементы_распред_щитов_ред1.docx` | DOCX | 27 | embedded media | `diagram` | `raw_extracted, needs_classification` | Вероятные схемы и иллюстрации элементов щитов. |
 
@@ -95,7 +93,7 @@
 - `ЭЛК_1_...Основные_понятия...` содержит читаемую схему соединения аккумуляторов.
 - Техкарты, состав ИБП, этапы монтажа и элементы щитов в основном состоят из схем, карточек и технических иллюстраций.
 - Внутри DOCX есть мелкие иконки, crop-фрагменты и пустые/почти пустые изображения; они автоматически помечены как `exclude_candidate`.
-- PDF пока сохранены как page renders и требуют ручного отбора страниц до привязки к знаниям.
+- Для `doc_014` добавлен отдельный manual visual-link pass: картинки иллюстрируют только уже извлеченные text-backed statements и не создают новые факты.
 
 ## Следующие действия
 

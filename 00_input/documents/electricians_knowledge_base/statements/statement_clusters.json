@@ -2,7 +2,7 @@
   "version": "v1",
   "created_at": "2026-06-16",
   "source": "00_input/documents/electricians_knowledge_base/statements/atomic_statements.jsonl",
-  "canonical_statement_count": 590,
+  "canonical_statement_count": 612,
   "clusters": [
     {
       "cluster_id": "C001",
@@ -433,7 +433,8 @@
       "title": "Этапы монтажа ИБП",
       "topic": "installation_process",
       "source_files": [
-        "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx"
+        "ЭЛК_3_Базовые_знания_Описание_этапов_монтажа_ред1_9.docx",
+        "ЭЛК_3_1процесс монтажа.docx"
       ],
       "primary_outputs": [
         "installation_process_article",
@@ -441,8 +442,8 @@
         "installation_checklist_draft",
         "technical_review_queue"
       ],
-      "notes": "Кластер содержит общий порядок монтажа, сборку ИБП, АКБ, инвертор, байпас, реверсивную кабельную линию, переборку щита, выделение резервной группы, пуск и настройку. 77 утверждений имеют safety_critical/review_required и требуют технического review перед превращением в финальную монтажную инструкцию. Визуальный слой doc_015 пока не перенесен в statement_images.jsonl.",
-      "statement_count": 101,
+      "notes": "Кластер содержит общий порядок монтажа, сборку ИБП, АКБ, инвертор, байпас, реверсивную кабельную линию, переборку щита, выделение резервной группы, пуск и настройку. В controlled extraction doc_014 добавлены уникальные DOCX-based уточнения по выбору места установки, сборке стеллажа, размещению балансира, подготовке байпасного щита, прокладке реверсивной линии и ограничению мощности приоритетной нагрузки. Все новые технические утверждения из doc_014 требуют review_required; визуальный слой doc_014 не продвигался в statement_images.jsonl.",
+      "statement_count": 123,
       "statement_ids": [
         "doc_015_chunk_0004_stmt_001",
         "doc_015_chunk_0004_stmt_002",
@@ -544,7 +545,29 @@
         "doc_015_chunk_0020_stmt_003",
         "doc_015_chunk_0020_stmt_004",
         "doc_015_chunk_0020_stmt_005",
-        "doc_015_chunk_0020_stmt_006"
+        "doc_015_chunk_0020_stmt_006",
+        "doc_014_chunk_0001_stmt_001",
+        "doc_014_chunk_0001_stmt_002",
+        "doc_014_chunk_0001_stmt_003",
+        "doc_014_chunk_0001_stmt_004",
+        "doc_014_chunk_0001_stmt_005",
+        "doc_014_chunk_0001_stmt_006",
+        "doc_014_chunk_0001_stmt_007",
+        "doc_014_chunk_0001_stmt_008",
+        "doc_014_chunk_0001_stmt_009",
+        "doc_014_chunk_0001_stmt_010",
+        "doc_014_chunk_0001_stmt_011",
+        "doc_014_chunk_0001_stmt_012",
+        "doc_014_chunk_0001_stmt_013",
+        "doc_014_chunk_0003_stmt_001",
+        "doc_014_chunk_0003_stmt_002",
+        "doc_014_chunk_0003_stmt_003",
+        "doc_014_chunk_0005_stmt_001",
+        "doc_014_chunk_0005_stmt_002",
+        "doc_014_chunk_0006_stmt_001",
+        "doc_014_chunk_0009_stmt_001",
+        "doc_014_chunk_0009_stmt_002",
+        "doc_014_chunk_0009_stmt_003"
       ]
     },
     {

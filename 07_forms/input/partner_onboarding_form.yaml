@@ -1,0 +1,156 @@
+title: Анкета партнера Светон
+description: |
+  Заполните короткую анкету для оформления сотрудничества.
+
+  Если у вас есть карточка компании или файл с реквизитами, загрузите его первым вопросом. Тогда реквизитные поля ниже можно не заполнять, если эти данные уже есть в файле.
+
+  Перед отправкой анкеты ознакомьтесь с документами:
+
+  [Политика конфиденциальности](https://sveton-ibp.ru/policy/)
+  [Согласие на обработку персональных данных](https://sveton-ibp.ru/personal-policy/)
+
+  Отправляя анкету, вы подтверждаете согласие на обработку персональных данных для рассмотрения заявки и связи по сотрудничеству.
+isAnonymous: false
+submitMultiple: false
+allowEditSubmissions: false
+showExpiration: false
+submitText: Отправить
+thanksTitle: Спасибо за заявку
+submissionMessage: Спасибо. Мы получили анкету и свяжемся с вами после проверки данных.
+
+nextcloudForms:
+  baseUrl: https://nc.domibp.ru
+
+manualSettings:
+  yandexForms:
+    - Проверить обязательность вопросов перед публикацией: текущий API-скрипт Yandex Forms предупреждает, что required-флаги нужно проверить вручную.
+    - Текущий Yandex-скрипт не переносит description у отдельных вопросов. Для q08_partner_type описание типов A/B нужно добавить вручную или доработать генератор.
+  nextcloudForms:
+    - Проверить, что описание q08_partner_type отображается под вопросом и Markdown выглядит нормально.
+    - Для q01_requisites_file проверить, что загрузка нескольких файлов работает и разрешены Word/PDF.
+
+questions:
+  - id: q01_requisites_file
+    section: Реквизиты
+    text: Загрузите карточку компании / реквизиты.
+    type: file
+    isRequired: false
+    description: |
+      Загрузите карточку компании или файлы с реквизитами в Word или PDF.
+
+      Можно приложить несколько файлов, если реквизиты, банковские данные или подтверждающие документы находятся в разных документах.
+
+      Если в файлах есть все данные для договора и выплат, поля ниже можно не заполнять.
+    extraSettings:
+      maxAllowedFilesCount: 10
+
+  - id: q02_legal_form
+    section: Реквизиты
+    text: Укажите форму работы.
+    type: multiple_unique
+    isRequired: false
+    description: |
+      Не заполняйте, если эти данные уже есть в загруженной карточке.
+    options:
+      - Самозанятый
+      - ИП
+      - ООО
+
+  - id: q03_legal_name
+    section: Реквизиты
+    text: Наименование компании / ИП / ФИО самозанятого.
+    type: short
+    isRequired: false
+    description: |
+      Не заполняйте, если эти данные уже есть в загруженной карточке.
+
+  - id: q04_inn
+    section: Реквизиты
+    text: ИНН.
+    type: short
+    isRequired: false
+    description: |
+      Не заполняйте, если ИНН уже указан в загруженной карточке.
+
+  - id: q05_phone
+    section: Контакты
+    text: Телефон.
+    type: short
+    isRequired: false
+    description: |
+      Не заполняйте, если телефон уже указан в загруженной карточке.
+
+  - id: q06_email
+    section: Контакты
+    text: Email.
+    type: short
+    isRequired: false
+    description: |
+      Не заполняйте, если email уже указан в загруженной карточке.
+    extraSettings:
+      validationType: email
+
+  - id: q07_regions
+    section: География работы
+    text: В каких регионах вы работаете?
+    type: multiple
+    isRequired: false
+    description: |
+      Выберите один или несколько регионов. Если работаете только в отдельных городах, можно указать их в следующем вопросе.
+    options:
+      - Краснодарский край
+      - Ростовская область
+      - Ставропольский край
+      - Республика Адыгея
+      - Республика Крым и г. Севастополь
+      - Кабардино-Балкарская Республика
+
+  - id: q07_cities
+    section: География работы
+    text: В каких городах вы работаете?
+    type: short
+    isRequired: false
+    description: |
+      Заполняется по желанию. Например: Краснодар, Сочи, Горячий Ключ.
+
+  - id: q08_partner_type
+    section: Формат участия
+    text: В каком формате вы можете участвовать в работе с клиентом?
+    type: multiple
+    isRequired: true
+    description: |
+      Выберите один или оба варианта.
+
+      > **Тип A** - вы передаете клиента и его контакты. Самостоятельный осмотр объекта не проводите.
+      > **Тип B** - вы передаете клиента, самостоятельно проводите осмотр объекта и передаете исходные данные для расчета и подбора решения.
+    options:
+      - Тип A
+      - Тип B
+
+  - id: q09_clients_per_month
+    section: Формат участия
+    text: Сколько клиентов ориентировочно можете передавать в месяц?
+    type: multiple_unique
+    isRequired: false
+    options:
+      - 1-2
+      - 3-5
+      - 6+
+
+  - id: q10_personal_data_consent
+    section: Согласия
+    text: Согласны на обработку персональных данных?
+    type: multiple_unique
+    isRequired: true
+    options:
+      - Да
+
+  - id: q11_payment_terms_consent
+    section: Согласия
+    text: Подтверждаете порядок выплат?
+    type: multiple_unique
+    isRequired: true
+    description: |
+      Выплаты производятся только по безналичному расчету по реквизитам партнера.
+    options:
+      - Да

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/business_interviews/coverage_report.schema.json",
+  "title": "Business interview coverage report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "source_claims_file",
+    "source_chunks_file",
+    "interviews",
+    "chunks_total",
+    "chunks_with_claims",
+    "claims_total",
+    "claims_by_type",
+    "claims_by_business_area",
+    "claims_by_review_status",
+    "review_flags",
+    "technical_confirmation_required",
+    "electricians_kb_relevant",
+    "chunks_with_zero_claims",
+    "skipped_items_by_reason",
+    "validation_errors",
+    "validation_warnings"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "source_claims_file": { "type": "string" },
+    "source_chunks_file": { "type": "string" },
+    "interviews": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "chunks_total": { "type": "integer", "minimum": 0 },
+    "chunks_with_claims": { "type": "integer", "minimum": 0 },
+    "claims_total": { "type": "integer", "minimum": 0 },
+    "claims_by_type": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "claims_by_business_area": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "claims_by_review_status": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "review_flags": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "technical_confirmation_required": { "type": "integer", "minimum": 0 },
+    "electricians_kb_relevant": { "type": "integer", "minimum": 0 },
+    "chunks_with_zero_claims": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "skipped_items_by_reason": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "validation_errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "validation_warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

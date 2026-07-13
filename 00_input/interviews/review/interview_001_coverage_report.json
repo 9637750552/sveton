@@ -1,0 +1,68 @@
+{
+  "run_id": "business_interviews_validation",
+  "interviews": [
+    "interview_001"
+  ],
+  "chunks_total": 24,
+  "chunks_with_claims": 23,
+  "claims_total": 91,
+  "claims_by_type": {
+    "business_model_claim": 1,
+    "customer_pain": 4,
+    "customer_segment_claim": 1,
+    "objection": 1,
+    "operational_claim": 15,
+    "partner_model_claim": 8,
+    "positioning_claim": 5,
+    "product_claim": 7,
+    "qualification_question": 2,
+    "recommended_response": 1,
+    "risk_or_constraint": 8,
+    "sales_case": 2,
+    "sales_process_claim": 6,
+    "strategy_claim": 14,
+    "technical_claim_needs_confirmation": 12,
+    "value_proposition_claim": 4
+  },
+  "claims_by_business_area": {
+    "business_model": 1,
+    "customer_pain": 4,
+    "customer_segment": 1,
+    "objection_handling": 2,
+    "operations": 15,
+    "partner_model": 8,
+    "positioning": 5,
+    "product": 7,
+    "qualification": 2,
+    "risk": 8,
+    "sales_process": 8,
+    "service_model": 1,
+    "strategy": 13,
+    "technical_context": 12,
+    "value_proposition": 4
+  },
+  "claims_by_review_status": {
+    "extracted": 2,
+    "review_required": 89
+  },
+  "review_flags": {
+    "marketing_claim_review": 32,
+    "price_or_guarantee_review": 22,
+    "public_use_review": 8,
+    "recognition_noise": 17,
+    "strategy_claim_review": 47,
+    "technical_confirmation_required": 38
+  },
+  "technical_confirmation_required": 38,
+  "electricians_kb_relevant": 33,
+  "chunks_with_zero_claims": [
+    "interview_001_chunk_0008"
+  ],
+  "skipped_items_by_reason": {
+    "not_business_relevant": 1
+  },
+  "validation_errors": [],
+  "validation_warnings": [],
+  "source_claims_file": "00_input/interviews/statements/interview_001_claims.jsonl",
+  "source_chunks_file": "00_input/interviews/chunks/interview_001_chunks.jsonl"
+}

@@ -1,0 +1,33 @@
+{
+  "source_interview_id": "interview_001",
+  "source_file": "00_input/interviews/260405_sveton_converted_t_large-v3_diar.txt",
+  "mapping_source": "user_confirmed_in_chat",
+  "mapping_status": "confirmed_with_manual_diarization_overrides",
+  "manual_override_note": "For this interview, SPEAKER_00 is treated as Dmitry and SPEAKER_03 is treated as Sergey. These labels should not create speaker-mapping review items by themselves.",
+  "speakers": {
+    "SPEAKER_00": {
+      "identity": "Дмитрий",
+      "role": "генеральный директор Светон",
+      "confidence": "confirmed",
+      "notes": "Manual diarization override accepted by user."
+    },
+    "SPEAKER_01": {
+      "identity": "Дмитрий",
+      "role": "генеральный директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed main speaker label."
+    },
+    "SPEAKER_02": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "User-confirmed main speaker label."
+    },
+    "SPEAKER_03": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "Manual diarization override accepted by user."
+    }
+  }
+}

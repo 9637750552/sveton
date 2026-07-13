@@ -1,0 +1,21 @@
+{
+  "source_interview_id": "interview_005",
+  "source_file": "00_input/interviews/260609_sveton_converted_t_large-v3_diar.txt",
+  "mapping_source": "user_confirmed_in_chat",
+  "mapping_status": "confirmed",
+  "manual_override_note": "",
+  "speakers": {
+    "SPEAKER_00": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview."
+    },
+    "SPEAKER_01": {
+      "identity": "Дмитрий",
+      "role": "генеральный директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview."
+    }
+  }
+}

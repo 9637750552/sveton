@@ -1,0 +1,33 @@
+{
+  "source_interview_id": "interview_004",
+  "source_file": "00_input/interviews/260408_sveton4_converted_t_large-v3_diar.txt",
+  "mapping_source": "user_confirmed_in_chat",
+  "mapping_status": "confirmed_with_manual_diarization_overrides",
+  "manual_override_note": "For this interview, SPEAKER_00, SPEAKER_01, and SPEAKER_03 are treated as Alexey; SPEAKER_02 is treated as Sergey. SPEAKER_00 and SPEAKER_03 should not create speaker-mapping review items by themselves.",
+  "speakers": {
+    "SPEAKER_00": {
+      "identity": "Алексей",
+      "role": "коммерческий директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview."
+    },
+    "SPEAKER_01": {
+      "identity": "Алексей",
+      "role": "коммерческий директор Светон",
+      "confidence": "confirmed",
+      "notes": "Main Alexey label by content; user confirmed SPEAKER_00 and SPEAKER_03 as Alexey."
+    },
+    "SPEAKER_02": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "Interviewer / regional model label by content."
+    },
+    "SPEAKER_03": {
+      "identity": "Алексей",
+      "role": "коммерческий директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview."
+    }
+  }
+}

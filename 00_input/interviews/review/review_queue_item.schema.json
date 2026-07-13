@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/business_interviews/review_queue_item.schema.json",
+  "title": "Business interview review queue item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "source_interview_id",
+    "source_chunk_id",
+    "review_reasons",
+    "claim",
+    "source_quote",
+    "review_owner",
+    "decision_status"
+  ],
+  "properties": {
+    "claim_id": { "type": "string", "pattern": "^interview_claim_[0-9]{6}$" },
+    "source_interview_id": { "type": "string", "pattern": "^interview_[0-9]{3}$" },
+    "source_chunk_id": { "type": "string", "pattern": "^interview_[0-9]{3}_chunk_[0-9]{4}$" },
+    "review_reasons": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "claim": { "type": "string" },
+    "source_quote": { "type": "string" },
+    "review_owner": { "type": "string" },
+    "decision_status": {
+      "type": "string",
+      "enum": ["pending", "approved", "approved_with_rewrite", "rejected", "needs_more_sources"]
+    },
+    "decision_notes": { "type": "string", "default": "" }
+  }
+}

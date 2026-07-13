@@ -1,0 +1,52 @@
+{
+  "run_id": "business_interviews_validation",
+  "interviews": [
+    "interview_003"
+  ],
+  "chunks_total": 20,
+  "chunks_with_claims": 20,
+  "claims_total": 60,
+  "claims_by_type": {
+    "business_model_claim": 1,
+    "customer_pain": 2,
+    "customer_segment_claim": 3,
+    "operational_claim": 6,
+    "positioning_claim": 1,
+    "qualification_question": 3,
+    "recommended_response": 2,
+    "risk_or_constraint": 5,
+    "sales_process_claim": 8,
+    "technical_claim_needs_confirmation": 29
+  },
+  "claims_by_business_area": {
+    "business_model": 1,
+    "customer_pain": 2,
+    "customer_segment": 3,
+    "objection_handling": 2,
+    "operations": 6,
+    "positioning": 1,
+    "qualification": 3,
+    "risk": 5,
+    "sales_process": 8,
+    "technical_context": 29
+  },
+  "claims_by_review_status": {
+    "review_required": 60
+  },
+  "review_flags": {
+    "marketing_claim_review": 30,
+    "price_or_guarantee_review": 5,
+    "public_use_review": 2,
+    "recognition_noise": 10,
+    "strategy_claim_review": 16,
+    "technical_confirmation_required": 43
+  },
+  "technical_confirmation_required": 43,
+  "electricians_kb_relevant": 44,
+  "chunks_with_zero_claims": [],
+  "skipped_items_by_reason": {},
+  "validation_errors": [],
+  "validation_warnings": [],
+  "source_claims_file": "00_input/interviews/statements/interview_003_claims.jsonl",
+  "source_chunks_file": "00_input/interviews/chunks/interview_003_chunks.jsonl"
+}

@@ -1,0 +1,33 @@
+{
+  "source_interview_id": "interview_006",
+  "source_file": "00_input/interviews/260609_sveton_2_converted_t_large-v3_diar.txt",
+  "mapping_source": "user_confirmed_in_chat",
+  "mapping_status": "confirmed",
+  "manual_override_note": "User confirmed SPEAKER_00 and SPEAKER_01 as Дмитрий; SPEAKER_02 and SPEAKER_03 as Сергей for this interview.",
+  "speakers": {
+    "SPEAKER_00": {
+      "identity": "Дмитрий",
+      "role": "генеральный директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview; rare diarization label."
+    },
+    "SPEAKER_01": {
+      "identity": "Дмитрий",
+      "role": "генеральный директор Светон",
+      "confidence": "confirmed",
+      "notes": "User-confirmed main Дмитрий label for this interview."
+    },
+    "SPEAKER_02": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "User-confirmed main Сергей label for this interview."
+    },
+    "SPEAKER_03": {
+      "identity": "Сергей",
+      "role": "директор южного филиала; новый сотрудник; интервьюер/аналитик бизнес-модели",
+      "confidence": "confirmed",
+      "notes": "User-confirmed label for this interview; rare diarization label."
+    }
+  }
+}

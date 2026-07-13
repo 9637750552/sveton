@@ -30,11 +30,13 @@ fi
 
 input_file="$(realpath "$input_file")"
 base_path="${input_file%.*}"
+input_dir="$(dirname "$input_file")"
 work_dir="$(mktemp -d)"
 processed_file="${work_dir}/input.md"
 mermaid_dir="${work_dir}/mermaid"
 mkdir -p "$mermaid_dir"
 trap 'rm -rf "$work_dir"' EXIT
+resource_path="$(wslpath -w "$work_dir");$(wslpath -w "$input_dir")"
 
 python3 - "$input_file" "$processed_file" "$mermaid_dir" "$mmdc" "$mermaid_max_width_in" "$mermaid_max_height_in" <<'PY'
 import os
@@ -120,7 +122,7 @@ case "$output_format" in
       --standalone \
       --from markdown+smart+link_attributes \
       --to docx \
-      --resource-path "$(wslpath -w "$work_dir")" \
+      --resource-path "$resource_path" \
       --output "$(wslpath -w "$output_file")"
     ;;
   pdf)
@@ -146,7 +148,7 @@ CSS
       --embed-resources \
       --from markdown+smart+link_attributes \
       --to html5 \
-      --resource-path "$(wslpath -w "$work_dir")" \
+      --resource-path "$resource_path" \
       --metadata "title=$(basename "$base_path")" \
       --output "$(wslpath -w "$temp_html")"
 

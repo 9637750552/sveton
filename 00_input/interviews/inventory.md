@@ -38,22 +38,25 @@
 - `raw_transcript`: исходная diarized TXT-стенограмма найдена;
 - `inventory_pending`: нужно уточнить участников, тему и качество;
 - `speaker_mapping_pending`: нужно сопоставить `SPEAKER_XX` с людьми/ролями;
+- `speaker_mapping_confirmed`: сопоставление участников подтверждено или принята ручная поправка диаризации;
 - `chunking_pending`: интервью еще не разбито на чанки;
+- `chunked`: интервью разбито на chunks;
 - `statements_pending`: утверждения еще не извлечены;
+- `statements_extracted`: утверждения извлечены и прошли автоматическую валидацию;
 - `review_required`: требуется ручная проверка;
 - `approved`: утверждения/выводы подтверждены.
 
 ## Документы
 
-| № | Файл | Предполагаемая дата | Формат | Размер, символы | Непустых строк | Статус | Комментарий |
-|---:|---|---|---|---:|---:|---|---|
-| 1 | `260405_sveton_2_converted_t_large-v3_diar.txt` | 2026-04-05 | txt transcript / diarized | 87131 | 562 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 2 | `260405_sveton_converted_t_large-v3_diar.txt` | 2026-04-05 | txt transcript / diarized | 79868 | 547 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 3 | `260408_sveton3_converted_t_large-v3_diar.txt` | 2026-04-08 | txt transcript / diarized | 52474 | 448 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 4 | `260408_sveton4_converted_t_large-v3_diar.txt` | 2026-04-08 | txt transcript / diarized | 74925 | 496 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 5 | `260609_sveton_2_converted_t_large-v3_diar.txt` | 2026-06-09 | txt transcript / diarized | 57633 | 538 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 6 | `260609_sveton_converted_t_large-v3_diar.txt` | 2026-06-09 | txt transcript / diarized | 21255 | 92 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
-| 7 | `260610_sveton_converted_t_large-v3_diar.txt` | 2026-06-10 | txt transcript / diarized | 60925 | 436 | raw_transcript, inventory_pending, speaker_mapping_pending | Нужно подтвердить участников, тему интервью и качество диаризации. |
+| № | Interview ID | Файл | Предполагаемая дата | Формат | Размер, символы | Непустых строк | Статус | Комментарий |
+|---:|---|---|---|---|---:|---:|---|---|
+| 1 | `interview_001` | `260405_sveton_converted_t_large-v3_diar.txt` | 2026-04-05 | txt transcript / diarized | 79868 | 547 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Первый файл смысловой последовательности интервью. Полный контрольный прогон выполнен: 24 chunks, 91 claim, validation errors 0, warnings 0. |
+| 2 | `interview_002` | `260405_sveton_2_converted_t_large-v3_diar.txt` | 2026-04-05 | txt transcript / diarized | 87131 | 562 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Второй файл смысловой последовательности интервью. Полный прогон выполнен: 32 chunks, 87 claims, validation errors 0, warnings 0. |
+| 3 | `interview_003` | `260408_sveton3_converted_t_large-v3_diar.txt` | 2026-04-08 | txt transcript / diarized | 52474 | 448 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Полный прогон выполнен: 20 chunks, 60 claims, validation errors 0, warnings 0. Технические claims помечены для подтверждения. |
+| 4 | `interview_004` | `260408_sveton4_converted_t_large-v3_diar.txt` | 2026-04-08 | txt transcript / diarized | 74925 | 496 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Полный прогон выполнен: 17 chunks, 43 claims, validation errors 0, warnings 0. Off-topic кемпинговые блоки исключены из claims для Sveton KB. |
+| 5 | `interview_005` | `260609_sveton_converted_t_large-v3_diar.txt` | 2026-06-09 | txt transcript / diarized | 21255 | 92 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Полный прогон выполнен: 7 chunks, 28 claims, validation errors 0, warnings 0. |
+| 6 | `interview_006` | `260609_sveton_2_converted_t_large-v3_diar.txt` | 2026-06-09 | txt transcript / diarized | 57633 | 538 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Полный прогон выполнен: 17 chunks, 55 claims, validation errors 0, warnings 0. Технические claims помечены для подтверждения; основной фокус: 1С, КП, осмотр, монтаж и региональная модель. |
+| 7 | `interview_007` | `260610_sveton_converted_t_large-v3_diar.txt` | 2026-06-10 | txt transcript / diarized | 60925 | 436 | raw_transcript, speaker_mapping_confirmed, chunked, statements_extracted, review_required | Полный прогон выполнен: 15 chunks, 52 claims, validation errors 0, warnings 0. Основной фокус: CRM, сервисная модель, масштабируемая модель электриков, прорабы/строители, ценность продукта и технические edge cases. |
 
 ## Что нужно уточнить перед анализом
 
@@ -84,6 +87,14 @@
 
 - [x] Найти 7 стенограмм интервью.
 - [x] Создать инвентаризацию.
-- [ ] Создать `review/speaker_mapping.md`.
-- [ ] Подтвердить участников и роли.
-- [ ] После завершения первого слоя анализа документов электриков запустить chunking интервью.
+- [x] Создать `review/speaker_mapping.md`.
+- [x] Подтвердить участников и роли для `interview_002`.
+- [x] Продолжить полный прогон корпуса с `interview_002`.
+- [x] Завершить полный прогон `interview_003`.
+- [x] Завершить полный прогон `interview_004`.
+- [x] Завершить полный прогон `interview_005`.
+- [x] Завершить полный прогон `interview_006`.
+- [x] Подтвердить speaker mapping и выполнить полный прогон `interview_007`.
+- [x] Собрать corpus-level artifacts: `interview_corpus_claims.jsonl`, `interview_corpus_chunks.jsonl`, `interview_corpus_extraction_results.jsonl`, `review_queue.md`, `coverage_report.md`.
+- [x] Выполнить clustering and relations по всему корпусу claims.
+- [ ] Перейти к сборке editorial outputs: Business / Sales / Commercial KB, business model map, sales playbook и связанные материалы.

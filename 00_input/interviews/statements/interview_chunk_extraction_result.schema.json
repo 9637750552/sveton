@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/business_interviews/interview_chunk_extraction_result.schema.json",
+  "title": "Business interview chunk extraction result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_chunk_id",
+    "coverage_summary",
+    "skipped_source_items",
+    "claims"
+  ],
+  "properties": {
+    "source_chunk_id": {
+      "type": "string",
+      "pattern": "^interview_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "coverage_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "meaningful_items_seen",
+        "claims_extracted",
+        "open_questions_found",
+        "noise_or_transition_items",
+        "coverage_notes"
+      ],
+      "properties": {
+        "meaningful_items_seen": { "type": "integer", "minimum": 0 },
+        "claims_extracted": { "type": "integer", "minimum": 0 },
+        "open_questions_found": { "type": "integer", "minimum": 0 },
+        "noise_or_transition_items": { "type": "integer", "minimum": 0 },
+        "coverage_notes": { "type": "string" }
+      }
+    },
+    "skipped_source_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_quote",
+          "reason"
+        ],
+        "properties": {
+          "source_quote": { "type": "string" },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "noise",
+              "duplicate_within_chunk",
+              "unclear_transcript",
+              "not_business_relevant",
+              "requires_context_outside_chunk",
+              "covered_by_another_claim"
+            ]
+          },
+          "notes": { "type": "string", "default": "" }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "interview_claim.schema.json"
+      }
+    }
+  }
+}

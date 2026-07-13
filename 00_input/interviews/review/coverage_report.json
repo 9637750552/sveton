@@ -1,0 +1,85 @@
+{
+  "run_id": "business_interviews_validation",
+  "interviews": [
+    "interview_001",
+    "interview_002",
+    "interview_003",
+    "interview_004",
+    "interview_005",
+    "interview_006",
+    "interview_007"
+  ],
+  "chunks_total": 132,
+  "chunks_with_claims": 126,
+  "claims_total": 416,
+  "claims_by_type": {
+    "business_model_claim": 25,
+    "customer_pain": 11,
+    "customer_segment_claim": 12,
+    "marketing_message": 7,
+    "objection": 2,
+    "open_question": 4,
+    "operational_claim": 59,
+    "partner_model_claim": 20,
+    "positioning_claim": 15,
+    "product_claim": 12,
+    "qualification_question": 9,
+    "recommended_response": 5,
+    "risk_or_constraint": 41,
+    "sales_case": 8,
+    "sales_process_claim": 38,
+    "strategy_claim": 56,
+    "technical_claim_needs_confirmation": 84,
+    "value_proposition_claim": 8
+  },
+  "claims_by_business_area": {
+    "business_model": 25,
+    "customer_pain": 11,
+    "customer_segment": 12,
+    "marketing": 5,
+    "objection_handling": 8,
+    "open_question": 4,
+    "operations": 59,
+    "partner_model": 20,
+    "positioning": 17,
+    "product": 12,
+    "qualification": 10,
+    "risk": 40,
+    "sales_process": 43,
+    "service_model": 2,
+    "strategy": 56,
+    "technical_context": 84,
+    "value_proposition": 8
+  },
+  "claims_by_review_status": {
+    "extracted": 2,
+    "review_required": 414
+  },
+  "review_flags": {
+    "marketing_claim_review": 148,
+    "open_question": 4,
+    "price_or_guarantee_review": 74,
+    "public_use_review": 26,
+    "recognition_noise": 28,
+    "strategy_claim_review": 215,
+    "technical_confirmation_required": 218
+  },
+  "technical_confirmation_required": 218,
+  "electricians_kb_relevant": 188,
+  "chunks_with_zero_claims": [
+    "interview_001_chunk_0008",
+    "interview_002_chunk_0001",
+    "interview_004_chunk_0001",
+    "interview_004_chunk_0007",
+    "interview_004_chunk_0016",
+    "interview_004_chunk_0017"
+  ],
+  "skipped_items_by_reason": {
+    "noise": 3,
+    "not_business_relevant": 3
+  },
+  "validation_errors": [],
+  "validation_warnings": [],
+  "source_claims_file": "00_input/interviews/statements/interview_corpus_claims.jsonl",
+  "source_chunks_file": "00_input/interviews/chunks/interview_corpus_chunks.jsonl"
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sveton.local/schemas/business_interviews/transcript_chunk.schema.json",
+  "title": "Business interview transcript chunk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chunk_id",
+    "source_interview_id",
+    "source_file",
+    "chunk_index",
+    "start_timestamp",
+    "end_timestamp",
+    "start_line",
+    "end_line",
+    "speakers",
+    "speaker_mapping_status",
+    "episode_type",
+    "primary_topic",
+    "text",
+    "previous_chunk_id",
+    "next_chunk_id",
+    "overlap_previous",
+    "overlap_next",
+    "review_flags",
+    "chunk_status"
+  ],
+  "properties": {
+    "chunk_id": {
+      "type": "string",
+      "pattern": "^interview_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "source_interview_id": {
+      "type": "string",
+      "pattern": "^interview_[0-9]{3}$"
+    },
+    "source_file": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chunk_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "start_timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$"
+    },
+    "end_timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{2}:[0-9]{2}:[0-9]{2}$"
+    },
+    "start_line": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "end_line": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "speakers": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^SPEAKER_[0-9]{2}$"
+      }
+    },
+    "speaker_mapping_status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "likely",
+        "low_confidence",
+        "unreliable",
+        "needs_mapping"
+      ]
+    },
+    "known_participants": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "episode_type": {
+      "type": "string",
+      "enum": [
+        "question_answer",
+        "objection_response",
+        "product_explanation",
+        "customer_case",
+        "sales_process",
+        "qualification_discovery",
+        "partner_workflow",
+        "operations_process",
+        "strategy_hypothesis",
+        "market_context",
+        "disagreement_clarification",
+        "decision_summary",
+        "technical_explanation_needs_confirmation",
+        "noise_or_transition",
+        "mixed"
+      ]
+    },
+    "primary_topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "secondary_topics": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary_hint": {
+      "type": "string",
+      "default": ""
+    },
+    "previous_chunk_id": {
+      "type": ["string", "null"],
+      "pattern": "^interview_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "next_chunk_id": {
+      "type": ["string", "null"],
+      "pattern": "^interview_[0-9]{3}_chunk_[0-9]{4}$"
+    },
+    "overlap_previous": {
+      "type": "string"
+    },
+    "overlap_next": {
+      "type": "string"
+    },
+    "review_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "speaker_mapping_required",
+          "diarization_unreliable",
+          "recognition_noise",
+          "technical_claim_boundary",
+          "marketing_claim_review",
+          "strategy_claim_review",
+          "open_question_present",
+          "fragment_too_short",
+          "fragment_too_long",
+          "mixed_topics",
+          "manual_split_recommended",
+          "manual_merge_recommended"
+        ]
+      }
+    },
+    "chunk_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready_for_extraction",
+        "needs_review",
+        "excluded"
+      ]
+    },
+    "exclude_reason": {
+      "type": "string",
+      "default": ""
+    },
+    "notes": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

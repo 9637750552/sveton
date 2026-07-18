@@ -1,0 +1,585 @@
+title: Заявка на осмотр объекта
+description: |
+  Рабочий YAML-шаблон, синхронизированный с v2-редакцией приложения №1 к договору на осмотр.
+
+  Структура шаблона повторяет новый markdown-текст:
+  часть A - заявка до выезда;
+  часть B - отчет по выполнению заявки.
+
+  Там, где бумажная версия использует строки для ручного заполнения, в форме применены короткие поля, чек-листы и многострочные поля для структурированного ввода.
+isAnonymous: false
+submitMultiple: false
+allowEditSubmissions: false
+showExpiration: false
+submitText: Сохранить заявку
+thanksTitle: Заявка сохранена
+submissionMessage: Данные по заявке и осмотру сохранены.
+
+source:
+  document: 01_docs/operations/contracts/appendix_1_object_inspection_request_v2.md
+  appendix: Приложение N 1
+  note: YAML приведен в прямое соответствие с v2-редакцией приложения №1.
+
+nextcloudForms:
+  baseUrl: https://nc.domibp.ru
+
+manualSettings:
+  yandexForms:
+    - Проверить обязательность вопросов перед публикацией: текущий API-скрипт Yandex Forms предупреждает, что required-флаги нужно проверить вручную.
+    - Проверить визуальную читаемость длинных секций Часть A и Часть B в интерфейсе формы.
+  nextcloudForms:
+    - Проверить, что длинные названия секций читаются нормально на мобильном экране.
+    - Проверить удобство загрузки нескольких файлов в блоке материалов отчета.
+
+questions:
+  - id: q01_request_id
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: ID заявки
+    type: short
+    isRequired: false
+
+  - id: q02_request_date
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Дата создания заявки
+    type: date
+    isRequired: false
+
+  - id: q03_sveton_owner
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Заказчик / ответственное лицо Светон
+    type: short
+    isRequired: true
+
+  - id: q04_client_name
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Клиент - Ф.И.О. или наименование организации
+    type: short
+    isRequired: true
+
+  - id: q05_client_contacts
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Контакты клиента
+    type: long
+    isRequired: true
+
+  - id: q06_object_address
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Адрес объекта
+    type: long
+    isRequired: true
+
+  - id: q07_target_departure_deadline
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Целевой срок выезда
+    type: short
+    isRequired: true
+
+  - id: q08_service_cost
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Стоимость выезда / услуг Исполнителя
+    type: short
+    isRequired: false
+
+  - id: q09_request_status
+    section: Часть A. Заявка до выезда / 1. Паспорт заявки
+    text: Статус заявки
+    type: short
+    isRequired: false
+
+  - id: q10_special_terms
+    section: Часть A. Заявка до выезда / 2. Особые условия по заявке
+    text: Текст
+    type: long
+    isRequired: false
+
+  - id: q11_transferred_materials
+    section: Часть A. Заявка до выезда / 3. Что передано исполнителю до выезда
+    text: Что передано исполнителю до выезда
+    type: multiple
+    isRequired: false
+    options:
+      - Фото щита от клиента
+      - Фото места установки ИБП от клиента
+      - Фото предполагаемой трассы от клиента
+      - Схема / план помещений от клиента
+      - Электрическая схема энергоснабжения объекта от клиента
+      - Предварительный список нагрузок, устанавливаемых в резерв
+      - Особые условия объекта от клиента
+      - Иное
+
+  - id: q12_transferred_materials_other
+    section: Часть A. Заявка до выезда / 3. Что передано исполнителю до выезда
+    text: Иное / комментарий
+    type: long
+    isRequired: false
+
+  - id: q13_priority_checks
+    section: Часть A. Заявка до выезда / 4. Что нужно проверить на объекте
+    text: Текст
+    type: long
+    isRequired: false
+    description: |
+      Заказчик при необходимости указывает приоритетные вопросы, на которые Исполнителю нужно обратить особое внимание.
+
+  - id: q14_house_breaker_rating
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Номинал вводного автомата в щите дома, А
+    type: short
+    isRequired: false
+
+  - id: q15_entry_breaker_rating
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Номинал вводного автомата на вводе, А
+    type: short
+    isRequired: false
+
+  - id: q16_measured_voltage
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Замеренное напряжение сети, В
+    type: short
+    isRequired: false
+
+  - id: q17_input_type
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Тип ввода
+    type: multiple_unique
+    isRequired: false
+    options:
+      - трехфазный
+      - однофазный
+      - не определено
+
+  - id: q18_grounding_system
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Система заземления
+    type: multiple_unique
+    isRequired: false
+    options:
+      - TN-C-S
+      - TT
+      - другая
+      - не определено
+
+  - id: q19_own_ground_loop
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Есть собственный контур заземления
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+      - не проверялось
+
+  - id: q20_neutral_voltage_absent
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: На нулевой шине нет напряжения
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+      - не проверялось
+
+  - id: q21_external_grid_features
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Есть особенности внешней сети
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q22_electrical_comment
+    section: Часть B. Отчет по выполнению заявки / 5. Электросеть
+    text: Общий комментарий по разделу
+    type: long
+    isRequired: false
+
+  - id: q23_installation_place_checklist
+    section: Часть B. Отчет по выполнению заявки / 6. Место установки ИБП, инвертора и АКБ
+    text: Место установки ИБП, инвертора и АКБ
+    type: multiple
+    isRequired: false
+    options:
+      - Основное место показано клиентом
+      - Место установки сфотографировано по кругу
+      - На фото видна каждая стена от пола до потолка
+      - Есть альтернативное место установки
+      - Альтернативное место сфотографировано по кругу
+      - Помещение места установки с финишной отделкой
+      - В помещении места установки идет ремонт / пыльно / грязно
+      - Есть место для АКБ
+      - Есть место для инвертора
+      - Есть место для щита автоматики / байпаса
+      - Можно обеспечить вентиляционные зазоры инвертора
+      - Расстояние между АКБ и инвертором требует уточнения
+      - Есть запреты от клиента по сверлению или внешнему виду
+      - Есть риск, что оборудование можно задеть или повредить
+
+  - id: q24_room_heated
+    section: Часть B. Отчет по выполнению заявки / 6. Место установки ИБП, инвертора и АКБ
+    text: Помещение отапливается
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q25_heaters_nearby
+    section: Часть B. Отчет по выполнению заявки / 6. Место установки ИБП, инвертора и АКБ
+    text: Рядом с местом установки есть приборы отопления
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q26_installation_comment
+    section: Часть B. Отчет по выполнению заявки / 6. Место установки ИБП, инвертора и АКБ
+    text: Комментарий по месту установки
+    type: long
+    isRequired: false
+
+  - id: q27_panel_checklist
+    section: Часть B. Отчет по выполнению заявки / 7. Проверка щита клиента
+    text: Проверка щита клиента
+    type: multiple
+    isRequired: false
+    options:
+      - Фото щита целиком до любых действий сделано
+      - Фото открытого щита сделано
+      - Фото вводного автомата крупно сделано
+      - Фото всех щитов, где предполагаются работы, сделаны
+      - Есть непонятные или спорные соединения
+      - Есть следы подгоревшей проводки
+
+  - id: q28_neutral_bus_visible
+    section: Часть B. Отчет по выполнению заявки / 7. Проверка щита клиента
+    text: Нулевые шины в щите визуально определены
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q29_pe_bus_visible
+    section: Часть B. Отчет по выполнению заявки / 7. Проверка щита клиента
+    text: PE-шина в щите визуально определена
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q30_panel_damage_details
+    section: Часть B. Отчет по выполнению заявки / 7. Проверка щита клиента
+    text: Если есть повреждения или спорные места, что именно
+    type: long
+    isRequired: false
+
+  - id: q31_reserve_loads_precheck
+    section: Часть B. Отчет по выполнению заявки / 8. Нагрузки, планируемые в резерв
+    text: Нагрузки, планируемые в резерв
+    type: multiple
+    isRequired: false
+    options:
+      - Уточнено у клиента, какие нагрузки должны быть в резерве
+      - Уточнено у клиента, какие нагрузки резерва еще не установлены
+
+  - id: q32_reserve_loads_typical
+    section: Часть B. Отчет по выполнению заявки / 8. Нагрузки, планируемые в резерв
+    text: Типовые нагрузки, планируемые в резерв
+    type: multiple
+    isRequired: false
+    options:
+      - Освещение
+      - Котел
+      - Насосы отопления
+      - Насос на воду
+      - Холодильник
+      - Септик
+      - Насос сброса
+      - Водоочистка
+      - Телевизор
+      - Компьютер
+      - Видеонаблюдение
+      - Другое
+
+  - id: q33_reserve_loads_details
+    section: Часть B. Отчет по выполнению заявки / 8. Нагрузки, планируемые в резерв
+    text: Детализация нагрузок
+    type: long
+    isRequired: false
+    description: |
+      Для каждой нагрузки указать отдельной строкой:
+      название | резерв да/нет | номинальная мощность, Вт | пиковая мощность, Вт | автомат / номер | установлен да/нет | комментарий
+
+  - id: q34_reserve_breakers_checklist
+    section: Часть B. Отчет по выполнению заявки / 9. Автоматы резерва
+    text: Автоматы резерва
+    type: multiple
+    isRequired: false
+    options:
+      - Автоматы, которые планируются в резерв, определены
+      - По каждому автомату резервной группы понятно, какие нагрузки к нему относятся
+      - В щите есть УЗО / дифавтоматы, через которые подключаются резервные нагрузки
+      - Нумерация автоматов резервной группы сделана отдельно; нумерация клиента не используется
+      - Фото автоматов резервной группы крупно сделано
+
+  - id: q35_reserve_group_verified
+    section: Часть B. Отчет по выполнению заявки / 9. Автоматы резерва
+    text: Проверено, что к автоматам резервной группы подключены только нагрузки, планируемые в резерв
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q36_extra_loads_found
+    section: Часть B. Отчет по выполнению заявки / 9. Автоматы резерва
+    text: Найдены лишние нагрузки, которые подключены к автоматам резервной группы
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q37_reserve_breakers_list
+    section: Часть B. Отчет по выполнению заявки / 9. Автоматы резерва
+    text: Перечень автоматов резерва
+    type: long
+    isRequired: false
+    description: |
+      Для каждого автомата указать отдельной строкой:
+      № | что питает | фаза | УЗО / дифавтомат | комментарий
+
+  - id: q38_reserve_breakers_comment
+    section: Часть B. Отчет по выполнению заявки / 9. Автоматы резерва
+    text: Комментарий монтажника
+    type: long
+    isRequired: false
+
+  - id: q39_route_allowed_area
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Уточнено, где клиент разрешает вести трассу
+    type: long
+    isRequired: false
+
+  - id: q40_route_start
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Точка начала трассы
+    type: short
+    isRequired: false
+
+  - id: q41_route_end
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Точка окончания трассы
+    type: short
+    isRequired: false
+
+  - id: q42_route_method
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Способ прокладки
+    type: multiple_unique
+    isRequired: false
+    options:
+      - кабель-канал
+      - гофра
+      - другое
+
+  - id: q43_route_length
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Длина трассы, м
+    type: short
+    isRequired: false
+
+  - id: q44_wall_passages
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Проходы через стены, шт
+    type: short
+    isRequired: false
+
+  - id: q45_ceiling_passages
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Проходы через перекрытия, шт
+    type: short
+    isRequired: false
+
+  - id: q46_complex_places
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Есть сложные места
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q47_room_scheme_required
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Требуется схема помещений
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q48_route_approved
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Трасса согласована с клиентом
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q49_route_photos
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Фото и ограничения по трассе
+    type: multiple
+    isRequired: false
+    options:
+      - Фото места прохождения трассы на всем протяжении сделано
+      - Фото мест проходов сделано
+      - Фото сложных мест сделано
+      - Есть ограничения по сверлению, коробам или внешнему виду трассы
+
+  - id: q50_route_restrictions
+    section: Часть B. Отчет по выполнению заявки / 10. Кабельная трасса
+    text: Ограничения по трассе
+    type: long
+    isRequired: false
+
+  - id: q51_extra_equipment
+    section: Часть B. Отчет по выполнению заявки / 11. Требуется дополнительное оборудование
+    text: Требуется дополнительное оборудование
+    type: multiple
+    isRequired: false
+    options:
+      - Защитные панели
+      - Дополнительный щит автоматики
+      - Стабилизатор
+      - Дополнительные автоматы
+      - Дополнительные УЗО
+      - Кросс-модули / шины
+      - Другое
+
+  - id: q52_extra_equipment_other
+    section: Часть B. Отчет по выполнению заявки / 11. Требуется дополнительное оборудование
+    text: Другое
+    type: short
+    isRequired: false
+
+  - id: q53_blockers_and_risks
+    section: Часть B. Отчет по выполнению заявки / 12. Блокеры, риски и расхождения
+    text: Блокеры, риски и расхождения
+    type: multiple
+    isRequired: false
+    options:
+      - Выявлены ограничения по месту установки ИБП
+      - Выявлены ограничения по прокладке кабельной трассы
+      - Есть опасные или непонятные места в щите
+      - Есть сложности с выделением резервных автоматов в отдельную группу в щите
+      - Есть расхождения с данными из Заявки
+      - Выполнение дальнейших работ по текущим данным невозможно без уточнений
+      - Требуется решение Заказчика для продолжения
+
+  - id: q54_blockers_details
+    section: Часть B. Отчет по выполнению заявки / 12. Блокеры, риски и расхождения
+    text: Что именно нужно уточнить, устранить или решить
+    type: long
+    isRequired: false
+
+  - id: q55_report_materials
+    section: Часть B. Отчет по выполнению заявки / 13. Фото и материалы отчета
+    text: Фото и материалы отчета
+    type: multiple
+    isRequired: false
+    description: |
+      Если пункта нет или он не относится к объекту, указать "нет" в комментарии.
+    options:
+      - Фото щита целиком
+      - Фото открытого щита
+      - Фото автоматов резерва крупно
+      - Фото проводов и шин в щите
+      - Фото УЗО / дифавтоматов
+      - Фото подгоревшей проводки / повреждений
+      - Фото места установки ИБП по кругу
+      - Фото альтернативного места установки
+      - Фото трассы на всем протяжении
+      - Фото проходов и сложных мест
+      - Видео места установки
+      - Видео трассы
+      - Фото подписанной Заявки / анкеты
+      - Фото документов, подписанных на объекте
+      - Иные материалы
+
+  - id: q56_report_files
+    section: Часть B. Отчет по выполнению заявки / 13. Фото и материалы отчета
+    text: Загрузите файлы материалов отчета
+    type: file
+    isRequired: false
+    extraSettings:
+      maxAllowedFilesCount: 30
+
+  - id: q57_report_materials_comment
+    section: Часть B. Отчет по выполнению заявки / 13. Фото и материалы отчета
+    text: Имя файла / комментарий
+    type: long
+    isRequired: false
+
+  - id: q58_repeat_visit_needed
+    section: Часть B. Отчет по выполнению заявки / 14. Итог осмотра
+    text: Нужен повторный осмотр
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q59_customer_clarification_needed
+    section: Часть B. Отчет по выполнению заявки / 14. Итог осмотра
+    text: Требуется уточнение Заказчика
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q60_can_continue
+    section: Часть B. Отчет по выполнению заявки / 14. Итог осмотра
+    text: Можно продолжать дальнейшие работы без дополнительных уточнений
+    type: multiple_unique
+    isRequired: false
+    options:
+      - да
+      - нет
+
+  - id: q61_final_comment
+    section: Часть B. Отчет по выполнению заявки / 14. Итог осмотра
+    text: Итоговый комментарий по осмотру
+    type: long
+    isRequired: false
+
+  - id: q62_completion_date
+    section: Часть B. Отчет по выполнению заявки / 15. Подтверждение
+    text: Дата заполнения
+    type: date
+    isRequired: false
+
+  - id: q63_executor_name
+    section: Часть B. Отчет по выполнению заявки / 15. Подтверждение
+    text: Исполнитель / монтажник
+    type: short
+    isRequired: false
+
+  - id: q64_sveton_signer
+    section: Часть B. Отчет по выполнению заявки / 15. Подтверждение
+    text: Ответственное лицо Светон
+    type: short
+    isRequired: false
+
+  - id: q65_client_signer
+    section: Часть B. Отчет по выполнению заявки / 15. Подтверждение
+    text: Клиент, если требуется
+    type: short
+    isRequired: false

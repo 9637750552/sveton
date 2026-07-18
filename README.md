@@ -1,69 +1,168 @@
-# Проект "Светон-Юг"
+![beans](https://github.com/user-attachments/assets/776f094c-f2c4-4724-9a0b-5b87e88bc50d)
 
-Проект по расширению бизнеса ИБП (Sveton / Bidneos) в Краснодарский край и прилегающие регионы.
+[![License](https://img.shields.io/github/license/hmans/beans?style=for-the-badge)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/hmans/beans?style=for-the-badge)](https://github.com/hmans/beans/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/hmans/beans/test.yml?branch=main&label=tests&style=for-the-badge)](https://github.com/hmans/beans/actions/workflows/test.yml)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/hmans/beans?style=for-the-badge)](https://go.dev/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hmans/beans?style=for-the-badge)](https://goreportcard.com/report/github.com/hmans/beans)
 
-## Структура проекта
+**Beans is an issue tracker for you, your team, and your coding agents.** Instead of tracking tasks in a separate application, Beans stores them right alongside your code. You can use the `beans` CLI to interact with your tasks, but more importantly, so can your favorite coding agent!
 
-### 1. [00_input/](./00_input/) — База знаний и исходные данные
-Здесь лежит сырье: все, что было получено от клиента, найдено на сайте, выгружено из старых материалов или записано в интервью. Эти файлы не считаются финальным результатом, но на них можно ссылаться при подготовке стратегии, сайта и коммерческих материалов.
+This gives your robot friends a juicy upgrade: now they get a complete view of your project, make suggestions for what to work on next, track their progress, create bug issues for problems they find, and more.
 
-- `briefs/`: Короткие исходные вводные по оборудованию, маркетингу и техническим деталям. Сюда класть новые текстовые заметки, если это именно исходная информация, а не готовый документ.
-- `interviews/`: Расшифровки разговоров и интервью. Аудио хранится отдельно в `00_input/audio/`, а сюда лучше складывать текстовые версии.
-- `documents/`: Внешние PDF, презентации, исходные коммерческие материалы и документы от заказчика.
-- `catalog/`: Выжимки по товарам, характеристикам и ассортименту с основного сайта или каталога.
-- `portfolio/`: Описания выполненных работ и кейсов, которые можно использовать как доказательства опыта.
-- `legal/`: Юридические данные, политики, реквизиты и документы, которые нужны для договоров и публикаций.
-- `assets/`: Исходные медиа и списки ссылок. Внутри `assets/images/` лежат собранные изображения, а `assets/sources/` хранит текстовые списки URL.
-- `audio/`: Исходные аудиофайлы интервью. Папка тяжелая и игнорируется git, чтобы репозиторий не раздувался.
+You've been programming all your life; now you get to be a product manager. Let's go! 🚀
 
-### 2. [01_docs/](./01_docs/) — Управляющие документы
-Здесь лежат рабочие документы проекта: планы, стандарты, стратегия, регламенты и справочные материалы. Это не сырье и не итоговые клиентские артефакты, а документы, по которым ведется работа.
+## Announcement Trailer ✨
 
-- `governance/`: Управление проектом. `PROJECT_STATUS.md` показывает текущее состояние, `GUIDE.md` описывает правила работы, `DEVELOPMENT_LOG.md` хранит журнал изменений.
-- `strategy/`: Стратегические документы: `ROADMAP.md`, `EXECUTIVE_SUMMARY.md`, `CURRENT_STATE.md`, `SWOT.md`, расширенная маркетинговая стратегия и экспортированные DOCX/PDF версии.
-- `operations/`: Практические чек-листы, скрипты интервью, формы отбора и инструкции для операционных задач.
-- `reference/`: Справочные объяснения и фоновые материалы, которые помогают понять предметную область, но не являются планом, исходником или итоговым результатом.
+https://github.com/user-attachments/assets/dbe45408-d3ed-4681-a436-a5e3046163da
 
-### 3. [02_output/](./02_output/) — Результаты работы
-Здесь должны появляться готовые или почти готовые результаты по задачам из плана. Если материал уже можно отправлять, обсуждать с партнером или использовать как итог этапа, ему место здесь.
+## Stability Warning ⚠️
 
-- `economics/`: Расчеты, спецификации, экономика решений, OKVED и связанные финансово-технические материалы.
-- `legal/`: Договоры, шаблоны соглашений и юридические заготовки для работы в регионе.
-- `marketing/`: Готовые офферы, рекламные тексты, сообщения, посадочные блоки и материалы для продвижения.
-- `operations/`: Запросы, отчеты, чек-листы выполнения и операционные документы, которые фиксируют сделанную работу.
+Beans is still under heavy development, and its features and APIs may still change significantly. If you decide to use it now, please follow the release notes closely.
 
-### 4. [03_images/](./03_images/) — Готовые визуальные материалы
-Здесь лежат отобранные визуальные материалы, которые можно использовать в документах, объявлениях, презентациях и на сайте. Черновые исходники лучше держать в `00_input/assets/images/`, а временные превью в `99_tmp/`.
+Since Beans emits its own prompt instructions for your coding agent, most changes will "just work"; but sometimes, we modify the schema of the underlying data files, which may require some manual migration steps. If you get caught by one of these changes, your agent will often be able to migrate your data for you:
 
-- `banners/`: Готовые баннеры и изображения под размещение.
-- `generated/`: Сгенерированные изображения и варианты, которые еще могут быть использованы или переработаны.
-- `logo/`: Логотипы, иконки и варианты фирменных знаков.
+```
+The Beans data format has changed. Please migrate this project's beans to the new format.
+```
 
-### 5. [04_output/](./04_output/) — Публикационные подборки и медиа-выгрузки
-Здесь лежат подготовленные наборы файлов для конкретных внешних площадок и задач, например отобранные фото для Avito и портфолио. Это не исходники и не универсальная библиотека изображений, а результат конкретного отбора или экспорта.
+## Features
 
-### 6. [05_research/](./05_research/) — Исследования
-Гипотезы, география, анализ рынка и черновики исследовательской базы. Сюда класть материалы, которые помогают принять решение, но еще не являются готовой стратегией или результатом.
+- **Track tasks, bugs, features**, and more right alongside your code.
+- **Plain old Markdown files** stored in a `.beans` directory in your project. Easy to version control, readable and editable by humans and machines alike!
+- Use the `beans` CLI to create, list, view, update, and archive beans; but more importantly, **let your coding agent do it for you**!
+- **Supercharge your robot friend** with full context about your project and its open tasks. A built-in **GraphQL query engine** allows your agent to get exactly the information it needs, keeping token use to a minimum.
+- **Project memory**: Completed beans are archived and serve as project memory that your coding agent can query for context about past work.
+- A beautiful **built-in** TUI for browsing and managing your beans from the terminal.
+- Generates a **Markdown roadmap document** for your project from your data.
 
-### 7. [06_website/](./06_website/) — Разработка сайта
-Площадка для будущей сборки сайта "Светон-Юг". Пока здесь лежит только `.gitkeep`, чтобы папка сохранялась в репозитории. Готовые тексты сайта лучше складывать в `02_output/marketing/` или `01_docs/strategy/`, пока нет полноценной структуры сайта.
+## Installation
 
-### 8. [07_scripts/](./07_scripts/) — Служебные скрипты
-Служебные скрипты для проекта. Сейчас здесь лежит конвертация Markdown в DOCX/PDF через Pandoc и PowerShell. Новые автоматизации лучше класть сюда, а не в корень проекта.
+We'll need to do three things:
 
-### 9. [99_tmp/](./99_tmp/) — Локальные временные файлы
-Папка игнорируется git. Используется для превью, промежуточных экспортов, временных картинок и мусора от офисных программ. Важные файлы не должны оставаться в `99_tmp/`: если картинка нужна дальше, перенести в `03_images/`; если документ стал результатом, перенести в `02_output/`; если это исходник, перенести в `00_input/`.
+1. Install the `beans` CLI tool.
+2. Configure your project to use it.
+3. Configure your coding agent to interact with it.
 
-## Быстрые правила
+Either download Beans from the [Releases section](https://github.com/hmans/beans/releases), or install it via Homebrew:
 
-- Новые исходники класть в `00_input/`.
-- Готовые результаты класть в `02_output/`.
-- Планы, стратегия и правила работы класть в `01_docs/`.
-- Готовые картинки класть в `03_images/`.
-- Подборки для конкретных внешних площадок класть в `04_output/`.
-- Черновые исследования класть в `05_research/`.
-- Временные файлы держать в `99_tmp/` и не коммитить.
-- Не класть новые файлы в корень проекта, если это не README, настройки git или другой общий служебный файл.
+```bash
+brew install hmans/beans/beans
+```
 
----
-*Для начала работы см. [01_docs/strategy/ROADMAP.md](./01_docs/strategy/ROADMAP.md)*
+Alternatively, install directly via Go:
+
+```bash
+go install github.com/hmans/beans@latest
+```
+
+## Configure Your Project
+
+Inside the root directory of your project, run:
+
+```bash
+beans init
+```
+
+This will create a `.beans/` directory and a `.beans.yml` configuration file at the project root. All of it is meant to be tracked in your version control system.
+
+From this point onward, you can interact with your Beans through the `beans` CLI. To get a list of available commands:
+
+```bash
+beans help
+```
+
+But more importantly, you'll want to get your coding agent set up to use it. Let's dive in!
+
+## Agent Configuration
+
+The most basic way to teach your agent about Beans is to simply add the following instruction to your `AGENTS.md`, `CLAUDE.md`, or equivalent file:
+
+```
+**IMPORTANT**: before you do anything else, run the `beans prime` command and heed its output.
+```
+
+Some agents provide mechanisms to automate this step:
+
+### Claude Code
+
+An official Beans plugin for Claude is in the works, but for the time being, please manually add the following hooks to your project's `.claude/settings.json` file:
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [{ "type": "command", "command": "beans prime" }] }
+    ],
+    "PreCompact": [
+      { "hooks": [{ "type": "command", "command": "beans prime" }] }
+    ]
+  }
+}
+```
+
+### OpenCode
+
+Beans integrates with OpenCode via a plugin that injects task context into your sessions. To set it up, **copy the plugin** from [`.opencode/plugin/beans-prime.ts`](.opencode/plugin/beans-prime.ts) to your project's `.opencode/plugin/` directory (or `~/.opencode/plugin/` for global availability across all projects).
+
+## Usage Hints
+
+As a human, you can get an overview of the CLI's functionalities by running:
+
+```bash
+beans help
+```
+
+You might specifically be interested in the interactive TUI:
+
+```bash
+beans tui
+```
+
+### Example Workflows
+
+**But the real power of Beans** comes from letting your coding agent manage your tasks for you.
+
+Assuming you have integrated Beans into your coding agent correctly, it will already know how to create and manage beans for you. You can use the usual assortment of natural language inquiries. If you've just
+added Beans to an existing project, you could try asking your agent to identify potential tasks and create beans for them:
+
+```
+Are there any tasks we should be tracking for this project? If so, please create beans for them.
+```
+
+If you already have some beans available, you can ask your agent to recommend what to work on next:
+
+```
+What should we work on next?
+```
+
+You can also specifically ask it to start working on a particular bean:
+
+```
+It's time to tackle myproj-123.
+```
+
+Consider that your agent will be just as capable to deal with beans as it is with code, so how about using it to quickly restructure your tasks?
+
+```
+Please inspect this project's beans and reorganize them into epics. Also please create 2-3 milestones to group these epics in a meaningful way.
+```
+
+You can also add Beans-specific instructions to your `AGENTS.md`, `CLAUDE.md` or equivalent file, for example:
+
+```
+When making a commit, include the relevant bean IDs in the commit message
+```
+
+## Contributing
+
+This project currently does not accept contributions -- it's just way too early for that!
+But if you do have suggestions or feedback, please feel free to open an issue.
+
+## License
+
+This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for details.
+
+## Getting in Touch
+
+If you have any questions, suggestions, or just want to say hi, feel free to reach out to me [on Bluesky](https://bsky.app/profile/hmans.dev), or [open an issue](https://github.com/hmans/beans/issues) in this repository.
